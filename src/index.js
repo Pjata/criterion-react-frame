@@ -1,4 +1,5 @@
-import MenuDrawer from "./MenuDrawer"
+import CriterionFrame from "./components/CriterionFrame"
+export MenuDrawer from "./MenuDrawer"
 export TopBar from "./TopBar"
 
-export default MenuDrawer
+export default CriterionFrame
