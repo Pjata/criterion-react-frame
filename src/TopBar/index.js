@@ -39,7 +39,7 @@ const style = theme => ({
   },
   logo: {
     height: "80%",
-    filter: theme.type !== "dark" ? "invert(1)" : "invert(0)"
+    filter: theme.palette.type !== "dark" ? "invert(1)" : "invert(0)"
   },
   hide: {
     display: "none"
@@ -48,7 +48,6 @@ const style = theme => ({
 class TopBarContainer extends PureComponent {
   render() {
     const { classes, title } = this.props
-    console.log(title)
     return (
       <Grid
         container
@@ -107,7 +106,10 @@ TopBarContainer.propTypes = {
   handleMenuOpen: PropTypes.func,
   userInfo: PropTypes.object,
   onLogout: PropTypes.func,
-  menuOpen: PropTypes.bool
+  menuOpen: PropTypes.bool,
+  classes: PropTypes.object,
+  height: PropTypes.number,
+  title: PropTypes.string
 } /*
 const getUserName = state => state.auth.userName
 export const getAuthState = createSelector([getUserName], userName => userName)

@@ -177,11 +177,10 @@ MenuDrawer.propTypes = {
   menuWidth: PropTypes.number.isRequired,
   topBarHeight: PropTypes.number,
   items: PropTypes.array.isRequired,
-  handleOpen: PropTypes.func.isRequired,
+  topBarRender: PropTypes.func,
   onItemSelected: PropTypes.func,
   selectedIndex: PropTypes.number,
   children: PropTypes.func,
-  TopBarContainer: PropTypes.node,
   theme: PropTypes.any,
   classes: PropTypes.any,
   rootStyle: PropTypes.any
