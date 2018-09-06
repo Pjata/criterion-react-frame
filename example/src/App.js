@@ -1,41 +1,25 @@
 import React, { Component } from "react"
-import CriterionFrame from "criterion-frame"
-import HomeIcon from "@material-ui/icons/Home"
-import FileIcon from "@material-ui/icons/FileCopy"
-import TagMultipleIcon from "@material-ui/icons/RemoveRedEye"
+import { Button } from "@material-ui/core"
+import { TypeField, RenderTextField } from "criterion-frame"
+import { withFormik, Field, FastField } from "formik"
+import i18n from "./i18n"
+import { I18nextProvider } from "react-i18next"
 class App extends Component {
   render() {
+    const { handleSubmit } = this.props
     return (
-      <div>
-        <CriterionFrame
-          menuConfig={[
-            {
-              label: "Főoldal",
-              icon: <HomeIcon />,
-              path: "/app/index"
-            },
-            {
-              label: "Szerződések",
-              icon: <FileIcon />,
-              path: "/app/szerzodesek"
-            },
-            {
-              label: "Szolgáltatások",
-              icon: <TagMultipleIcon />,
-              path: "/app/szolgaltatasok"
-            }
-          ]}
-          title={"asd"}
-          onLogout={console.log}
-          userInfo={{
-            userName: "hello world"
-          }}
-          onItemSelected={console.log}
-        >
-          hello world
-        </CriterionFrame>
-      </div>
+      <I18nextProvider i18n={i18n} initialLanguage={"kplogKPLOG"}>
+        <form onSubmit={handleSubmit}>
+          <TypeField name="lastName" label="hello" />
+          <Button type="submit">Submit</Button>
+        </form>
+      </I18nextProvider>
     )
   }
 }
-export default App
+
+export default withFormik({
+  handleSubmit: (values, { props }) => {
+    console.log(values)
+  }
+})(App)
