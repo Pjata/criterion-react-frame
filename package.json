@@ -36,6 +36,7 @@
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-knobs": "^3.4.10",
     "@storybook/addon-links": "^3.4.10",
+    "@storybook/addon-options": "^3.4.10",
     "@storybook/addons": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "@storybook/storybook-deployer": "^2.3.0",
@@ -66,7 +67,8 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
-    "rollup-plugin-url": "^1.4.0"
+    "rollup-plugin-url": "^1.4.0",
+    "storybook-readme": "^4.0.0-beta1"
   },
   "files": [
     "dist"
