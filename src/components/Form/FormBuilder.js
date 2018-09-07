@@ -10,7 +10,7 @@ import {
   renderCikkNev
 } from "./renderers"
 
-export const TypeField = ({ type, ...rest }) => {
+const TypeField = ({ type, ...rest }) => {
   switch (type) {
     case "date":
       return <Field {...rest} component={renderDatePicker} />

@@ -2,16 +2,22 @@ import { validateYupSchema, yupToFormErrors } from "formik"
 import memoize from "fast-memoize"
 const error = { v: "1" }
 const yupToFormErrorsMemoized = memoize(yupToFormErrors)
-const validateSchema = schema => (values, props) => {
+const validateSchema = (
+  { i18n, schema: propSchema, children, ...values },
+  { onError, schema }
+) => {
   return new Promise((resolve, reject) => {
+    if (!schema) {
+      resolve({})
+    }
     validateYupSchema(values, schema).then(
       () => {
-        props.onError(null)
+        onError && onError(null)
         resolve({})
       },
       err => {
         const formErrors = yupToFormErrorsMemoized(err)
-        props.onError(formErrors)
+        onError && onError(formErrors)
         reject(formErrors)
       }
     )

@@ -1,25 +1,35 @@
 import React, { Component } from "react"
-import { Button } from "@material-ui/core"
-import { TypeField, RenderTextField } from "criterion-frame"
-import { withFormik, Field, FastField } from "formik"
+import { Button, Paper } from "@material-ui/core"
+import { TypeField, FormikContainer } from "criterion-frame"
 import i18n from "./i18n"
-import { I18nextProvider } from "react-i18next"
+import * as Yup from "yup"
+const schema = Yup.object().shape({
+  hello: Yup.string().required("Kötelező mező!")
+})
 class App extends Component {
   render() {
     const { handleSubmit } = this.props
     return (
-      <I18nextProvider i18n={i18n} initialLanguage={"kplogKPLOG"}>
-        <form onSubmit={handleSubmit}>
-          <TypeField name="lastName" label="hello" />
-          <Button type="submit">Submit</Button>
-        </form>
-      </I18nextProvider>
+      <FormikContainer
+        onError={console.log}
+        onSubmit={console.log}
+        i18n={i18n}
+        schema={schema}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField label={"hello"} name={"hello"} />
+            <Button type={"submit"}>Submit</Button>
+          </Paper>
+        )}
+      />
     )
   }
 }
 
-export default withFormik({
-  handleSubmit: (values, { props }) => {
-    console.log(values)
-  }
-})(App)
+export default App

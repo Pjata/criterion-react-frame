@@ -1,6 +1,6 @@
 {
   "name": "criterion-frame",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Internal React frame for projects",
   "author": "Pjata",
   "license": "GPL-3.0",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-info": "^3.4.10",
     "@storybook/addon-knobs": "^3.4.10",
     "@storybook/addon-links": "^3.4.10",
     "@storybook/addon-options": "^3.4.10",
@@ -81,15 +82,17 @@
     "@material-ui/core": "^3.0.2",
     "@material-ui/icons": "^3.0.1",
     "classnames": "^2.2.6",
+    "formik": "^1.2.0",
     "i18next": "^11.7.0",
     "i18next-browser-languagedetector": "^2.2.3",
     "material-ui-pickers": "^1.0.0-rc.14",
     "moment": "^2.22.2",
     "react-datepicker": "^1.6.0",
     "react-i18next": "^7.11.1",
+    "react-text-mask": "^5.4.3",
     "recompose": "^0.30.0",
     "redux": "^4.0.0",
-    "formik": "^1.2.0",
-    "react-text-mask": "^5.4.3"
+    "storybook-addon-docgen": "^4.0.0",
+    "yup": "^0.26.3"
   }
 }

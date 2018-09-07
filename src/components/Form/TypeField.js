@@ -20,7 +20,9 @@ const enhance = compose(
       value: props.field.value,
       onChange: props.readOnly ? nothing : props.field.onChange,
       onBlur: props.field.onBlur,
-      name: props.field.name
+      name: props.field.name,
+      touched: props.form.touched[props.field.name],
+      error: props.form.errors[props.field.name]
     },
     name: props.field.name
   })),
@@ -56,7 +58,16 @@ const datePickerField = enhanceSetFieldValue(renderDatePicker)
 const selectField = enhanceSetFieldValue(renderSelectField)
 const switchField = enhanceSetFieldValue(renderSwitch)
 const timePickerField = enhanceSetFieldValue(renderTimePicker)
-export const TypeField = ({ type, ...rest }) => {
+
+/**
+ * TypeField for forms
+ * Valid types: text,select,switch,time,date. Default is text.
+ * @param type
+ * @param rest
+ * @returns {*}
+ * @constructor
+ */
+const TypeField = ({ type, ...rest }) => {
   switch (type) {
     case "date":
       return (
@@ -78,5 +89,20 @@ export const TypeField = ({ type, ...rest }) => {
     default:
       return <FastField {...rest} component={textField} />
   }
+}
+
+TypeField.propTypes = {
+  /**
+   * Valid values:text, select, switch, time or date
+   */
+  type: PropTypes.string,
+  /**
+   * Name of the field.
+   */
+  name: PropTypes.string.isRequired,
+  /**
+  Label for field
+   */
+  label: PropTypes.string
 }
 export default TypeField

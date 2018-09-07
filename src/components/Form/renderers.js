@@ -43,11 +43,7 @@ const renderTextFieldWithoutStyle = ({
         value={input.value || ""}
         onChange={input.onChange}
         autoComplete={"off"}
-        helperText={
-          meta && meta.error && (meta.touched || submitCount > 0)
-            ? meta.error
-            : null
-        }
+        helperText={input.touched || submitCount > 0 ? input.error : null}
         InputProps={{
           name: input.name,
           inputComponent: mask ? TextMaskCustom : undefined
@@ -57,7 +53,7 @@ const renderTextFieldWithoutStyle = ({
           root: classes.root
         }}
         {...custom}
-        error={Boolean(meta && meta.error && (meta.touched || submitCount > 0))}
+        error={Boolean((input.touched || submitCount > 0) && input.error)}
         inputProps={{
           mask
         }}
