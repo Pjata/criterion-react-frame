@@ -54,7 +54,7 @@ const enhanceDate = compose(
   }))
 )
 const textField = enhance(RenderTextField)
-const datePickerField = enhanceSetFieldValue(renderDatePicker)
+const datePickerField = enhance(renderDatePicker)
 const selectField = enhanceSetFieldValue(renderSelectField)
 const switchField = enhanceSetFieldValue(renderSwitch)
 const timePickerField = enhanceSetFieldValue(renderTimePicker)

@@ -12,12 +12,19 @@ import validateSchema from "./validateSchema"
  */
 export class FormikContainerComponent extends Component {
   render() {
-    const { handleSubmit, render, setFieldValue, i18n, ...rest } = this.props
+    const {
+      handleSubmit,
+      render,
+      setFieldValue,
+      i18n,
+      values,
+      ...rest
+    } = this.props
     return (
       <I18nextProvider i18n={i18n} initialLanguage={"kplogKPLOG"}>
         <MuiPickersUtilsProvider utils={MomentUtils}>
           <SetFieldValueContext.Provider value={{ setFieldValue }}>
-            <form onSubmit={handleSubmit}>{render()}</form>
+            <form onSubmit={handleSubmit}>{render(values)}</form>
           </SetFieldValueContext.Provider>
         </MuiPickersUtilsProvider>
       </I18nextProvider>

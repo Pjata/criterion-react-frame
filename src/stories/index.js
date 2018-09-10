@@ -185,12 +185,13 @@ storiesFormik.add("Validation", () => {
   const regex = text("Regex", "")
   return (
     <FormikContainer
-      onError={console.log}
-      onSubmit={console.log}
+      onError={action("Error: ")}
+      onSubmit={action("Submitted: ")}
       i18n={i18n}
       schema={Yup.object().shape({
         required: Yup.string().required("Kötelező mező!"),
-        regex: Yup.string().matches(new RegExp(regex))
+        regex: Yup.string().matches(new RegExp(regex)),
+        date: Yup.string().required("Kötelező mező!")
       })}
       render={() => (
         <Paper
@@ -202,6 +203,7 @@ storiesFormik.add("Validation", () => {
         >
           <TypeField label={"Required"} name={"required"} />
           <TypeField label={"Regex"} name={"regex"} />
+          <TypeField name={"date"} label={"date"} type={"date"} />
           <Button type={"submit"}>Submit</Button>
         </Paper>
       )}

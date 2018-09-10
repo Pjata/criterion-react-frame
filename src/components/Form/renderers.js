@@ -199,17 +199,14 @@ export const renderTimePicker = ({
 const onChangeDateSFV = (input, sfv) => date => {
   sfv(input.name, date)
 }
-const DateButton = ({ ref, name, form, ...props }) => {
-  const meta = {
-    error: form.errors[name],
-    touched: form.touched[name]
-  }
-  return <RenderTextField meta={meta} name={name} form={form} {...props} />
+const DateButton = ({ form, name, input }) => ({ helperText, ...props }) => {
+  return <RenderTextField form={form} name={name} input={input} {...props} />
 }
 export const renderDatePicker = ({
   className,
   input,
   name,
+  form,
   label,
   ...rest
 }) => (
@@ -218,6 +215,7 @@ export const renderDatePicker = ({
       <DatePicker
         label={label}
         className={className}
+        TextFieldComponent={DateButton({ form, name, input })}
         rightArrowIcon={<KeyboardArrowRight />}
         leftArrowIcon={<KeyboardArrowLeft />}
         format={"YYYY.MM.DD"}
