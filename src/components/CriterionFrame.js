@@ -34,7 +34,7 @@ export default class CriterionFrame extends Component {
     this.setState({
       selectedIndex: index
     })
-    this.props.onItemSelected(item)
+    this.props.onItemSelected(item, index)
   }
   onLogout = () => {
     this.props.onLogout()
@@ -78,33 +78,33 @@ CriterionFrame.propTypes = {
   /**
    * The callback function for the logout button click
    */
-  onLogout: PropTypes.func.required,
+  onLogout: PropTypes.func.isRequired,
   /**
    * The title that the frame displays in the TopBar
    */
-  title: PropTypes.string.optional,
+  title: PropTypes.string,
   /**
    * UserInfo object. It must contain a userName field
    */
-  userInfo: PropTypes.object.required,
+  userInfo: PropTypes.object.isRequired,
   /**
    * Array of menu config items. It must contain fieldsÉlabel, icon, path
    */
-  menuConfig: PropTypes.array.required,
+  menuConfig: PropTypes.array.isRequired,
   /**
    * The callback is called when a menu item is selected from the menu
    */
-  onItemSelected: PropTypes.func.required,
+  onItemSelected: PropTypes.func.isRequired,
   /**
    * If set the component is in controlled mode. You must handle the correct selectIndex value.
    */
-  selectedIndex: PropTypes.number.optional,
+  selectedIndex: PropTypes.number,
   /**
    * The children to be rendered as content
    */
-  children: PropTypes.node.required,
+  children: PropTypes.node.isRequired,
   /**
    * Optional param for styling the container div
    */
-  style: PropTypes.object.optional
+  style: PropTypes.object
 }

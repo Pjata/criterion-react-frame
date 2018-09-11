@@ -8,6 +8,7 @@ import Switch from "@material-ui/core/Switch"
 import FormControlLabel from "@material-ui/core/FormControlLabel"
 import FormHelperText from "@material-ui/core/FormHelperText"
 import { withStyles } from "@material-ui/core/styles"
+import { shouldUpdate, compose } from "recompose"
 import classNames from "classnames"
 import { TimePicker, DatePicker } from "material-ui-pickers"
 import SetFieldValueContext from "./SetFieldValueContext"
@@ -69,9 +70,27 @@ const renderTextFieldWithoutStyle = ({
   </I18n>
 )
 
-export const RenderTextField = withStyles(textFieldStyle)(
-  renderTextFieldWithoutStyle
-)
+export const RenderTextField = compose(
+  withStyles(textFieldStyle),
+  shouldUpdate((props, nextProps) => {
+    const { input } = props
+    if (
+      input.value !== nextProps.input.value ||
+      input.touched !== nextProps.input.touched ||
+      input.error !== nextProps.input.error
+    ) {
+      console.log(`updated: ${input.name}`)
+      return true
+    }
+    if (props.classes !== nextProps.classes) {
+      return true
+    }
+    console.log(props)
+    console.log(nextProps)
+    console.log("-----------------------")
+    return false
+  })
+)(renderTextFieldWithoutStyle)
 const onSwitchChangeSFV = (input, sfv) => event => {
   const value = Boolean(event.target.checked)
   sfv(input.name, value)
@@ -202,14 +221,18 @@ const onChangeDateSFV = (input, sfv) => date => {
 const DateButton = ({ form, name, input }) => ({ helperText, ...props }) => {
   return <RenderTextField form={form} name={name} input={input} {...props} />
 }
-export const renderDatePicker = ({
-  className,
-  input,
-  name,
-  form,
-  label,
-  ...rest
-}) => (
+export const renderDatePicker = shouldUpdate((props, nextProps) => {
+  const { input } = props
+  if (
+    input.value !== nextProps.input.value ||
+    input.touched !== nextProps.input.touched ||
+    input.error !== nextProps.input.error
+  ) {
+    console.log(`updated: ${input.name}`)
+    return true
+  }
+  return false
+})(({ className, input, name, form, label, ...rest }) => (
   <SetFieldValueContext.Consumer>
     {({ setFieldValue }) => (
       <DatePicker
@@ -224,4 +247,4 @@ export const renderDatePicker = ({
       />
     )}
   </SetFieldValueContext.Consumer>
-)
+))

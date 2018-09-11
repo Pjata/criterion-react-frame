@@ -1,7 +1,13 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { FastField, Field } from "formik"
-import { compose, mapProps, withProps, renderComponent } from "recompose"
+import {
+  compose,
+  mapProps,
+  withProps,
+  renderComponent,
+  shouldUpdate
+} from "recompose"
 import moment from "moment"
 import { omit } from "lodash/fp"
 import {
@@ -59,35 +65,61 @@ const selectField = enhanceSetFieldValue(renderSelectField)
 const switchField = enhanceSetFieldValue(renderSwitch)
 const timePickerField = enhanceSetFieldValue(renderTimePicker)
 
-/**
- * TypeField for forms
- * Valid types: text,select,switch,time,date. Default is text.
- * @param type
- * @param rest
- * @returns {*}
- * @constructor
- */
-const TypeField = ({ type, ...rest }) => {
-  switch (type) {
-    case "date":
-      return (
-        <Field
-          {...rest}
-          component={
-            rest.readOnly ? enhanceDate(RenderTextField) : datePickerField
-          }
-        />
-      )
-    case "text":
-      return <Field {...rest} component={textField} />
-    case "select":
-      return <Field {...rest} component={selectField} />
-    case "switch":
-      return <Field {...rest} component={switchField} />
-    case "time":
-      return <Field {...rest} component={timePickerField} />
-    default:
-      return <FastField {...rest} component={textField} />
+class TypeFieldInner extends Component {
+  shouldComponentUpdate(nextProps) {
+    const { input } = this.props
+    if (
+      input.value !== nextProps.input.value ||
+      input.touched !== nextProps.input.touched ||
+      input.error !== nextProps.input.error
+    ) {
+      console.log(`updated: ${input.name}`)
+      return true
+    }
+    return false
+  }
+  render() {
+    const { Component, ...rest } = this.props
+    return <Component {...rest} />
+  }
+}
+const enhancedTypeFieldInner = enhance(TypeFieldInner)
+class TypeField extends Component {
+  render() {
+    const { type, ...rest } = this.props
+    switch (type) {
+      case "date":
+        return (
+          <Field
+            {...rest}
+            component={
+              rest.readOnly ? enhanceDate(RenderTextField) : datePickerField
+            }
+          />
+        )
+      case "text":
+        return (
+          <FastField
+            {...rest}
+            Component={textField}
+            component={enhancedTypeFieldInner}
+          />
+        )
+      case "select":
+        return <Field {...rest} component={selectField} />
+      case "switch":
+        return <Field {...rest} component={switchField} />
+      case "time":
+        return <Field {...rest} component={timePickerField} />
+      default:
+        return (
+          <FastField
+            {...rest}
+            Component={textField}
+            component={enhancedTypeFieldInner}
+          />
+        )
+    }
   }
 }
 

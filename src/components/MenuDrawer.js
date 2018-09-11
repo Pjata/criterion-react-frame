@@ -82,7 +82,7 @@ class MenuDrawer extends PureComponent {
   }
   generateMenuItems = items =>
     items.map((item, index) => (
-      <div>
+      <div key={index}>
         <ListItem
           button
           onClick={this.goToPage({ index, item })}
