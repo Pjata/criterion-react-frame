@@ -92,6 +92,36 @@ storiesFormik.add(
     )
   })
 )
+storiesFormik.add(
+  "TextField (default)",
+  withInfo({
+    source: false,
+    propTables: [TypeField, FormikContainerComponent]
+  })(() => {
+    const label = text("Label", "Test")
+    return (
+      <FormikContainer
+        i18n={i18n}
+        defaultValues={{
+          textfield: "default value"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField name={"textfield"} label={label} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    )
+  })
+)
 storiesFormik.add("Select", () => {
   const label = text("Label", "Select test")
   return (

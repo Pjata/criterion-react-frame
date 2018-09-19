@@ -35,8 +35,12 @@ export class FormikContainerComponent extends Component {
 export default withFormik({
   handleSubmit: (values, { props }) => {
     const { children, schema, ...rest } = values
-
     props.onSubmit(rest)
+  },
+  mapPropsToValues: props => {
+    return {
+      ...props.defaultValues
+    }
   },
   validate: validateSchema
 })(FormikContainerComponent)
