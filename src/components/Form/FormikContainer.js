@@ -37,6 +37,7 @@ export default withFormik({
     const { children, schema, ...rest } = values
     props.onSubmit(rest)
   },
+  enableReinitialize: true,
   mapPropsToValues: props => {
     return {
       ...props.defaultValues
