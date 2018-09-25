@@ -19,7 +19,7 @@ import { TypeField } from "../index"
 import * as Yup from "yup"
 import i18n from "./i18n"
 import { withInfo } from "@storybook/addon-info"
-
+import FormEditor from "../components/FormEditor"
 const stories = storiesOf("Menu and topbar", module)
 stories.addDecorator(withKnobs).addDecorator(muiTheme())
 
@@ -115,6 +115,36 @@ storiesFormik.add(
             }}
           >
             <TypeField name={"textfield"} label={label} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    )
+  })
+)
+storiesFormik.add(
+  "TextField (default, read only)",
+  withInfo({
+    source: false,
+    propTables: [TypeField, FormikContainerComponent]
+  })(() => {
+    const label = text("Label", "Test")
+    return (
+      <FormikContainer
+        i18n={i18n}
+        defaultValues={{
+          textfield: "default value read only"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField readOnly={true} name={"textfield"} label={label} />
             <Button type="submit">Submit</Button>
           </Paper>
         )}
@@ -237,6 +267,17 @@ storiesFormik.add("Validation", () => {
           <Button type={"submit"}>Submit</Button>
         </Paper>
       )}
+    />
+  )
+})
+
+storiesFormik.add("Form editor", () => {
+  return (
+    <FormikContainer
+      onError={action("Error: ")}
+      onSubmit={action("Submitted: ")}
+      i18n={i18n}
+      render={() => <FormEditor />}
     />
   )
 })

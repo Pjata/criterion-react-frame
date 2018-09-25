@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react"
-import PropTypes from "prop-types"
 import { TypeField } from "../../common/Form/FormikBuilder"
 
 class AdoszamField extends PureComponent {

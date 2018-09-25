@@ -110,7 +110,6 @@ class MenuDrawer extends PureComponent {
       rootStyle
     } = this.props
     const contentStyle = {
-      backgroundColor: theme.palette.background.default,
       padding: theme.spacing.unit * 3,
       marginTop: topBarHeight,
       flexGrow: 1,

@@ -1,6 +1,6 @@
 {
   "name": "criterion-frame",
-  "version": "1.0.17",
+  "version": "1.0.21",
   "description": "Internal React frame for projects",
   "author": "Pjata",
   "license": "GPL-3.0",
@@ -25,11 +25,11 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "peerDependencies": {
+
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0",
     "@material-ui/core": "^3.0.2",
-    "@material-ui/icons": "^3.0.1",
     "redux": "^4.0.0",
     "lodash": "^4.17.10",
     "formik": "^1.2.0",
@@ -47,6 +47,7 @@
     "@storybook/addons": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "@storybook/storybook-deployer": "^2.3.0",
+    "@material-ui/icons": "^3.0.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -76,27 +77,34 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-url": "^1.4.0",
     "storybook-addon-material-ui": "^0.9.0-alpha.8",
-    "storybook-readme": "^4.0.0-beta1"
+    "storybook-readme": "^4.0.0-beta1",
+    "storybook-addon-docgen": "^4.0.0",
+    "styled": "^1.0.0",
+    "styled-components": "^3.4.9",
+    "react-ace": "^6.1.4",
+    "react-css-editor": "^1.0.1",
+    "react-inline-css": "^2.3.1"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@material-ui/core": "^3.0.2",
-    "@material-ui/icons": "^3.0.1",
+    "brace": "^0.11.1",
     "classnames": "^2.2.6",
     "formik": "^1.2.0",
     "i18next": "^11.7.0",
     "i18next-browser-languagedetector": "^2.2.3",
+    "js-yaml": "^3.12.0",
     "material-ui-pickers": "^1.0.0-rc.14",
     "moment": "^2.22.2",
     "react-datepicker": "^1.6.0",
     "react-i18next": "^7.11.1",
+    "react-notification-system-redux": "^1.2.0",
     "react-text-mask": "^5.4.3",
     "recompose": "^0.30.0",
     "redux": "^4.0.0",
     "redux-observable": "^1.0.0",
-    "storybook-addon-docgen": "^4.0.0",
+    "rxjs-compat": "^6.3.2",
     "yup": "^0.26.3"
   }
 }

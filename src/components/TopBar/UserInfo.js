@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react"
 import IconButton from "@material-ui/core/IconButton"
-import { PowerSettingsNew } from "@material-ui/icons"
+import PowerSettingsNew from "@material-ui/icons/PowerSettingsNew"
 import PropTypes from "prop-types"
 import { withStyles } from "@material-ui/core/styles"
 import { compose } from "redux"
