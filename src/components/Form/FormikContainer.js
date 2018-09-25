@@ -19,13 +19,14 @@ export class FormikContainerComponent extends Component {
       i18n,
       validateForm,
       values,
+      style,
       ...rest
     } = this.props
     return (
       <I18nextProvider i18n={i18n} initialLanguage={"kplogKPLOG"}>
         <MuiPickersUtilsProvider utils={MomentUtils}>
           <SetFieldValueContext.Provider value={{ setFieldValue }}>
-            <form onSubmit={handleSubmit} {...rest}>
+            <form onSubmit={handleSubmit} style={style}>
               {render(values, validateForm)}
             </form>
           </SetFieldValueContext.Provider>
