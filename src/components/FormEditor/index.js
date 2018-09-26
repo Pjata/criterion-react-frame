@@ -21,6 +21,81 @@ import SortableTree, {
 } from "react-sortable-tree"
 import "react-sortable-tree/style.css" // This only needs to be imported once in your app
 import produce from "immer"
+import Download from "@axetroy/react-download"
+import Menu from "@material-ui/core/Menu"
+import CheckCircleIcon from "@material-ui/icons/CheckCircle"
+import ErrorIcon from "@material-ui/icons/Error"
+import InfoIcon from "@material-ui/icons/Info"
+import CloseIcon from "@material-ui/icons/Close"
+import green from "@material-ui/core/colors/green"
+import amber from "@material-ui/core/colors/amber"
+import IconButton from "@material-ui/core/IconButton"
+import Snackbar from "@material-ui/core/Snackbar"
+import SnackbarContent from "@material-ui/core/SnackbarContent"
+import WarningIcon from "@material-ui/icons/Warning"
+import classNames from "classnames"
+const variantIcon = {
+  success: CheckCircleIcon,
+  warning: WarningIcon,
+  error: ErrorIcon,
+  info: InfoIcon
+}
+const styles1 = theme => ({
+  success: {
+    backgroundColor: green[600]
+  },
+  error: {
+    backgroundColor: theme.palette.error.dark
+  },
+  info: {
+    backgroundColor: theme.palette.primary.dark
+  },
+  warning: {
+    backgroundColor: amber[700]
+  },
+  icon: {
+    fontSize: 20
+  },
+  iconVariant: {
+    opacity: 0.9,
+    marginRight: theme.spacing.unit
+  },
+  message: {
+    display: "flex",
+    alignItems: "center"
+  }
+})
+
+function MySnackbarContent(props) {
+  const { classes, className, message, onClose, variant, ...other } = props
+  const Icon = variantIcon[variant]
+
+  return (
+    <SnackbarContent
+      className={classNames(classes[variant], className)}
+      aria-describedby="client-snackbar"
+      message={
+        <span id="client-snackbar" className={classes.message}>
+          <Icon className={classNames(classes.icon, classes.iconVariant)} />
+          {message}
+        </span>
+      }
+      action={[
+        <IconButton
+          key="close"
+          aria-label="Close"
+          color="inherit"
+          className={classes.close}
+          onClick={onClose}
+        >
+          <CloseIcon className={classes.icon} />
+        </IconButton>
+      ]}
+      {...other}
+    />
+  )
+}
+const MySnackbarContentWrapper = withStyles(styles1)(MySnackbarContent)
 
 const styles = {
   container: {
@@ -163,16 +238,18 @@ const getTreeFromLS = () => {
   ]
 }
 const onEditorChange = new Subject()
+const onEditorTempChange = new Subject()
 const onEditorFieldChange = new Subject()
 class FormEditor extends PureComponent {
   constructor(props) {
     super(props)
     onEditorChange
-      .pipe(debounceTime(3000))
+      .pipe(debounceTime(2000))
       .subscribe(this.setNode(this.setStyle))
     onEditorFieldChange
-      .pipe(debounceTime(1500))
+      .pipe(debounceTime(500))
       .subscribe(this.setNode(this.setFieldData))
+    onEditorTempChange.pipe(debounceTime(300)).subscribe(this.setAceTemp)
     this.state = {
       selected: null,
       editor: {
@@ -180,6 +257,8 @@ class FormEditor extends PureComponent {
         node: null,
         path: null
       },
+      aceTemp: null,
+      addMenuAnchor: null,
       tree: getTreeFromLS()
     }
   }
@@ -280,10 +359,23 @@ class FormEditor extends PureComponent {
     }`
   }
   setStyle = (node, value) => {
-    node.style = yaml.safeLoad(value)
+    let y = null
+    try {
+      y = yaml.safeLoad(value)
+    } catch (exception) {
+      console.log(exception)
+      this.handleSnackbarOpen("error", exception.reason)
+      return false
+    }
+    if (y) {
+      node.style = y
+      this.handleSnackbarOpen("success", "Sikeres fordítás!")
+      return true
+    }
   }
   setFieldData = (node, value) => {
     node.data[value.name] = value.value
+    return true
   }
   setNode = setter => val => {
     console.log(val)
@@ -299,13 +391,17 @@ class FormEditor extends PureComponent {
       //subItem.style = yaml.safeLoad(val)
       setter(subItem, val)
     })
+    let success = false
     const newEditor = produce(this.state.editor, draft => {
-      setter(draft.node, val)
+      success = setter(draft.node, val)
     })
-    this.setState({
-      tree: result,
-      editor: newEditor
-    })
+    if (success) {
+      this.setState({
+        tree: result,
+        editor: newEditor,
+        aceTemp: null
+      })
+    }
   }
 
   findNodeById = (tree, id, pidx = []) => {
@@ -331,7 +427,14 @@ class FormEditor extends PureComponent {
     return found
   }
 
+  setAceTemp = value => {
+    console.log(value)
+    this.setState({
+      aceTemp: value
+    })
+  }
   onChange = val => {
+    onEditorTempChange.next(val)
     onEditorChange.next(val)
   }
   renderTreeInfo = tree => {
@@ -398,26 +501,118 @@ class FormEditor extends PureComponent {
     })
   }
   getNodeKey = ({ node }) => node.id
-  addNode = (treeData, path) => ev => {
+  addNode = (treeData, path, newNode) => {
     const newTree = addNodeUnderParent({
       treeData,
       parentKey: path[path.length - 1],
       expandParent: true,
       getNodeKey: this.getNodeKey,
-      newNode: {
-        type: "text",
-        id: uniqid(),
-        title: `text`,
-        data: {
-          type: "text",
-          label: "none",
-          name: "none"
-        }
-      },
+      newNode,
       addAsFirstChild: true
     }).treeData
     console.log(newTree)
     this.convertToFieldTree(newTree)
+  }
+  openAddMenu = node => ev => {
+    this.setState({
+      addMenuAnchor: { node, target: ev.currentTarget }
+    })
+  }
+
+  getNewField = type => {
+    switch (type) {
+      case "text":
+        return {
+          type: "text",
+          id: uniqid(),
+          title: `text`,
+          data: {
+            type: "text",
+            label: "none",
+            name: "none"
+          }
+        }
+      case "div":
+        return {
+          type: "div",
+          id: uniqid(),
+          title: "div",
+          style: {
+            width: "100%"
+          },
+          children: []
+        }
+      case "select":
+        return {
+          type: "select",
+          id: uniqid(),
+          title: `select`,
+          data: {
+            type: "select",
+            label: "none",
+            name: "none",
+            children: [
+              {
+                name: "1",
+                value: "1"
+              },
+              {
+                name: "2",
+                value: "2"
+              },
+              {
+                name: "3",
+                value: "3"
+              }
+            ]
+          }
+        }
+      case "switch":
+        return {
+          type: "switch",
+          id: uniqid(),
+          title: `switch`,
+          data: {
+            type: "switch",
+            label: "none",
+            name: "none"
+          }
+        }
+      case "date":
+        return {
+          type: "date",
+          id: uniqid(),
+          title: `date`,
+          data: {
+            type: "date",
+            label: "none",
+            name: "none"
+          }
+        }
+      case "time":
+        return {
+          type: "time",
+          id: uniqid(),
+          title: `time`,
+          data: {
+            type: "time",
+            label: "none",
+            name: "none"
+          }
+        }
+    }
+  }
+
+  addNodeType = (type, treeData, path) => ev => {
+    this.addNode(treeData, path, this.getNewField(type))
+    console.log(type)
+    this.setState({
+      addMenuAnchor: {}
+    })
+  }
+
+  canDrop = ({ nextParent }) => {
+    return nextParent.type === "div"
   }
   renderInfo = () => {
     const treeData = this.getTreeData()
@@ -431,13 +626,57 @@ class FormEditor extends PureComponent {
           treeData={treeData}
           onChange={this.convertToFieldTree}
           getNodeKey={this.getNodeKey}
+          canDrop={this.canDrop}
           generateNodeProps={({ node, path }) => {
             if (node.type === "div") {
               return {
                 buttons: [
-                  <Button onClick={this.addNode(treeData, path)}>
-                    Add Child
-                  </Button>,
+                  <div>
+                    <Button onClick={this.openAddMenu(node)}>Add Child</Button>
+                    <Menu
+                      key={node.id}
+                      anchorEl={
+                        this.state.addMenuAnchor &&
+                        this.state.addMenuAnchor.target
+                      }
+                      open={Boolean(
+                        this.state.addMenuAnchor &&
+                          this.state.addMenuAnchor.node &&
+                          this.state.addMenuAnchor.node.id === node.id
+                      )}
+                    >
+                      <MenuItem
+                        onClick={this.addNodeType("div", treeData, path)}
+                      >
+                        div
+                      </MenuItem>
+                      <MenuItem
+                        onClick={this.addNodeType("text", treeData, path)}
+                      >
+                        text
+                      </MenuItem>
+                      <MenuItem
+                        onClick={this.addNodeType("select", treeData, path)}
+                      >
+                        select
+                      </MenuItem>
+                      <MenuItem
+                        onClick={this.addNodeType("date", treeData, path)}
+                      >
+                        date
+                      </MenuItem>
+                      <MenuItem
+                        onClick={this.addNodeType("time", treeData, path)}
+                      >
+                        time
+                      </MenuItem>
+                      <MenuItem
+                        onClick={this.addNodeType("switch", treeData, path)}
+                      >
+                        switch
+                      </MenuItem>
+                    </Menu>
+                  </div>,
                   <Button onClick={this.openEditor(node, path)}>Style</Button>
                 ]
               }
@@ -495,6 +734,22 @@ class FormEditor extends PureComponent {
       </div>
     )
   }
+  generateFile = () => {
+    return yaml.safeDump(this.state.tree)
+  }
+  handleSnackbarOpen = (type, message) => {
+    this.setState({
+      snackBarOpen: true,
+      snackBarType: type,
+      snackBarMessage: message
+    })
+  }
+  handleSnackbarClose = () => {
+    this.setState({
+      snackBarOpen: false
+    })
+  }
+
   render() {
     const { classes } = this.props
     const { editor } = this.state
@@ -502,6 +757,21 @@ class FormEditor extends PureComponent {
     console.log(this.state.tree)
     return (
       <div>
+        <Snackbar
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "left"
+          }}
+          open={this.state.snackBarOpen}
+          autoHideDuration={6000}
+          onClose={this.handleSnackbarClose}
+        >
+          <MySnackbarContentWrapper
+            onClose={this.handleSnackbarClose}
+            variant={this.state.snackBarType}
+            message={this.state.snackBarMessage}
+          />
+        </Snackbar>
         <Drawer
           open={editor.open}
           anchor={"right"}
@@ -522,7 +792,7 @@ class FormEditor extends PureComponent {
                 showPrintMargin={true}
                 showGutter={true}
                 highlightActiveLine={true}
-                value={this.getStyleValue()}
+                value={this.state.aceTemp || this.getStyleValue()}
                 setOptions={{
                   enableBasicAutocompletion: true,
                   enableLiveAutocompletion: true,
@@ -538,6 +808,9 @@ class FormEditor extends PureComponent {
           <div className={classes.content}>{elements}</div>
           <div className={classes.sideBar}>{this.renderInfo()}</div>
         </div>
+        <Download file={"test.yaml"} content={this.generateFile()}>
+          <Button>Download</Button>
+        </Download>
       </div>
     )
   }
