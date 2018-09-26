@@ -176,8 +176,7 @@ const getTreeFromLS = () => {
           type: "div",
           id: uniqid(),
           style: {
-            width: "100%",
-            height: "100%"
+            width: "100%"
           },
           children: [
             {
@@ -194,8 +193,7 @@ const getTreeFromLS = () => {
           type: "div",
           id: uniqid(),
           style: {
-            width: "100%",
-            height: "100%"
+            width: "100%"
           },
           children: [
             {
@@ -212,8 +210,7 @@ const getTreeFromLS = () => {
           type: "div",
           id: uniqid(),
           style: {
-            width: "100%",
-            height: "100%"
+            width: "100%"
           },
           children: [
             {
@@ -230,8 +227,7 @@ const getTreeFromLS = () => {
           type: "div",
           id: uniqid(),
           style: {
-            width: "100%",
-            height: "100%"
+            width: "100%"
           },
           children: [
             {
@@ -248,8 +244,7 @@ const getTreeFromLS = () => {
           type: "div",
           id: uniqid(),
           style: {
-            width: "100%",
-            height: "100%"
+            width: "100%"
           },
           children: [
             {
