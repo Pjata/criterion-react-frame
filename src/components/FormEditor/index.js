@@ -26,6 +26,7 @@ import Menu from "@material-ui/core/Menu"
 import CheckCircleIcon from "@material-ui/icons/CheckCircle"
 import ErrorIcon from "@material-ui/icons/Error"
 import InfoIcon from "@material-ui/icons/Info"
+import DeleteIcon from "@material-ui/icons/Delete"
 import CloseIcon from "@material-ui/icons/Close"
 import green from "@material-ui/core/colors/green"
 import amber from "@material-ui/core/colors/amber"
@@ -34,6 +35,48 @@ import Snackbar from "@material-ui/core/Snackbar"
 import SnackbarContent from "@material-ui/core/SnackbarContent"
 import WarningIcon from "@material-ui/icons/Warning"
 import classNames from "classnames"
+import { DragDropContext, DropTarget } from "react-dnd"
+import HTML5Backend from "react-dnd-html5-backend"
+import { SortableTreeWithoutDndContext as SortableTreeDND } from "react-sortable-tree"
+const trashAreaType = "yourNodeType"
+const trashAreaSpec = {
+  // The endDrag handler on the tree source will use some of the properties of
+  // the source, like node, treeIndex, and path to determine where it was before.
+  // The treeId must be changed, or it interprets it as dropping within itself.
+  drop: (props, monitor) => ({ ...monitor.getItem(), treeId: "trash" })
+}
+const trashAreaCollect = (connect, monitor) => ({
+  connectDropTarget: connect.dropTarget(),
+  isOver: monitor.isOver({ shallow: true })
+})
+
+// The component will sit around the tree component and catch
+// nodes dragged out
+class trashAreaBaseComponent extends PureComponent {
+  render() {
+    const { connectDropTarget, children, isOver } = this.props
+
+    return connectDropTarget(
+      <div
+        style={{
+          background: isOver ? "pink" : "transparent"
+        }}
+      >
+        {children}
+      </div>
+    )
+  }
+}
+trashAreaBaseComponent.propTypes = {
+  connectDropTarget: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+  isOver: PropTypes.bool.isRequired
+}
+const TrashAreaComponent = DropTarget(
+  trashAreaType,
+  trashAreaSpec,
+  trashAreaCollect
+)(trashAreaBaseComponent)
 const variantIcon = {
   success: CheckCircleIcon,
   warning: WarningIcon,
@@ -610,9 +653,24 @@ class FormEditor extends PureComponent {
       addMenuAnchor: {}
     })
   }
+  closeAddMenu = () => {
+    this.setState({
+      addMenuAnchor: {}
+    })
+  }
 
+  deleteNode = (node, path) => ev => {
+    const tree = removeNodeAtPath({
+      treeData: this.state.tree,
+      path,
+      getNodeKey: this.getNodeKey
+    })
+    this.setState({
+      tree
+    })
+  }
   canDrop = ({ nextParent }) => {
-    return nextParent.type === "div"
+    return !nextParent || nextParent.type === "div"
   }
   renderInfo = () => {
     const treeData = this.getTreeData()
@@ -622,7 +680,7 @@ class FormEditor extends PureComponent {
           height: "900px"
         }}
       >
-        <SortableTree
+        <SortableTreeDND
           treeData={treeData}
           onChange={this.convertToFieldTree}
           getNodeKey={this.getNodeKey}
@@ -632,7 +690,7 @@ class FormEditor extends PureComponent {
               return {
                 buttons: [
                   <div>
-                    <Button onClick={this.openAddMenu(node)}>Add Child</Button>
+                    <Button onClick={this.openAddMenu(node)}>Add</Button>
                     <Menu
                       key={node.id}
                       anchorEl={
@@ -644,6 +702,7 @@ class FormEditor extends PureComponent {
                           this.state.addMenuAnchor.node &&
                           this.state.addMenuAnchor.node.id === node.id
                       )}
+                      onClose={this.closeAddMenu}
                     >
                       <MenuItem
                         onClick={this.addNodeType("div", treeData, path)}
@@ -677,13 +736,19 @@ class FormEditor extends PureComponent {
                       </MenuItem>
                     </Menu>
                   </div>,
-                  <Button onClick={this.openEditor(node, path)}>Style</Button>
+                  <Button onClick={this.openEditor(node, path)}>Style</Button>,
+                  <IconButton onClick={this.deleteNode(node, path)}>
+                    <DeleteIcon />
+                  </IconButton>
                 ]
               }
             } else {
               return {
                 buttons: [
-                  <Button onClick={this.openEditor(node, path)}>Edit</Button>
+                  <Button onClick={this.openEditor(node, path)}>Edit</Button>,
+                  <IconButton onClick={this.deleteNode(node, path)}>
+                    <DeleteIcon />
+                  </IconButton>
                 ]
               }
             }
@@ -750,6 +815,23 @@ class FormEditor extends PureComponent {
     })
   }
 
+  onFileUpload = ev => {
+    const file = ev.target.files[0]
+    const fileReader = new FileReader()
+    fileReader.onloadend = () => {
+      const content = fileReader.result
+      try {
+        const tree = yaml.safeLoad(content)
+        this.setState({
+          tree
+        })
+        this.handleSnackbarOpen("success", "Sikeres beolvasás!")
+      } catch (exception) {
+        this.handleSnackbarOpen("error", exception.reason)
+      }
+    }
+    fileReader.readAsText(file)
+  }
   render() {
     const { classes } = this.props
     const { editor } = this.state
@@ -784,6 +866,7 @@ class FormEditor extends PureComponent {
             editor.node.type === "div" && (
               <AceEditor
                 mode="yaml"
+                focus={true}
                 theme="monokai"
                 name="blah2"
                 onLoad={this.onLoad}
@@ -793,6 +876,10 @@ class FormEditor extends PureComponent {
                 showGutter={true}
                 highlightActiveLine={true}
                 value={this.state.aceTemp || this.getStyleValue()}
+                style={{
+                  width: "300px",
+                  height: "100%"
+                }}
                 setOptions={{
                   enableBasicAutocompletion: true,
                   enableLiveAutocompletion: true,
@@ -805,20 +892,27 @@ class FormEditor extends PureComponent {
           {editor.node && editor.node.type !== "div" && this.getFieldEditor()}
         </Drawer>
         <div className={classes.container}>
-          <div className={classes.content}>{elements}</div>
+          <div className={classes.content}>
+            <TrashAreaComponent>{elements}</TrashAreaComponent>
+          </div>
           <div className={classes.sideBar}>{this.renderInfo()}</div>
         </div>
         <Download file={"test.yaml"} content={this.generateFile()}>
           <Button>Download</Button>
         </Download>
+        <input
+          type={"file"}
+          id={"raised-button-file"}
+          onChange={this.onFileUpload}
+        />
       </div>
     )
   }
 }
 
 FormEditor.propTypes = {}
-
-export default withStyles(styles)(FormEditor)
+const styledFormEditor = withStyles(styles)(FormEditor)
+export default DragDropContext(HTML5Backend)(styledFormEditor)
 
 /*
 
