@@ -91,9 +91,13 @@ export const RenderTextField = compose(
     return false
   })
 )(renderTextFieldWithoutStyle)
-const onSwitchChangeSFV = (input, sfv) => event => {
+const onSwitchChangeSFV = (input, deconverter, sfv) => event => {
   const value = Boolean(event.target.checked)
-  sfv(input.name, value)
+  if (deconverter) {
+    sfv(input.name, deconverter(value))
+  } else {
+    sfv(input.name, value)
+  }
 }
 const onSelectChangeSFV = (input, sfv) => event => {
   console.log(sfv)
@@ -114,14 +118,14 @@ const switchStyles = {
     margin: "0px 0px 0px 10px"
   }
 }
-const renderSwitchComponent = ({ classes, input, label }) => (
+const renderSwitchComponent = ({ classes, input, deconverter, label }) => (
   <SetFieldValueContext.Consumer>
     {({ setFieldValue }) => (
       <FormControlLabel
         control={
           <Switch
             checked={input.value}
-            onChange={onSwitchChangeSFV(input, setFieldValue)}
+            onChange={onSwitchChangeSFV(input, deconverter, setFieldValue)}
             color={"primary"}
             value={label}
           />

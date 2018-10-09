@@ -62,7 +62,7 @@ class TopBarContainer extends PureComponent {
           margin: "0px"
         }}
       >
-        <Grid className={this.props.classes.header} item xs={10}>
+        <Grid className={this.props.classes.header} item xs={9}>
           <div
             style={{
               display: "flex",
@@ -89,9 +89,10 @@ class TopBarContainer extends PureComponent {
             </div>
           </div>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={3}>
           <div className={classes.center}>
             <UserInfo
+              userInfoRender={this.props.userInfoRender}
               userInfo={this.props.userInfo}
               onLogout={this.props.onLogout}
             />
@@ -105,6 +106,7 @@ class TopBarContainer extends PureComponent {
 TopBarContainer.propTypes = {
   handleMenuOpen: PropTypes.func,
   userInfo: PropTypes.object,
+  userInfoRender: PropTypes.func,
   onLogout: PropTypes.func,
   menuOpen: PropTypes.bool,
   classes: PropTypes.object,

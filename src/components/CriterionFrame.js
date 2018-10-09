@@ -46,6 +46,7 @@ export default class CriterionFrame extends Component {
       handleMenuOpen={this.handleDrawerOpen}
       title={this.props.title}
       onLogout={this.onLogout}
+      userInfoRender={this.props.userInfoRender}
       userInfo={this.props.userInfo}
     />
   )
@@ -87,6 +88,10 @@ CriterionFrame.propTypes = {
    * UserInfo object. It must contain a userName field
    */
   userInfo: PropTypes.object.isRequired,
+  /**
+   * userInfoRender func. Optional to render userInfo
+   */
+  userInfoRender: PropTypes.func,
   /**
    * Array of menu config items. It must contain fieldsÉlabel, icon, path
    */

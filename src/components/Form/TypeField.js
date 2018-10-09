@@ -35,14 +35,30 @@ const enhance = compose(
   omitProps(["setFieldValue"])
 )
 
+const Converter = (converter, setFieldValue) => (name, value) => {
+  console.log(value)
+  return setFieldValue(name, converter(value))
+}
+const withConverter = (deconverter, setFieldValue) => {
+  if (deconverter) {
+    return Converter(deconverter, setFieldValue)
+  } else {
+    return setFieldValue
+  }
+}
 const enhanceSetFieldValue = compose(
   withProps(props => {
     return {
       input: {
-        value: props.field.value,
-        onChange: props.readOnly ? nothing : props.setFieldValue,
+        value: props.converter
+          ? props.converter(props.field.value)
+          : props.field.value,
+        onChange: props.readOnly
+          ? nothing
+          : withConverter(props.deconverter, props.form.setFieldValue),
         name: props.field.name
       },
+      deconverter: props.deconverter,
       name: props.field.name
     }
   }),

@@ -9,17 +9,33 @@ const style = theme => ({
     width: "100%",
     textAlign: "right"
   },
-  item: {}
+  item: {
+    display: "flex"
+  },
+  logout: {
+    width: "50px"
+  },
+  userInfo: {
+    flexGrow: 1
+  }
 })
 class UserInfo extends PureComponent {
   render() {
+    const { classes, onLogout, userInfo, userInfoRender } = this.props
+    const render = userInfoRender ? (
+      userInfoRender(userInfo)
+    ) : (
+      <React.Fragment>{userInfo.userName}</React.Fragment>
+    )
     return (
-      <div className={this.props.classes.root}>
-        <div className={this.props.classes.item}>
-          {this.props.userInfo.userName}
-          <IconButton onClick={this.props.onLogout}>
-            <PowerSettingsNew />
-          </IconButton>
+      <div className={classes.root}>
+        <div className={classes.item}>
+          <div className={classes.userInfo}>{render}</div>
+          <div className={classes.logout}>
+            <IconButton onClick={onLogout}>
+              <PowerSettingsNew />
+            </IconButton>
+          </div>
         </div>
       </div>
     )
@@ -29,7 +45,8 @@ class UserInfo extends PureComponent {
 UserInfo.propTypes = {
   classes: PropTypes.any,
   userInfo: PropTypes.any,
-  onLogout: PropTypes.func
+  onLogout: PropTypes.func,
+  userInfoRender: PropTypes.func
 }
 
 const enhance = compose(withStyles(style))

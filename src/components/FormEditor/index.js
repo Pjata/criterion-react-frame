@@ -872,7 +872,7 @@ class FormEditor extends PureComponent {
                 highlightActiveLine={true}
                 value={this.state.aceTemp || this.getStyleValue()}
                 style={{
-                  width: "300px",
+                  width: "400px",
                   height: "100%"
                 }}
                 setOptions={{

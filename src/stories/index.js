@@ -29,7 +29,8 @@ stories.add(
     const title = text("title", "Example app")
     const content = text("content", "Hello world!")
     const userInfo = object("userInfo", {
-      userName: "Gipsz Jakab"
+      userName: "Gipsz Jakab",
+      phoneNumber: 1081
     })
 
     return (
@@ -54,6 +55,12 @@ stories.add(
         title={title}
         onLogout={action("Logout clicked!")}
         userInfo={userInfo}
+        userInfoRender={userInfo => (
+          <div>
+            <div>{userInfo.userName}</div>
+            <div>{userInfo.phoneNumber}</div>
+          </div>
+        )}
         onItemSelected={action("item selected")}
       >
         {content}
@@ -145,6 +152,42 @@ storiesFormik.add(
             }}
           >
             <TypeField readOnly={true} name={"textfield"} label={label} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    )
+  })
+)
+storiesFormik.add(
+  "TextField (default, converter)",
+  withInfo({
+    source: false,
+    propTables: [TypeField, FormikContainerComponent]
+  })(() => {
+    const label = text("Label", "Test")
+    return (
+      <FormikContainer
+        i18n={i18n}
+        defaultValues={{
+          switch: "0"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField
+              converter={value => value === "1"}
+              deconverter={value => (value ? "1" : "0")}
+              name={"switch"}
+              label={label}
+              type={"switch"}
+            />
             <Button type="submit">Submit</Button>
           </Paper>
         )}
