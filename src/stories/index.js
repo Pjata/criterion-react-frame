@@ -13,6 +13,7 @@ import { muiTheme } from "storybook-addon-material-ui"
 import FormikContainer, {
   FormikContainerComponent
 } from "../components/Form/FormikContainer"
+import InputAdornment from "@material-ui/core/InputAdornment"
 
 import CriterionFrame from "../components/CriterionFrame"
 import { TypeField } from "../index"
@@ -113,7 +114,7 @@ storiesFormik.add(
           textfield: "default value"
         }}
         onSubmit={action("Submitted: ")}
-        render={() => (
+        render={(values, validateForm, submitForm) => (
           <Paper
             style={{
               margin: "15px",
@@ -121,8 +122,16 @@ storiesFormik.add(
               width: "400px"
             }}
           >
-            <TypeField name={"textfield"} label={label} />
-            <Button type="submit">Submit</Button>
+            <TypeField
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position={"end"}>nap</InputAdornment>
+                )
+              }}
+              name={"textfield"}
+              label={label}
+            />
+            <Button onClick={() => submitForm()}>Submit</Button>
           </Paper>
         )}
       />
@@ -160,7 +169,7 @@ storiesFormik.add(
   })
 )
 storiesFormik.add(
-  "TextField (default, converter)",
+  "Switch (default, converter)",
   withInfo({
     source: false,
     propTables: [TypeField, FormikContainerComponent]
@@ -184,6 +193,43 @@ storiesFormik.add(
             <TypeField
               converter={value => value === "1"}
               deconverter={value => (value ? "1" : "0")}
+              name={"switch"}
+              label={label}
+              type={"switch"}
+            />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    )
+  })
+)
+storiesFormik.add(
+  "Switch (default, converter, readOnly)",
+  withInfo({
+    source: false,
+    propTables: [TypeField, FormikContainerComponent]
+  })(() => {
+    const label = text("Label", "Test")
+    return (
+      <FormikContainer
+        i18n={i18n}
+        defaultValues={{
+          switch: "0"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField
+              converter={value => value === "1"}
+              deconverter={value => (value ? "1" : "0")}
+              readOnly={true}
               name={"switch"}
               label={label}
               type={"switch"}

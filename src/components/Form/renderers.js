@@ -47,7 +47,8 @@ const renderTextFieldWithoutStyle = ({
         helperText={input.touched || submitCount > 0 ? input.error : null}
         InputProps={{
           name: input.name,
-          inputComponent: mask ? TextMaskCustom : undefined
+          inputComponent: mask ? TextMaskCustom : undefined,
+          ...InputProps
         }}
         onBlur={input.onBlur}
         classes={{
@@ -91,7 +92,10 @@ export const RenderTextField = compose(
     return false
   })
 )(renderTextFieldWithoutStyle)
-const onSwitchChangeSFV = (input, deconverter, sfv) => event => {
+const onSwitchChangeSFV = (input, deconverter, sfv, readOnly) => event => {
+  if (readOnly) {
+    return
+  }
   const value = Boolean(event.target.checked)
   if (deconverter) {
     sfv(input.name, deconverter(value))
@@ -118,14 +122,25 @@ const switchStyles = {
     margin: "0px 0px 0px 10px"
   }
 }
-const renderSwitchComponent = ({ classes, input, deconverter, label }) => (
+const renderSwitchComponent = ({
+  classes,
+  input,
+  deconverter,
+  label,
+  readOnly
+}) => (
   <SetFieldValueContext.Consumer>
     {({ setFieldValue }) => (
       <FormControlLabel
         control={
           <Switch
             checked={input.value}
-            onChange={onSwitchChangeSFV(input, deconverter, setFieldValue)}
+            onChange={onSwitchChangeSFV(
+              input,
+              deconverter,
+              setFieldValue,
+              readOnly
+            )}
             color={"primary"}
             value={label}
           />
