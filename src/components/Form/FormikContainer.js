@@ -1,37 +1,18 @@
 import React, { Component } from "react"
 import { withFormik } from "formik"
-import { I18nextProvider } from "react-i18next"
 import SetFieldValueContext from "./SetFieldValueContext"
 import PropTypes from "prop-types"
-import MomentUtils from "material-ui-pickers/utils/moment-utils"
-import MuiPickersUtilsProvider from "material-ui-pickers/utils/MuiPickersUtilsProvider"
 import validateSchema from "./validateSchema"
 
 /**
  * A container for simpler formik usage. It users render prop.
  */
-class Providers extends Component {
-  shouldComponentUpdate(props) {
-    return false
-  }
-  render() {
-    const { i18n, children } = this.props
-    return (
-      <I18nextProvider i18n={i18n} initialLanguage={"kplogKPLOG"}>
-        <MuiPickersUtilsProvider utils={MomentUtils}>
-          {children}
-        </MuiPickersUtilsProvider>
-      </I18nextProvider>
-    )
-  }
-}
 export class FormikContainerComponent extends Component {
   render() {
     const {
       handleSubmit,
       render,
       setFieldValue,
-      i18n,
       validateForm,
       values,
       style,
@@ -39,13 +20,11 @@ export class FormikContainerComponent extends Component {
       ...rest
     } = this.props
     return (
-      <Providers i18n={i18n}>
-        <SetFieldValueContext.Provider value={{ setFieldValue }}>
-          <form onSubmit={handleSubmit} style={style}>
-            {render(values, validateForm, submitForm)}
-          </form>
-        </SetFieldValueContext.Provider>
-      </Providers>
+      <SetFieldValueContext.Provider value={{ setFieldValue }}>
+        <form onSubmit={handleSubmit} style={style}>
+          {render(values, validateForm, submitForm)}
+        </form>
+      </SetFieldValueContext.Provider>
     )
   }
 }
@@ -68,10 +47,6 @@ FormikContainerComponent.propTypes = {
    * Render prop for your fields
    */
   render: PropTypes.func.isRequired,
-  /**
-   * i18n configuration for localization
-   */
-  i18n: PropTypes.object.isRequired,
   /**
    * Yup schema for validation
    */

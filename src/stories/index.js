@@ -1,5 +1,6 @@
 import React from "react"
 
+import CriterionProviders from "../components/Form/CriterionProviders"
 import { storiesOf } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 import HomeIcon from "@material-ui/icons/Home"
@@ -81,22 +82,23 @@ storiesFormik.add(
   })(() => {
     const label = text("Label", "Test")
     return (
-      <FormikContainer
-        i18n={i18n}
-        onSubmit={action("Submitted: ")}
-        render={() => (
-          <Paper
-            style={{
-              margin: "15px",
-              padding: "5px",
-              width: "400px"
-            }}
-          >
-            <TypeField name={"textfield"} label={label} />
-            <Button type="submit">Submit</Button>
-          </Paper>
-        )}
-      />
+      <CriterionProviders i18n={i18n}>
+        <FormikContainer
+          onSubmit={action("Submitted: ")}
+          render={() => (
+            <Paper
+              style={{
+                margin: "15px",
+                padding: "5px",
+                width: "400px"
+              }}
+            >
+              <TypeField name={"textfield"} label={label} />
+              <Button type="submit">Submit</Button>
+            </Paper>
+          )}
+        />
+      </CriterionProviders>
     )
   })
 )
@@ -108,39 +110,40 @@ storiesFormik.add(
   })(() => {
     const label = text("Label", "Test")
     return (
-      <FormikContainer
-        i18n={i18n}
-        defaultValues={{
-          textfield: "default value"
-        }}
-        onSubmit={action("Submitted: ")}
-        render={(values, validateForm, submitForm) => (
-          <Paper
-            style={{
-              margin: "15px",
-              padding: "5px",
-              width: "400px"
-            }}
-          >
-            <TypeField name={"textfield0"} label={label} />
-            <TypeField name={"textfield1"} label={label} />
-            <TypeField name={"textfield2"} label={label} />
-            <TypeField name={"textfield3"} label={label} />
-            <TypeField name={"textfield4"} label={label} />
-            <TypeField name={"textfield5"} label={label} />
-            <TypeField name={"textfield6"} label={label} />
-            <TypeField name={"textfield7"} label={label} />
-            <TypeField name={"textfield8"} label={label} />
-            <TypeField name={"textfield9"} label={label} />
-            <TypeField name={"textfield10"} label={label} />
-            <TypeField name={"textfield11"} label={label} />
-            <TypeField name={"textfield12"} label={label} />
-            <TypeField name={"textfield13"} label={label} />
-            <TypeField name={"textfield14"} label={label} />
-            <Button onClick={() => submitForm()}>Submit</Button>
-          </Paper>
-        )}
-      />
+      <CriterionProviders i18n={i18n}>
+        <FormikContainer
+          defaultValues={{
+            textfield: "default value"
+          }}
+          onSubmit={action("Submitted: ")}
+          render={(values, validateForm, submitForm) => (
+            <Paper
+              style={{
+                margin: "15px",
+                padding: "5px",
+                width: "400px"
+              }}
+            >
+              <TypeField name={"textfield0"} label={label} />
+              <TypeField name={"textfield1"} label={label} />
+              <TypeField name={"textfield2"} label={label} />
+              <TypeField name={"textfield3"} label={label} />
+              <TypeField name={"textfield4"} label={label} />
+              <TypeField name={"textfield5"} label={label} />
+              <TypeField name={"textfield6"} label={label} />
+              <TypeField name={"textfield7"} label={label} />
+              <TypeField name={"textfield8"} label={label} />
+              <TypeField name={"textfield9"} label={label} />
+              <TypeField name={"textfield10"} label={label} />
+              <TypeField name={"textfield11"} label={label} />
+              <TypeField name={"textfield12"} label={label} />
+              <TypeField name={"textfield13"} label={label} />
+              <TypeField name={"textfield14"} label={label} />
+              <Button onClick={() => submitForm()}>Submit</Button>
+            </Paper>
+          )}
+        />
+      </CriterionProviders>
     )
   })
 )
@@ -152,33 +155,34 @@ storiesFormik.add(
   })(() => {
     const label = text("Label", "Test")
     return (
-      <FormikContainer
-        i18n={i18n}
-        defaultValues={{
-          textfield: "default value"
-        }}
-        onSubmit={action("Submitted: ")}
-        render={(values, validateForm, submitForm) => (
-          <Paper
-            style={{
-              margin: "15px",
-              padding: "5px",
-              width: "400px"
-            }}
-          >
-            <TypeField
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position={"end"}>nap</InputAdornment>
-                )
+      <CriterionProviders i18n={i18n}>
+        <FormikContainer
+          defaultValues={{
+            textfield: "default value"
+          }}
+          onSubmit={action("Submitted: ")}
+          render={(values, validateForm, submitForm) => (
+            <Paper
+              style={{
+                margin: "15px",
+                padding: "5px",
+                width: "400px"
               }}
-              name={"textfield"}
-              label={label}
-            />
-            <Button onClick={() => submitForm()}>Submit</Button>
-          </Paper>
-        )}
-      />
+            >
+              <TypeField
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position={"end"}>nap</InputAdornment>
+                  )
+                }}
+                name={"textfield"}
+                label={label}
+              />
+              <Button onClick={() => submitForm()}>Submit</Button>
+            </Paper>
+          )}
+        />
+      </CriterionProviders>
     )
   })
 )
@@ -190,25 +194,26 @@ storiesFormik.add(
   })(() => {
     const label = text("Label", "Test")
     return (
-      <FormikContainer
-        i18n={i18n}
-        defaultValues={{
-          textfield: "default value read only"
-        }}
-        onSubmit={action("Submitted: ")}
-        render={() => (
-          <Paper
-            style={{
-              margin: "15px",
-              padding: "5px",
-              width: "400px"
-            }}
-          >
-            <TypeField readOnly={true} name={"textfield"} label={label} />
-            <Button type="submit">Submit</Button>
-          </Paper>
-        )}
-      />
+      <CriterionProviders i18n={i18n}>
+        <FormikContainer
+          defaultValues={{
+            textfield: "default value read only"
+          }}
+          onSubmit={action("Submitted: ")}
+          render={() => (
+            <Paper
+              style={{
+                margin: "15px",
+                padding: "5px",
+                width: "400px"
+              }}
+            >
+              <TypeField readOnly={true} name={"textfield"} label={label} />
+              <Button type="submit">Submit</Button>
+            </Paper>
+          )}
+        />
+      </CriterionProviders>
     )
   })
 )
@@ -220,31 +225,32 @@ storiesFormik.add(
   })(() => {
     const label = text("Label", "Test")
     return (
-      <FormikContainer
-        i18n={i18n}
-        defaultValues={{
-          switch: "0"
-        }}
-        onSubmit={action("Submitted: ")}
-        render={() => (
-          <Paper
-            style={{
-              margin: "15px",
-              padding: "5px",
-              width: "400px"
-            }}
-          >
-            <TypeField
-              converter={value => value === "1"}
-              deconverter={value => (value ? "1" : "0")}
-              name={"switch"}
-              label={label}
-              type={"switch"}
-            />
-            <Button type="submit">Submit</Button>
-          </Paper>
-        )}
-      />
+      <CriterionProviders i18n={i18n}>
+        <FormikContainer
+          defaultValues={{
+            switch: "0"
+          }}
+          onSubmit={action("Submitted: ")}
+          render={() => (
+            <Paper
+              style={{
+                margin: "15px",
+                padding: "5px",
+                width: "400px"
+              }}
+            >
+              <TypeField
+                converter={value => value === "1"}
+                deconverter={value => (value ? "1" : "0")}
+                name={"switch"}
+                label={label}
+                type={"switch"}
+              />
+              <Button type="submit">Submit</Button>
+            </Paper>
+          )}
+        />
+      </CriterionProviders>
     )
   })
 )
@@ -256,11 +262,41 @@ storiesFormik.add(
   })(() => {
     const label = text("Label", "Test")
     return (
+      <CriterionProviders i18n={i18n}>
+        <FormikContainer
+          defaultValues={{
+            switch: "0"
+          }}
+          onSubmit={action("Submitted: ")}
+          render={() => (
+            <Paper
+              style={{
+                margin: "15px",
+                padding: "5px",
+                width: "400px"
+              }}
+            >
+              <TypeField
+                converter={value => value === "1"}
+                deconverter={value => (value ? "1" : "0")}
+                readOnly={true}
+                name={"switch"}
+                label={label}
+                type={"switch"}
+              />
+              <Button type="submit">Submit</Button>
+            </Paper>
+          )}
+        />
+      </CriterionProviders>
+    )
+  })
+)
+storiesFormik.add("Select", () => {
+  const label = text("Label", "Select test")
+  return (
+    <CriterionProviders i18n={i18n}>
       <FormikContainer
-        i18n={i18n}
-        defaultValues={{
-          switch: "0"
-        }}
         onSubmit={action("Submitted: ")}
         render={() => (
           <Paper
@@ -270,147 +306,124 @@ storiesFormik.add(
               width: "400px"
             }}
           >
-            <TypeField
-              converter={value => value === "1"}
-              deconverter={value => (value ? "1" : "0")}
-              readOnly={true}
-              name={"switch"}
-              label={label}
-              type={"switch"}
-            />
+            <TypeField name={"select"} label={label} type={"select"}>
+              <MenuItem value={1}>1</MenuItem>
+              <MenuItem value={2}>2</MenuItem>
+              <MenuItem value={3}>3</MenuItem>
+              <MenuItem value={4}>4</MenuItem>
+            </TypeField>
             <Button type="submit">Submit</Button>
           </Paper>
         )}
       />
-    )
-  })
-)
-storiesFormik.add("Select", () => {
-  const label = text("Label", "Select test")
-  return (
-    <FormikContainer
-      i18n={i18n}
-      onSubmit={action("Submitted: ")}
-      render={() => (
-        <Paper
-          style={{
-            margin: "15px",
-            padding: "5px",
-            width: "400px"
-          }}
-        >
-          <TypeField name={"select"} label={label} type={"select"}>
-            <MenuItem value={1}>1</MenuItem>
-            <MenuItem value={2}>2</MenuItem>
-            <MenuItem value={3}>3</MenuItem>
-            <MenuItem value={4}>4</MenuItem>
-          </TypeField>
-          <Button type="submit">Submit</Button>
-        </Paper>
-      )}
-    />
+    </CriterionProviders>
   )
 })
 storiesFormik.add("Switch", () => {
   const label = text("Label", "Switch test")
   return (
-    <FormikContainer
-      i18n={i18n}
-      onSubmit={action("Submitted: ")}
-      render={() => (
-        <Paper
-          style={{
-            margin: "15px",
-            padding: "5px",
-            width: "400px"
-          }}
-        >
-          <TypeField name={"switch"} label={label} type={"switch"} />
-          <Button type="submit">Submit</Button>
-        </Paper>
-      )}
-    />
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField name={"switch"} label={label} type={"switch"} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
   )
 })
 storiesFormik.add("Time picker", () => {
   const label = text("Label", "Time test")
   return (
-    <FormikContainer
-      i18n={i18n}
-      onSubmit={action("Submitted: ")}
-      render={() => (
-        <Paper
-          style={{
-            margin: "15px",
-            padding: "5px",
-            width: "400px"
-          }}
-        >
-          <TypeField name={"time"} label={label} type={"time"} />
-          <Button type="submit">Submit</Button>
-        </Paper>
-      )}
-    />
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField name={"time"} label={label} type={"time"} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
   )
 })
 storiesFormik.add("Date picker", () => {
   const label = text("Label", "Date test")
   return (
-    <FormikContainer
-      i18n={i18n}
-      onSubmit={action("Submitted: ")}
-      render={() => (
-        <Paper
-          style={{
-            margin: "15px",
-            padding: "5px",
-            width: "400px"
-          }}
-        >
-          <TypeField name={"date"} label={label} type={"date"} />
-          <Button type="submit">Submit</Button>
-        </Paper>
-      )}
-    />
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField name={"date"} label={label} type={"date"} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
   )
 })
 storiesFormik.add("Validation", () => {
   const regex = text("Regex", "")
   return (
-    <FormikContainer
-      onError={action("Error: ")}
-      onSubmit={action("Submitted: ")}
-      i18n={i18n}
-      schema={Yup.object().shape({
-        required: Yup.string().required("Kötelező mező!"),
-        regex: Yup.string().matches(new RegExp(regex)),
-        date: Yup.string().required("Kötelező mező!")
-      })}
-      render={() => (
-        <Paper
-          style={{
-            margin: "15px",
-            padding: "5px",
-            width: "400px"
-          }}
-        >
-          <TypeField label={"Required"} name={"required"} />
-          <TypeField label={"Regex"} name={"regex"} />
-          <TypeField name={"date"} label={"date"} type={"date"} />
-          <Button type={"submit"}>Submit</Button>
-        </Paper>
-      )}
-    />
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        onError={action("Error: ")}
+        onSubmit={action("Submitted: ")}
+        schema={Yup.object().shape({
+          required: Yup.string().required("Kötelező mező!"),
+          regex: Yup.string().matches(new RegExp(regex)),
+          date: Yup.string().required("Kötelező mező!")
+        })}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField label={"Required"} name={"required"} />
+            <TypeField label={"Regex"} name={"regex"} />
+            <TypeField name={"date"} label={"date"} type={"date"} />
+            <Button type={"submit"}>Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
   )
 })
 
 storiesFormik.add("Form editor", () => {
   return (
-    <FormikContainer
-      onError={action("Error: ")}
-      onSubmit={action("Submitted: ")}
-      i18n={i18n}
-      render={() => <FormEditor />}
-    />
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        onError={action("Error: ")}
+        onSubmit={action("Submitted: ")}
+        render={() => <FormEditor />}
+      />
+    </CriterionProviders>
   )
 })
