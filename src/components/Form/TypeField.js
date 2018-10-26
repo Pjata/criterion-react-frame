@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, PureComponent } from "react"
 import PropTypes from "prop-types"
 import { FastField, Field } from "formik"
 import {
@@ -89,7 +89,6 @@ class TypeFieldInner extends Component {
       input.touched !== nextProps.input.touched ||
       input.error !== nextProps.input.error
     ) {
-      console.log(`updated: ${input.name}`)
       return true
     }
     return false
@@ -100,7 +99,7 @@ class TypeFieldInner extends Component {
   }
 }
 const enhancedTypeFieldInner = enhance(TypeFieldInner)
-class TypeField extends Component {
+class TypeField extends PureComponent {
   render() {
     const { type, ...rest } = this.props
     switch (type) {

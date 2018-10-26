@@ -101,6 +101,50 @@ storiesFormik.add(
   })
 )
 storiesFormik.add(
+  "TextField heavy (default)",
+  withInfo({
+    source: false,
+    propTables: [TypeField, FormikContainerComponent]
+  })(() => {
+    const label = text("Label", "Test")
+    return (
+      <FormikContainer
+        i18n={i18n}
+        defaultValues={{
+          textfield: "default value"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={(values, validateForm, submitForm) => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField name={"textfield0"} label={label} />
+            <TypeField name={"textfield1"} label={label} />
+            <TypeField name={"textfield2"} label={label} />
+            <TypeField name={"textfield3"} label={label} />
+            <TypeField name={"textfield4"} label={label} />
+            <TypeField name={"textfield5"} label={label} />
+            <TypeField name={"textfield6"} label={label} />
+            <TypeField name={"textfield7"} label={label} />
+            <TypeField name={"textfield8"} label={label} />
+            <TypeField name={"textfield9"} label={label} />
+            <TypeField name={"textfield10"} label={label} />
+            <TypeField name={"textfield11"} label={label} />
+            <TypeField name={"textfield12"} label={label} />
+            <TypeField name={"textfield13"} label={label} />
+            <TypeField name={"textfield14"} label={label} />
+            <Button onClick={() => submitForm()}>Submit</Button>
+          </Paper>
+        )}
+      />
+    )
+  })
+)
+storiesFormik.add(
   "TextField (default)",
   withInfo({
     source: false,
