@@ -52,14 +52,20 @@ export default class CriterionFrame extends Component {
   )
 
   render() {
-    const { menuConfig, children, style, selectedIndex } = this.props
+    const {
+      menuConfig,
+      children,
+      style,
+      selectedIndex,
+      menuWidth = drawerWidth
+    } = this.props
     return (
       <div style={{ ...style }}>
         <MenuDrawer
           items={menuConfig}
           open={this.state.drawerOpen}
           onClose={this.handleDrawerClose}
-          menuWidth={drawerWidth}
+          menuWidth={menuWidth}
           topBarHeight={topBarHeight}
           handleOpen={this.handleDrawerOpen}
           onItemSelected={this.select}
