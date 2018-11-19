@@ -25,6 +25,7 @@ const enhance = compose(
     input: {
       value: props.field.value,
       onChange: props.readOnly ? nothing : props.field.onChange,
+      readOnly: props.readOnly,
       onBlur: props.field.onBlur,
       name: props.field.name,
       touched: props.form.touched[props.field.name],
@@ -56,7 +57,8 @@ const enhanceSetFieldValue = compose(
         onChange: props.readOnly
           ? nothing
           : withConverter(props.deconverter, props.form.setFieldValue),
-        name: props.field.name
+        name: props.field.name,
+        readOnly: props.readOnly
       },
       deconverter: props.deconverter,
       name: props.field.name
@@ -69,6 +71,7 @@ const enhanceDate = compose(
   withProps(props => ({
     input: {
       ...props.input,
+      readOnly: props.readOnly,
       value: props.input.value
         ? moment(props.input.value).format("YYYY.MM.DD")
         : ""

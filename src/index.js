@@ -5,6 +5,7 @@ export TopBar from "./components/TopBar"
 export CriterionProviders from "./components/Form/CriterionProviders"
 export TypeField from "./components/Form/TypeField"
 export { RenderTextField } from "./components/Form/renderers"
+export SetFieldValueContext from "./components/Form/SetFieldValueContext"
 export {
   ajaxGetJSON,
   ajaxPutJSON,

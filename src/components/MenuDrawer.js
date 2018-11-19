@@ -11,7 +11,37 @@ import IconButton from "@material-ui/core/IconButton"
 import { withStyles, withTheme } from "@material-ui/core/styles"
 import grey from "@material-ui/core/colors/grey"
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
-
+import posed, { PoseGroup } from "react-pose"
+const TopBar = posed.div({
+  enter: {
+    y: 0,
+    opacity: 1,
+    delay: 0,
+    transition: {
+      default: { duration: 150 }
+    }
+  },
+  exit: {
+    y: -50,
+    opacity: 0,
+    transition: { duration: 150 }
+  }
+})
+const Menu = posed.div({
+  enter: {
+    x: 0,
+    opacity: 1,
+    delay: 150,
+    transition: {
+      default: { duration: 150 }
+    }
+  },
+  exit: {
+    x: -50,
+    opacity: 0,
+    transition: { duration: 150 }
+  }
+})
 const styles = theme => ({
   root: {
     flexGrow: 1
@@ -77,6 +107,14 @@ const styles = theme => ({
   }
 })
 class MenuDrawer extends PureComponent {
+  state = {
+    isVisible: false
+  }
+  componentDidMount() {
+    this.setState({
+      isVisible: true
+    })
+  }
   goToPage = ({ item, index }) => event => {
     this.props.onItemSelected(item, index)
   }
@@ -122,48 +160,61 @@ class MenuDrawer extends PureComponent {
       ? { marginLeft: menuWidth, width: `calc(100% - ${menuWidth}px)` }
       : {}
     const drawerPaperStyle = open ? { width: menuWidth } : {}
+    const { isVisible } = this.state
     return (
       <div className={classes.appFrame} style={{ ...rootStyle }}>
-        <div
-          className={classNames(classes.appBar, {
-            [classes.appBarShift]: open
-          })}
-          style={{
-            position: "absolute",
-            ...appbarStyle
-          }}
-        >
-          {topBarRender()}
-        </div>
-        <Drawer
-          variant="permanent"
-          open={open}
-          classes={{
-            paper: classNames(
-              classes.drawerPaper,
-              !open && classes.drawerPaperClose
-            )
-          }}
-          PaperProps={{
-            style: drawerPaperStyle
-          }}
-        >
-          <div
-            className={classes.drawerHeader}
-            style={{
-              height: topBarHeight
-            }}
-          >
-            <IconButton onClick={onClose}>
-              <ChevronLeftIcon />
-            </IconButton>
-            <Divider />
-          </div>
-          <div>
-            <List>{this.generateMenuItems(items)}</List>
-          </div>
-        </Drawer>
-        {this.props.children(contentStyle)}
+        <PoseGroup>
+          {isVisible && [
+            <TopBar
+              key={"topbar"}
+              className={classNames(classes.appBar, {
+                [classes.appBarShift]: open
+              })}
+              style={{
+                position: "absolute",
+                ...appbarStyle
+              }}
+            >
+              {topBarRender()}
+            </TopBar>,
+            <Menu key={"drawer"} style={{ height: "100%" }}>
+              <Drawer
+                variant="permanent"
+                open={open}
+                classes={{
+                  paper: classNames(
+                    classes.drawerPaper,
+                    !open && classes.drawerPaperClose
+                  )
+                }}
+                PaperProps={{
+                  style: drawerPaperStyle
+                }}
+                style={{
+                  height: "100%"
+                }}
+              >
+                <div
+                  className={classes.drawerHeader}
+                  style={{
+                    height: topBarHeight
+                  }}
+                >
+                  <IconButton onClick={onClose}>
+                    <ChevronLeftIcon />
+                  </IconButton>
+                  <Divider />
+                </div>
+                <div>
+                  <List>{this.generateMenuItems(items)}</List>
+                </div>
+              </Drawer>
+            </Menu>,
+            <div key={"content"} style={{ width: "100%" }}>
+              {this.props.children(contentStyle)}
+            </div>
+          ]}
+        </PoseGroup>
       </div>
     )
   }

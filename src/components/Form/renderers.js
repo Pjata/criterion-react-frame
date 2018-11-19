@@ -1,4 +1,5 @@
-import React from "react"
+import React, { PureComponent } from "react"
+import ReactDOM from "react-dom"
 import InputLabel from "@material-ui/core/InputLabel"
 import Select from "@material-ui/core/Select"
 import { TextField } from "@material-ui/core"
@@ -15,6 +16,8 @@ import SetFieldValueContext from "./SetFieldValueContext"
 import TextMaskCustom from "./TextMaskCustom"
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft"
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight"
+import OutlinedInput from "@material-ui/core/OutlinedInput"
+import Input from "@material-ui/core/Input"
 import { I18n } from "react-i18next"
 
 const textFieldStyle = theme => ({
@@ -25,6 +28,7 @@ const textFieldStyle = theme => ({
     width: "100%"
   }
 })
+
 /*  */
 const renderTextFieldWithoutStyle = ({
   input,
@@ -45,9 +49,11 @@ const renderTextFieldWithoutStyle = ({
         onChange={input.onChange}
         autoComplete={"off"}
         helperText={input.touched || submitCount > 0 ? input.error : null}
+        variant={input.readOnly ? "outlined" : "standard"}
         InputProps={{
           name: input.name,
           inputComponent: mask ? TextMaskCustom : undefined,
+          disableUnderline: input.readOnly,
           ...InputProps
         }}
         onBlur={input.onBlur}
@@ -161,45 +167,150 @@ const onSelectChange = input => event => {
   console.log(event)
   input.onChange(input.name, event.target.value, true)
 }
-export const renderSelectField = ({
-  input,
-  label,
-  style,
-  className,
-  children,
-  meta,
-  form,
-  name,
-  form: { submitCount, errors },
-  ...rest
-}) => {
-  const error = errors[name]
-  return (
-    <SetFieldValueContext.Consumer>
-      {({ setFieldValue }) => (
-        <FormControl
-          className={className}
-          error={Boolean(error && submitCount > 0)}
-          style={{ minWidth: 150, ...style }}
-        >
-          <InputLabel>{label}</InputLabel>
-          <Select
-            value={input.value || ""}
-            onChange={onSelectChangeSFV(input, setFieldValue)}
-            {...rest}
-          >
-            {children}
-          </Select>
-          {error && submitCount > 0 ? (
-            <FormHelperText>{error}</FormHelperText>
-          ) : (
-            <div />
-          )}
-        </FormControl>
-      )}
-    </SetFieldValueContext.Consumer>
-  )
+const selectStyle = {
+  iconStyleHidden: {
+    opacity: 0
+  },
+  iconStyleShow: {
+    opacity: 1
+  }
 }
+export class RenderSelectFieldComponent extends PureComponent {
+  state = {
+    labelWidth: 0
+  }
+  componentDidMount() {
+    const off = ReactDOM.findDOMNode(this.InputLabelRef).offsetWidth
+    console.log(off)
+    this.setState({
+      labelWidth: ReactDOM.findDOMNode(this.InputLabelRef).offsetWidth
+    })
+  }
+
+  render() {
+    const {
+      input,
+      label,
+      style,
+      className,
+      children,
+      meta,
+      form,
+      name,
+      classes,
+      form: { submitCount, errors },
+      ...rest
+    } = this.props
+    const error = errors[name]
+    return (
+      <SetFieldValueContext.Consumer>
+        {({ setFieldValue }) => (
+          <FormControl
+            variant={input.readOnly ? "outlined" : "standard"}
+            className={className}
+            error={Boolean(error && submitCount > 0)}
+            style={{ minWidth: 150, ...style }}
+          >
+            <InputLabel
+              ref={ref => {
+                this.InputLabelRef = ref
+              }}
+            >
+              {label}
+            </InputLabel>
+            <Select
+              classes={{
+                icon: input.readOnly
+                  ? classes.iconStyleHidden
+                  : input.iconStyleShow
+              }}
+              value={input.value || ""}
+              onChange={onSelectChangeSFV(input, setFieldValue)}
+              disableUnderline={input.readOnly}
+              input={
+                input.readOnly ? (
+                  <OutlinedInput
+                    labelWidth={this.state.labelWidth}
+                    {...input}
+                  />
+                ) : (
+                  <Input {...input} />
+                )
+              }
+              //   {...rest}
+            >
+              {children}
+            </Select>
+            {error && submitCount > 0 ? (
+              <FormHelperText>{error}</FormHelperText>
+            ) : (
+              <div />
+            )}
+          </FormControl>
+        )}
+      </SetFieldValueContext.Consumer>
+    )
+  }
+}
+export const renderSelectField = withStyles(selectStyle)(
+  RenderSelectFieldComponent
+)
+export const RenderSelectField = withStyles(selectStyle)(
+  ({
+    input,
+    label,
+    style,
+    className,
+    children,
+    meta,
+    form,
+    name,
+    classes,
+    form: { submitCount, errors },
+    ...rest
+  }) => {
+    const error = errors[name]
+    return (
+      <SetFieldValueContext.Consumer>
+        {({ setFieldValue }) => (
+          <FormControl
+            variant={"outlined"}
+            className={className}
+            error={Boolean(error && submitCount > 0)}
+            style={{ minWidth: 150, ...style }}
+          >
+            <InputLabel>{label}</InputLabel>
+            <Select
+              classes={{
+                icon: input.readOnly
+                  ? classes.iconStyleHidden
+                  : input.iconStyleShow
+              }}
+              value={input.value || ""}
+              onChange={onSelectChangeSFV(input, setFieldValue)}
+              disableUnderline={input.readOnly}
+              input={
+                input.readOnly || true ? (
+                  <OutlinedInput labelWidth={10} />
+                ) : (
+                  <Input {...input} />
+                )
+              }
+              //   {...rest}
+            >
+              {children}
+            </Select>
+            {error && submitCount > 0 ? (
+              <FormHelperText>{error}</FormHelperText>
+            ) : (
+              <div />
+            )}
+          </FormControl>
+        )}
+      </SetFieldValueContext.Consumer>
+    )
+  }
+)
 
 const onChangeTimePicker = (name, setFieldValue) => date => {
   setFieldValue(name, date.format("HH:mm"))
@@ -229,6 +340,10 @@ export const renderTimePicker = ({
         label={label}
         invalidLabel={""}
         value={getTimeValue(input.value)}
+        variant={input.readOnly ? "outlined" : "standard"}
+        InputProps={{
+          disableUnderline: input.readOnly
+        }}
         onChange={onChangeTimePicker(input.name, setFieldValue)}
       />
     )}
@@ -262,6 +377,10 @@ export const renderDatePicker = shouldUpdate((props, nextProps) => {
         leftArrowIcon={<KeyboardArrowLeft />}
         format={"YYYY.MM.DD"}
         onChange={onChangeDateSFV(input, setFieldValue)}
+        variant={input.readOnly ? "outlined" : "standard"}
+        InputProps={{
+          disableUnderline: input.readOnly
+        }}
         value={input.value ? moment(input.value) : null}
       />
     )}
