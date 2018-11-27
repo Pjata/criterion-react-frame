@@ -37,7 +37,6 @@ const enhance = compose(
 )
 
 const Converter = (converter, setFieldValue) => (name, value) => {
-  console.log(value)
   return setFieldValue(name, converter(value))
 }
 const withConverter = (deconverter, setFieldValue) => {

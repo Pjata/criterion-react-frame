@@ -392,11 +392,16 @@ storiesFormik.add("Validation", () => {
       <FormikContainer
         onError={action("Error: ")}
         onSubmit={action("Submitted: ")}
-        schema={Yup.object().shape({
-          required: Yup.string().required("Kötelező mező!"),
-          regex: Yup.string().matches(new RegExp(regex)),
-          date: Yup.string().required("Kötelező mező!")
-        })}
+        schema={values =>
+          Yup.object().shape({
+            required: Yup.string().required("Kötelező mező!"),
+            regex:
+              values.required === "123"
+                ? Yup.string().matches(new RegExp(regex))
+                : Yup.string(),
+            date: Yup.string().required("Kötelező mező!")
+          })
+        }
         render={() => (
           <Paper
             style={{

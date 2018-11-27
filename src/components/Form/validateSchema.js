@@ -10,7 +10,9 @@ const validateSchema = (
     if (!schema) {
       resolve({})
     }
-    validateYupSchema(values, schema).then(
+    const validationSchema =
+      typeof schema === "function" ? schema(values) : schema
+    validateYupSchema(values, validationSchema).then(
       () => {
         onError && onError(null)
         resolve({})
