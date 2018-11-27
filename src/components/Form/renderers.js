@@ -133,7 +133,8 @@ const renderSwitchComponent = ({
   input,
   deconverter,
   label,
-  readOnly
+  readOnly,
+  ...props
 }) => (
   <I18n ns={["translations"]}>
     {t => (
@@ -150,10 +151,11 @@ const renderSwitchComponent = ({
                   readOnly
                 )}
                 color={"primary"}
-                value={t(label)}
+                value={label}
+                {...props}
               />
             }
-            label={label}
+            label={t(label)}
             classes={{
               root: classes.root,
               label: classes.label
