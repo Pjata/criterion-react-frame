@@ -135,30 +135,34 @@ const renderSwitchComponent = ({
   label,
   readOnly
 }) => (
-  <SetFieldValueContext.Consumer>
-    {({ setFieldValue }) => (
-      <FormControlLabel
-        control={
-          <Switch
-            checked={input.value}
-            onChange={onSwitchChangeSFV(
-              input,
-              deconverter,
-              setFieldValue,
-              readOnly
-            )}
-            color={"primary"}
-            value={label}
+  <I18n ns={["translations"]}>
+    {t => (
+      <SetFieldValueContext.Consumer>
+        {({ setFieldValue }) => (
+          <FormControlLabel
+            control={
+              <Switch
+                checked={input.value}
+                onChange={onSwitchChangeSFV(
+                  input,
+                  deconverter,
+                  setFieldValue,
+                  readOnly
+                )}
+                color={"primary"}
+                value={t(label)}
+              />
+            }
+            label={label}
+            classes={{
+              root: classes.root,
+              label: classes.label
+            }}
           />
-        }
-        label={label}
-        classes={{
-          root: classes.root,
-          label: classes.label
-        }}
-      />
+        )}
+      </SetFieldValueContext.Consumer>
     )}
-  </SetFieldValueContext.Consumer>
+  </I18n>
 )
 export const renderSwitch = withStyles(switchStyles)(renderSwitchComponent)
 
@@ -203,52 +207,56 @@ export class RenderSelectFieldComponent extends PureComponent {
     } = this.props
     const error = errors[name]
     return (
-      <SetFieldValueContext.Consumer>
-        {({ setFieldValue }) => (
-          <FormControl
-            variant={input.readOnly ? "outlined" : "standard"}
-            className={className}
-            error={Boolean(error && submitCount > 0)}
-            style={{ minWidth: 150, ...style }}
-          >
-            <InputLabel
-              ref={ref => {
-                this.InputLabelRef = ref
-              }}
-            >
-              {label}
-            </InputLabel>
-            <Select
-              classes={{
-                icon: input.readOnly
-                  ? classes.iconStyleHidden
-                  : input.iconStyleShow
-              }}
-              value={input.value || ""}
-              onChange={onSelectChangeSFV(input, setFieldValue)}
-              disableUnderline={input.readOnly}
-              input={
-                input.readOnly ? (
-                  <OutlinedInput
-                    labelWidth={this.state.labelWidth}
-                    {...input}
-                  />
+      <I18n ns={["translations"]}>
+        {t => (
+          <SetFieldValueContext.Consumer>
+            {({ setFieldValue }) => (
+              <FormControl
+                variant={input.readOnly ? "outlined" : "standard"}
+                className={className}
+                error={Boolean(error && submitCount > 0)}
+                style={{ minWidth: 150, ...style }}
+              >
+                <InputLabel
+                  ref={ref => {
+                    this.InputLabelRef = ref
+                  }}
+                >
+                  {t(label)}
+                </InputLabel>
+                <Select
+                  classes={{
+                    icon: input.readOnly
+                      ? classes.iconStyleHidden
+                      : input.iconStyleShow
+                  }}
+                  value={input.value || ""}
+                  onChange={onSelectChangeSFV(input, setFieldValue)}
+                  disableUnderline={input.readOnly}
+                  input={
+                    input.readOnly ? (
+                      <OutlinedInput
+                        labelWidth={this.state.labelWidth}
+                        {...input}
+                      />
+                    ) : (
+                      <Input {...input} />
+                    )
+                  }
+                  //   {...rest}
+                >
+                  {children}
+                </Select>
+                {error && submitCount > 0 ? (
+                  <FormHelperText>{error}</FormHelperText>
                 ) : (
-                  <Input {...input} />
-                )
-              }
-              //   {...rest}
-            >
-              {children}
-            </Select>
-            {error && submitCount > 0 ? (
-              <FormHelperText>{error}</FormHelperText>
-            ) : (
-              <div />
+                  <div />
+                )}
+              </FormControl>
             )}
-          </FormControl>
+          </SetFieldValueContext.Consumer>
         )}
-      </SetFieldValueContext.Consumer>
+      </I18n>
     )
   }
 }
