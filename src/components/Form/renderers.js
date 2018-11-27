@@ -134,13 +134,14 @@ const renderSwitchComponent = ({
   deconverter,
   label,
   readOnly,
-  ...props
+  labelPlacement
 }) => (
   <I18n ns={["translations"]}>
     {t => (
       <SetFieldValueContext.Consumer>
         {({ setFieldValue }) => (
           <FormControlLabel
+            labelPlacement={labelPlacement}
             control={
               <Switch
                 checked={input.value}
@@ -152,7 +153,6 @@ const renderSwitchComponent = ({
                 )}
                 color={"primary"}
                 value={label}
-                {...props}
               />
             }
             label={t(label)}
