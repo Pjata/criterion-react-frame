@@ -2,6 +2,7 @@ import i18n from "i18next"
 import LanguageDetector from "i18next-browser-languagedetector"
 
 i18n.use(LanguageDetector).init({
+  debug: false,
   // we init with resources
   resources: {
     kplogKPLOG: {
@@ -31,7 +32,6 @@ i18n.use(LanguageDetector).init({
     }
   },
   fallbackLng: "kplogKPLOG",
-  debug: true,
 
   // have a common namespace used around the full app
   ns: ["translations"],

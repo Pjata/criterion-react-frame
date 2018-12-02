@@ -1,0 +1,4427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Form Date picker 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
+    <div
+      className="MuiPaper-root-1159 MuiPaper-elevation2-1163 MuiPaper-rounded-1160"
+      style={
+        Object {
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
+        }
+      }
+    >
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-1189 shouldUpdate-renderTextFieldWithoutStyle--root-1188"
+        onClick={[Function]}
+        onError={undefined}
+        onKeyPress={[Function]}
+      >
+        <label
+          className="MuiFormLabel-root-1204 MuiInputLabel-root-1193 MuiInputLabel-formControl-1198 MuiInputLabel-animated-1201"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Date test
+        </label>
+        <div
+          className="MuiInputBase-root-1224 MuiInput-root-1211 MuiInput-underline-1215 MuiInputBase-formControl-1225 MuiInput-formControl-1212 WithUtils-DateTextField--input-1186"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input-1234 MuiInput-input-1219"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={null}
+            name="date"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={true}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <button
+        className="MuiButtonBase-root-1288 MuiButton-root-1262 MuiButton-text-1264 MuiButton-flat-1267"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label-1263"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root-1291"
+        />
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Form Select 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
+    <div
+      className="MuiPaper-root-760 MuiPaper-elevation2-764 MuiPaper-rounded-761"
+      style={
+        Object {
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
+        }
+      }
+    >
+      <div
+        className="MuiFormControl-root-789"
+        style={
+          Object {
+            "minWidth": 150,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-804 MuiInputLabel-root-793 MuiInputLabel-formControl-798 MuiInputLabel-animated-801"
+          data-shrink={false}
+        >
+          Select test
+        </label>
+        <div
+          className="MuiInputBase-root-831 MuiInput-root-818 MuiInput-underline-822 MuiInputBase-formControl-832 MuiInput-formControl-819"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root-811"
+          >
+            <div
+              aria-haspopup="true"
+              aria-owns={undefined}
+              aria-pressed="false"
+              className="MuiSelect-select-812 MuiSelect-selectMenu-815 MuiInputBase-input-841 MuiInput-input-826"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&#8203;",
+                  }
+                }
+              />
+            </div>
+            <input
+              autoComplete={undefined}
+              autoFocus={undefined}
+              defaultValue={undefined}
+              id={undefined}
+              name="select"
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              rows={undefined}
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-848 MuiSelect-icon-817"
+              color={undefined}
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div />
+      </div>
+      <button
+        className="MuiButtonBase-root-887 MuiButton-root-861 MuiButton-text-863 MuiButton-flat-866"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label-862"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root-890"
+        />
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Form Switch (default, converter) 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+          "zIndex": 0,
+        }
+      }
+    >
+      <form
+        onSubmit={[Function]}
+        style={undefined}
+      >
+        <div
+          className="MuiPaper-root-510 MuiPaper-elevation2-514 MuiPaper-rounded-511"
+          style={
+            Object {
+              "margin": "15px",
+              "padding": "5px",
+              "width": "400px",
+            }
+          }
+        >
+          <label
+            className="MuiFormControlLabel-root-539 renderSwitchComponent-root-537"
+          >
+            <span
+              className="MuiSwitch-root-545"
+            >
+              <span
+                className="MuiButtonBase-root-564 MuiIconButton-root-558 MuiPrivateSwitchBase-root-554 MuiSwitch-switchBase-548 MuiSwitch-colorPrimary-550"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role={undefined}
+                tabIndex={null}
+              >
+                <span
+                  className="MuiIconButton-label-563"
+                >
+                  <span
+                    className="MuiSwitch-icon-546"
+                  />
+                  <input
+                    autoFocus={undefined}
+                    checked={false}
+                    className="MuiPrivateSwitchBase-input-557"
+                    disabled={undefined}
+                    id={undefined}
+                    name={undefined}
+                    onChange={[Function]}
+                    readOnly={undefined}
+                    required={undefined}
+                    tabIndex={undefined}
+                    type="checkbox"
+                    value="Test"
+                  />
+                </span>
+                <span
+                  className="MuiTouchRipple-root-628"
+                />
+              </span>
+              <span
+                className="MuiSwitch-bar-553"
+              />
+            </span>
+            <span
+              className="MuiTypography-root-567 MuiTypography-body1-576 MuiFormControlLabel-label-544 renderSwitchComponent-label-538"
+            >
+              Test
+            </span>
+          </label>
+          <button
+            className="MuiButtonBase-root-564 MuiButton-root-602 MuiButton-text-604 MuiButton-flat-607"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="submit"
+          >
+            <span
+              className="MuiButton-label-603"
+            >
+              Submit
+            </span>
+            <span
+              className="MuiTouchRipple-root-628"
+            />
+          </button>
+        </div>
+      </form>
+    </div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      Show Info
+    </button>
+    <div
+      style={
+        Object {
+          "background": "white",
+          "bottom": 0,
+          "display": "none",
+          "left": 0,
+          "overflow": "auto",
+          "padding": "0 40px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 99999,
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "#28c",
+            "border": "none",
+            "borderRadius": "0 0 0 5px",
+            "color": "#fff",
+            "cursor": "pointer",
+            "display": "block",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "padding": "5px 15px",
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        type="button"
+      >
+        ×
+      </button>
+      <div
+        style={undefined}
+      >
+        <div
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "backgroundColor": "#fff",
+              "border": "1px solid #eee",
+              "borderRadius": "2px",
+              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+              "color": "#444",
+              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+              "fontSize": "15px",
+              "fontWeight": 300,
+              "lineHeight": 1.45,
+              "marginBottom": "20px",
+              "marginTop": "20px",
+              "padding": "20px 40px 40px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "borderBottom": "1px solid #eee",
+                "marginBottom": 10,
+                "paddingTop": 10,
+              }
+            }
+          >
+            <h1
+              style={
+                Object {
+                  "fontSize": "35px",
+                  "margin": 0,
+                  "padding": 0,
+                }
+              }
+            >
+              Form
+            </h1>
+            <h2
+              style={
+                Object {
+                  "fontSize": "22px",
+                  "fontWeight": 400,
+                  "margin": "0 0 10px 0",
+                  "padding": 0,
+                }
+              }
+            >
+              Switch (default, converter)
+            </h2>
+          </div>
+          
+          <div>
+            <h1
+              style={
+                Object {
+                  "borderBottom": "1px solid #EEE",
+                  "fontSize": "25px",
+                  "margin": "20px 0 0 0",
+                  "padding": "0 0 5px 0",
+                }
+              }
+            >
+              Prop Types
+            </h1>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                CriterionProviders
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                FormikContainerComponent
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      render
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      schema
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      onError
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                TypeField
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      type
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      name
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      label
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                WithFormik(FormikContainerComponent)
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form Switch (default, converter, readOnly) 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+          "zIndex": 0,
+        }
+      }
+    >
+      <form
+        onSubmit={[Function]}
+        style={undefined}
+      >
+        <div
+          className="MuiPaper-root-635 MuiPaper-elevation2-639 MuiPaper-rounded-636"
+          style={
+            Object {
+              "margin": "15px",
+              "padding": "5px",
+              "width": "400px",
+            }
+          }
+        >
+          <label
+            className="MuiFormControlLabel-root-664 renderSwitchComponent-root-662"
+          >
+            <span
+              className="MuiSwitch-root-670"
+            >
+              <span
+                className="MuiButtonBase-root-689 MuiIconButton-root-683 MuiPrivateSwitchBase-root-679 MuiSwitch-switchBase-673 MuiSwitch-colorPrimary-675"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role={undefined}
+                tabIndex={null}
+              >
+                <span
+                  className="MuiIconButton-label-688"
+                >
+                  <span
+                    className="MuiSwitch-icon-671"
+                  />
+                  <input
+                    autoFocus={undefined}
+                    checked={false}
+                    className="MuiPrivateSwitchBase-input-682"
+                    disabled={undefined}
+                    id={undefined}
+                    name={undefined}
+                    onChange={[Function]}
+                    readOnly={undefined}
+                    required={undefined}
+                    tabIndex={undefined}
+                    type="checkbox"
+                    value="Test"
+                  />
+                </span>
+                <span
+                  className="MuiTouchRipple-root-753"
+                />
+              </span>
+              <span
+                className="MuiSwitch-bar-678"
+              />
+            </span>
+            <span
+              className="MuiTypography-root-692 MuiTypography-body1-701 MuiFormControlLabel-label-669 renderSwitchComponent-label-663"
+            >
+              Test
+            </span>
+          </label>
+          <button
+            className="MuiButtonBase-root-689 MuiButton-root-727 MuiButton-text-729 MuiButton-flat-732"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="submit"
+          >
+            <span
+              className="MuiButton-label-728"
+            >
+              Submit
+            </span>
+            <span
+              className="MuiTouchRipple-root-753"
+            />
+          </button>
+        </div>
+      </form>
+    </div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      Show Info
+    </button>
+    <div
+      style={
+        Object {
+          "background": "white",
+          "bottom": 0,
+          "display": "none",
+          "left": 0,
+          "overflow": "auto",
+          "padding": "0 40px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 99999,
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "#28c",
+            "border": "none",
+            "borderRadius": "0 0 0 5px",
+            "color": "#fff",
+            "cursor": "pointer",
+            "display": "block",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "padding": "5px 15px",
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        type="button"
+      >
+        ×
+      </button>
+      <div
+        style={undefined}
+      >
+        <div
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "backgroundColor": "#fff",
+              "border": "1px solid #eee",
+              "borderRadius": "2px",
+              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+              "color": "#444",
+              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+              "fontSize": "15px",
+              "fontWeight": 300,
+              "lineHeight": 1.45,
+              "marginBottom": "20px",
+              "marginTop": "20px",
+              "padding": "20px 40px 40px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "borderBottom": "1px solid #eee",
+                "marginBottom": 10,
+                "paddingTop": 10,
+              }
+            }
+          >
+            <h1
+              style={
+                Object {
+                  "fontSize": "35px",
+                  "margin": 0,
+                  "padding": 0,
+                }
+              }
+            >
+              Form
+            </h1>
+            <h2
+              style={
+                Object {
+                  "fontSize": "22px",
+                  "fontWeight": 400,
+                  "margin": "0 0 10px 0",
+                  "padding": 0,
+                }
+              }
+            >
+              Switch (default, converter, readOnly)
+            </h2>
+          </div>
+          
+          <div>
+            <h1
+              style={
+                Object {
+                  "borderBottom": "1px solid #EEE",
+                  "fontSize": "25px",
+                  "margin": "20px 0 0 0",
+                  "padding": "0 0 5px 0",
+                }
+              }
+            >
+              Prop Types
+            </h1>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                CriterionProviders
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                FormikContainerComponent
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      render
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      schema
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      onError
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                TypeField
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      type
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      name
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      label
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                WithFormik(FormikContainerComponent)
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form Switch 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
+    <div
+      className="MuiPaper-root-897 MuiPaper-elevation2-901 MuiPaper-rounded-898"
+      style={
+        Object {
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
+        }
+      }
+    >
+      <label
+        className="MuiFormControlLabel-root-926 renderSwitchComponent-root-924"
+      >
+        <span
+          className="MuiSwitch-root-932"
+        >
+          <span
+            className="MuiButtonBase-root-951 MuiIconButton-root-945 MuiPrivateSwitchBase-root-941 MuiSwitch-switchBase-935 MuiSwitch-colorPrimary-937"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role={undefined}
+            tabIndex={null}
+          >
+            <span
+              className="MuiIconButton-label-950"
+            >
+              <span
+                className="MuiSwitch-icon-933"
+              />
+              <input
+                autoFocus={undefined}
+                checked={false}
+                className="MuiPrivateSwitchBase-input-944"
+                disabled={undefined}
+                id={undefined}
+                name={undefined}
+                onChange={[Function]}
+                readOnly={undefined}
+                required={undefined}
+                tabIndex={undefined}
+                type="checkbox"
+                value="Switch test"
+              />
+            </span>
+            <span
+              className="MuiTouchRipple-root-1015"
+            />
+          </span>
+          <span
+            className="MuiSwitch-bar-940"
+          />
+        </span>
+        <span
+          className="MuiTypography-root-954 MuiTypography-body1-963 MuiFormControlLabel-label-931 renderSwitchComponent-label-925"
+        >
+          Switch test
+        </span>
+      </label>
+      <button
+        className="MuiButtonBase-root-951 MuiButton-root-989 MuiButton-text-991 MuiButton-flat-994"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label-990"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root-1015"
+        />
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Form TextField (default) 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+          "zIndex": 0,
+        }
+      }
+    >
+      <form
+        onSubmit={[Function]}
+        style={undefined}
+      >
+        <div
+          className="MuiPaper-root-235 MuiPaper-elevation2-239 MuiPaper-rounded-236"
+          style={
+            Object {
+              "margin": "15px",
+              "padding": "5px",
+              "width": "400px",
+            }
+          }
+        >
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-264 shouldUpdate-renderTextFieldWithoutStyle--root-263"
+            field={
+              Object {
+                "name": "textfield",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": "default value",
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-279 MuiFormLabel-filled-283 MuiInputLabel-root-268 MuiInputLabel-formControl-273 MuiInputLabel-animated-276 MuiInputLabel-shrink-275"
+              data-shrink={true}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-299 MuiInput-root-286 MuiInput-underline-290 MuiInputBase-formControl-300 MuiInput-formControl-287 MuiInputBase-adornedEnd-304"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-309 MuiInput-input-294 MuiInputBase-inputAdornedEnd-315"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value="default value"
+              />
+              <div
+                className="MuiInputAdornment-root-316 MuiInputAdornment-positionEnd-319"
+              >
+                <p
+                  className="MuiTypography-root-320 MuiTypography-body1-329 MuiTypography-colorTextSecondary-353"
+                >
+                  nap
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            className="MuiButtonBase-root-381 MuiButton-root-355 MuiButton-text-357 MuiButton-flat-360"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiButton-label-356"
+            >
+              Submit
+            </span>
+            <span
+              className="MuiTouchRipple-root-384"
+            />
+          </button>
+        </div>
+      </form>
+    </div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      Show Info
+    </button>
+    <div
+      style={
+        Object {
+          "background": "white",
+          "bottom": 0,
+          "display": "none",
+          "left": 0,
+          "overflow": "auto",
+          "padding": "0 40px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 99999,
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "#28c",
+            "border": "none",
+            "borderRadius": "0 0 0 5px",
+            "color": "#fff",
+            "cursor": "pointer",
+            "display": "block",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "padding": "5px 15px",
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        type="button"
+      >
+        ×
+      </button>
+      <div
+        style={undefined}
+      >
+        <div
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "backgroundColor": "#fff",
+              "border": "1px solid #eee",
+              "borderRadius": "2px",
+              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+              "color": "#444",
+              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+              "fontSize": "15px",
+              "fontWeight": 300,
+              "lineHeight": 1.45,
+              "marginBottom": "20px",
+              "marginTop": "20px",
+              "padding": "20px 40px 40px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "borderBottom": "1px solid #eee",
+                "marginBottom": 10,
+                "paddingTop": 10,
+              }
+            }
+          >
+            <h1
+              style={
+                Object {
+                  "fontSize": "35px",
+                  "margin": 0,
+                  "padding": 0,
+                }
+              }
+            >
+              Form
+            </h1>
+            <h2
+              style={
+                Object {
+                  "fontSize": "22px",
+                  "fontWeight": 400,
+                  "margin": "0 0 10px 0",
+                  "padding": 0,
+                }
+              }
+            >
+              TextField (default)
+            </h2>
+          </div>
+          
+          <div>
+            <h1
+              style={
+                Object {
+                  "borderBottom": "1px solid #EEE",
+                  "fontSize": "25px",
+                  "margin": "20px 0 0 0",
+                  "padding": "0 0 5px 0",
+                }
+              }
+            >
+              Prop Types
+            </h1>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                CriterionProviders
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                FormikContainerComponent
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      render
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      schema
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      onError
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                TypeField
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      type
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      name
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      label
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                WithFormik(FormikContainerComponent)
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form TextField (default, read only) 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+          "zIndex": 0,
+        }
+      }
+    >
+      <form
+        onSubmit={[Function]}
+        style={undefined}
+      >
+        <div
+          className="MuiPaper-root-391 MuiPaper-elevation2-395 MuiPaper-rounded-392"
+          style={
+            Object {
+              "margin": "15px",
+              "padding": "5px",
+              "width": "400px",
+            }
+          }
+        >
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-420 shouldUpdate-renderTextFieldWithoutStyle--root-419"
+            field={
+              Object {
+                "name": "textfield",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": "default value read only",
+              }
+            }
+            readOnly={true}
+          >
+            <label
+              className="MuiFormLabel-root-435 MuiFormLabel-filled-439 MuiInputLabel-root-424 MuiInputLabel-formControl-429 MuiInputLabel-animated-432 MuiInputLabel-shrink-431 MuiInputLabel-outlined-434"
+              data-shrink={true}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-455 MuiOutlinedInput-root-442 MuiInputBase-formControl-456"
+              disableUnderline={true}
+              onClick={[Function]}
+            >
+              <fieldset
+                aria-hidden={true}
+                className="MuiPrivateNotchedOutline-root-472 MuiOutlinedInput-notchedOutline-449"
+                style={
+                  Object {
+                    "paddingLeft": 8,
+                  }
+                }
+              >
+                <legend
+                  className="MuiPrivateNotchedOutline-legend-473"
+                  style={
+                    Object {
+                      "width": 0,
+                    }
+                  }
+                >
+                  <span
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "&#8203;",
+                      }
+                    }
+                  />
+                </legend>
+              </fieldset>
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-465 MuiOutlinedInput-input-450"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value="default value read only"
+              />
+            </div>
+          </div>
+          <button
+            className="MuiButtonBase-root-500 MuiButton-root-474 MuiButton-text-476 MuiButton-flat-479"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="submit"
+          >
+            <span
+              className="MuiButton-label-475"
+            >
+              Submit
+            </span>
+            <span
+              className="MuiTouchRipple-root-503"
+            />
+          </button>
+        </div>
+      </form>
+    </div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      Show Info
+    </button>
+    <div
+      style={
+        Object {
+          "background": "white",
+          "bottom": 0,
+          "display": "none",
+          "left": 0,
+          "overflow": "auto",
+          "padding": "0 40px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 99999,
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "#28c",
+            "border": "none",
+            "borderRadius": "0 0 0 5px",
+            "color": "#fff",
+            "cursor": "pointer",
+            "display": "block",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "padding": "5px 15px",
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        type="button"
+      >
+        ×
+      </button>
+      <div
+        style={undefined}
+      >
+        <div
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "backgroundColor": "#fff",
+              "border": "1px solid #eee",
+              "borderRadius": "2px",
+              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+              "color": "#444",
+              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+              "fontSize": "15px",
+              "fontWeight": 300,
+              "lineHeight": 1.45,
+              "marginBottom": "20px",
+              "marginTop": "20px",
+              "padding": "20px 40px 40px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "borderBottom": "1px solid #eee",
+                "marginBottom": 10,
+                "paddingTop": 10,
+              }
+            }
+          >
+            <h1
+              style={
+                Object {
+                  "fontSize": "35px",
+                  "margin": 0,
+                  "padding": 0,
+                }
+              }
+            >
+              Form
+            </h1>
+            <h2
+              style={
+                Object {
+                  "fontSize": "22px",
+                  "fontWeight": 400,
+                  "margin": "0 0 10px 0",
+                  "padding": 0,
+                }
+              }
+            >
+              TextField (default, read only)
+            </h2>
+          </div>
+          
+          <div>
+            <h1
+              style={
+                Object {
+                  "borderBottom": "1px solid #EEE",
+                  "fontSize": "25px",
+                  "margin": "20px 0 0 0",
+                  "padding": "0 0 5px 0",
+                }
+              }
+            >
+              Prop Types
+            </h1>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                CriterionProviders
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                FormikContainerComponent
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      render
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      schema
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      onError
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                TypeField
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      type
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      name
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      label
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                WithFormik(FormikContainerComponent)
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form TextField 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+          "zIndex": 0,
+        }
+      }
+    >
+      <form
+        onSubmit={[Function]}
+        style={undefined}
+      >
+        <div
+          className="MuiPaper-root-1 MuiPaper-elevation2-5 MuiPaper-rounded-2"
+          style={
+            Object {
+              "margin": "15px",
+              "padding": "5px",
+              "width": "400px",
+            }
+          }
+        >
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-30 shouldUpdate-renderTextFieldWithoutStyle--root-29"
+            field={
+              Object {
+                "name": "textfield",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-45 MuiInputLabel-root-34 MuiInputLabel-formControl-39 MuiInputLabel-animated-42"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-65 MuiInput-root-52 MuiInput-underline-56 MuiInputBase-formControl-66 MuiInput-formControl-53"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-75 MuiInput-input-60"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <button
+            className="MuiButtonBase-root-108 MuiButton-root-82 MuiButton-text-84 MuiButton-flat-87"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="submit"
+          >
+            <span
+              className="MuiButton-label-83"
+            >
+              Submit
+            </span>
+            <span
+              className="MuiTouchRipple-root-111"
+            />
+          </button>
+        </div>
+      </form>
+    </div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      Show Info
+    </button>
+    <div
+      style={
+        Object {
+          "background": "white",
+          "bottom": 0,
+          "display": "none",
+          "left": 0,
+          "overflow": "auto",
+          "padding": "0 40px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 99999,
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "#28c",
+            "border": "none",
+            "borderRadius": "0 0 0 5px",
+            "color": "#fff",
+            "cursor": "pointer",
+            "display": "block",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "padding": "5px 15px",
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        type="button"
+      >
+        ×
+      </button>
+      <div
+        style={undefined}
+      >
+        <div
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "backgroundColor": "#fff",
+              "border": "1px solid #eee",
+              "borderRadius": "2px",
+              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+              "color": "#444",
+              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+              "fontSize": "15px",
+              "fontWeight": 300,
+              "lineHeight": 1.45,
+              "marginBottom": "20px",
+              "marginTop": "20px",
+              "padding": "20px 40px 40px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "borderBottom": "1px solid #eee",
+                "marginBottom": 10,
+                "paddingTop": 10,
+              }
+            }
+          >
+            <h1
+              style={
+                Object {
+                  "fontSize": "35px",
+                  "margin": 0,
+                  "padding": 0,
+                }
+              }
+            >
+              Form
+            </h1>
+            <h2
+              style={
+                Object {
+                  "fontSize": "22px",
+                  "fontWeight": 400,
+                  "margin": "0 0 10px 0",
+                  "padding": 0,
+                }
+              }
+            >
+              TextField
+            </h2>
+          </div>
+          
+          <div>
+            <h1
+              style={
+                Object {
+                  "borderBottom": "1px solid #EEE",
+                  "fontSize": "25px",
+                  "margin": "20px 0 0 0",
+                  "padding": "0 0 5px 0",
+                }
+              }
+            >
+              Prop Types
+            </h1>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                CriterionProviders
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                FormikContainerComponent
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      render
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      schema
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      onError
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                TypeField
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      type
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      name
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      label
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                WithFormik(FormikContainerComponent)
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form TextField heavy (default) 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "position": "relative",
+          "zIndex": 0,
+        }
+      }
+    >
+      <form
+        onSubmit={[Function]}
+        style={undefined}
+      >
+        <div
+          className="MuiPaper-root-118 MuiPaper-elevation2-122 MuiPaper-rounded-119"
+          style={
+            Object {
+              "margin": "15px",
+              "padding": "5px",
+              "width": "400px",
+            }
+          }
+        >
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield0",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield0"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield1",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield1"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield2",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield2"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield3",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield3"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield4",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield4"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield5",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield5"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield6",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield6"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield7",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield7"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield8",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield8"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield9",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield9"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield10",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield10"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield11",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield11"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield12",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield12"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield13",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield13"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            aria-describedby={undefined}
+            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            field={
+              Object {
+                "name": "textfield14",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": undefined,
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              data-shrink={false}
+              htmlFor={undefined}
+            >
+              Test
+            </label>
+            <div
+              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoComplete="off"
+                autoFocus={undefined}
+                className="MuiInputBase-input-192 MuiInput-input-177"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                mask={undefined}
+                name="textfield14"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={false}
+                rows={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <button
+            className="MuiButtonBase-root-225 MuiButton-root-199 MuiButton-text-201 MuiButton-flat-204"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiButton-label-200"
+            >
+              Submit
+            </span>
+            <span
+              className="MuiTouchRipple-root-228"
+            />
+          </button>
+        </div>
+      </form>
+    </div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      Show Info
+    </button>
+    <div
+      style={
+        Object {
+          "background": "white",
+          "bottom": 0,
+          "display": "none",
+          "left": 0,
+          "overflow": "auto",
+          "padding": "0 40px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 99999,
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "#28c",
+            "border": "none",
+            "borderRadius": "0 0 0 5px",
+            "color": "#fff",
+            "cursor": "pointer",
+            "display": "block",
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "padding": "5px 15px",
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        type="button"
+      >
+        ×
+      </button>
+      <div
+        style={undefined}
+      >
+        <div
+          style={
+            Object {
+              "WebkitFontSmoothing": "antialiased",
+              "backgroundColor": "#fff",
+              "border": "1px solid #eee",
+              "borderRadius": "2px",
+              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+              "color": "#444",
+              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+              "fontSize": "15px",
+              "fontWeight": 300,
+              "lineHeight": 1.45,
+              "marginBottom": "20px",
+              "marginTop": "20px",
+              "padding": "20px 40px 40px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "borderBottom": "1px solid #eee",
+                "marginBottom": 10,
+                "paddingTop": 10,
+              }
+            }
+          >
+            <h1
+              style={
+                Object {
+                  "fontSize": "35px",
+                  "margin": 0,
+                  "padding": 0,
+                }
+              }
+            >
+              Form
+            </h1>
+            <h2
+              style={
+                Object {
+                  "fontSize": "22px",
+                  "fontWeight": 400,
+                  "margin": "0 0 10px 0",
+                  "padding": 0,
+                }
+              }
+            >
+              TextField heavy (default)
+            </h2>
+          </div>
+          
+          <div>
+            <h1
+              style={
+                Object {
+                  "borderBottom": "1px solid #EEE",
+                  "fontSize": "25px",
+                  "margin": "20px 0 0 0",
+                  "padding": "0 0 5px 0",
+                }
+              }
+            >
+              Prop Types
+            </h1>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                CriterionProviders
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                FormikContainerComponent
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      render
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      schema
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      onError
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                TypeField
+                " Component
+              </h2>
+              <table
+                className="css-1ytzlk7"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      property
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      propType
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      required
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      default
+                    </th>
+                    <th
+                      className="css-d52hbj"
+                    >
+                      description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      type
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      name
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      yes
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      label
+                    </td>
+                    <td
+                      className="css-1ygfcef"
+                    >
+                      <span />
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    >
+                      -
+                    </td>
+                    <td
+                      className="css-d52hbj"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2
+                style={
+                  Object {
+                    "margin": "20px 0 0 0",
+                  }
+                }
+              >
+                "
+                WithFormik(FormikContainerComponent)
+                " Component
+              </h2>
+              <small>
+                No propTypes defined!
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form Time picker 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
+    <div
+      className="MuiPaper-root-1022 MuiPaper-elevation2-1026 MuiPaper-rounded-1023"
+      style={
+        Object {
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
+        }
+      }
+    >
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-1050"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "time",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+        form={
+          Object {
+            "dirty": false,
+            "errors": Object {},
+            "handleBlur": [Function],
+            "handleChange": [Function],
+            "handleReset": [Function],
+            "handleSubmit": [Function],
+            "initialValues": Object {},
+            "isSubmitting": false,
+            "isValid": false,
+            "isValidating": false,
+            "registerField": [Function],
+            "resetForm": [Function],
+            "setError": [Function],
+            "setErrors": [Function],
+            "setFieldError": [Function],
+            "setFieldTouched": [Function],
+            "setFieldValue": [Function],
+            "setFormikState": [Function],
+            "setStatus": [Function],
+            "setSubmitting": [Function],
+            "setTouched": [Function],
+            "setValues": [Function],
+            "submitCount": 0,
+            "submitForm": [Function],
+            "touched": Object {},
+            "unregisterField": [Function],
+            "validateField": [Function],
+            "validateForm": [Function],
+            "validateOnBlur": true,
+            "validateOnChange": true,
+            "values": Object {},
+          }
+        }
+        onClick={[Function]}
+        onError={undefined}
+        onKeyPress={[Function]}
+      >
+        <label
+          className="MuiFormLabel-root-1065 MuiInputLabel-root-1054 MuiInputLabel-formControl-1059 MuiInputLabel-animated-1062"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Time test
+        </label>
+        <div
+          className="MuiInputBase-root-1085 MuiInput-root-1072 MuiInput-underline-1076 MuiInputBase-formControl-1086 MuiInput-formControl-1073 WithUtils-DateTextField--input-1049"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className="MuiInputBase-input-1095 MuiInput-input-1080"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={null}
+            name={undefined}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={true}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+        
+      </div>
+      <button
+        className="MuiButtonBase-root-1149 MuiButton-root-1123 MuiButton-text-1125 MuiButton-flat-1128"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label-1124"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root-1152"
+        />
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Form Validation 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
+    <div
+      className="MuiPaper-root-1298 MuiPaper-elevation2-1302 MuiPaper-rounded-1299"
+      style={
+        Object {
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
+        }
+      }
+    >
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-1327 shouldUpdate-renderTextFieldWithoutStyle--root-1326"
+        field={
+          Object {
+            "name": "required",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-1342 MuiInputLabel-root-1331 MuiInputLabel-formControl-1336 MuiInputLabel-animated-1339"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Required
+        </label>
+        <div
+          className="MuiInputBase-root-1362 MuiInput-root-1349 MuiInput-underline-1353 MuiInputBase-formControl-1363 MuiInput-formControl-1350"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input-1372 MuiInput-input-1357"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="required"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-1327 shouldUpdate-renderTextFieldWithoutStyle--root-1326"
+        field={
+          Object {
+            "name": "regex",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-1342 MuiInputLabel-root-1331 MuiInputLabel-formControl-1336 MuiInputLabel-animated-1339"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Regex
+        </label>
+        <div
+          className="MuiInputBase-root-1362 MuiInput-root-1349 MuiInput-underline-1353 MuiInputBase-formControl-1363 MuiInput-formControl-1350"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input-1372 MuiInput-input-1357"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="regex"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-1327 shouldUpdate-renderTextFieldWithoutStyle--root-1326"
+        onClick={[Function]}
+        onError={undefined}
+        onKeyPress={[Function]}
+      >
+        <label
+          className="MuiFormLabel-root-1342 MuiInputLabel-root-1331 MuiInputLabel-formControl-1336 MuiInputLabel-animated-1339"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          date
+        </label>
+        <div
+          className="MuiInputBase-root-1362 MuiInput-root-1349 MuiInput-underline-1353 MuiInputBase-formControl-1363 MuiInput-formControl-1350 WithUtils-DateTextField--input-1379"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input-1372 MuiInput-input-1357"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={null}
+            name="date"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={true}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <button
+        className="MuiButtonBase-root-1427 MuiButton-root-1401 MuiButton-text-1403 MuiButton-flat-1406"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label-1402"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root-1430"
+        />
+      </button>
+    </div>
+  </form>
+</div>
+`;

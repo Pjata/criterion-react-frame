@@ -21,12 +21,17 @@ import { TypeField } from "../index"
 import * as Yup from "yup"
 import i18n from "./i18n"
 import { withInfo } from "@storybook/addon-info"
-import FormEditor from "../components/FormEditor"
-const stories = storiesOf("Menu and topbar", module)
-stories.addDecorator(withKnobs).addDecorator(muiTheme())
+const stories = storiesOf("Menu and topbar (DontTest)", module)
+stories.addDecorator(withKnobs).addDecorator(
+  muiTheme({
+    typography: {
+      useNextVariants: true
+    }
+  })
+)
 
 stories.add(
-  "Complete frame ",
+  "Complete frame",
   withReadme(CriterionFrameReadme, () => {
     const title = text("title", "Example app")
     const content = text("content", "Hello world!")
@@ -421,6 +426,7 @@ storiesFormik.add("Validation", () => {
   )
 })
 
+/*
 storiesFormik.add("Form editor", () => {
   return (
     <CriterionProviders i18n={i18n}>
@@ -432,3 +438,4 @@ storiesFormik.add("Form editor", () => {
     </CriterionProviders>
   )
 })
+*/

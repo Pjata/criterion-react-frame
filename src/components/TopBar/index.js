@@ -85,7 +85,7 @@ class TopBarContainer extends PureComponent {
             </div>
             <div className={classes.center}>
               <img className={classes.logo} src={logo} />
-              <Typography variant={"title"}>{title}</Typography>
+              <Typography variant={"h6"}>{title}</Typography>
             </div>
           </div>
         </Grid>

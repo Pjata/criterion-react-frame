@@ -50,7 +50,7 @@ FormikContainerComponent.propTypes = {
   /**
    * Yup schema for validation
    */
-  schema: PropTypes.object,
+  schema: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   /**
    * Error callback on validation
    */
