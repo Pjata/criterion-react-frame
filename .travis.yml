@@ -1,8 +1,13 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 cache:
   directories:
   - node_modules
 script:
-  - npm test
+- npm test
+deploy:
+  provider: npm
+  email: "pjatacsuk@gmail.com"
+  api_key:
+    secure: a/1ZOJYvIJvp2RHGPGLBJo8z2GiWJkWtRGs9ScKYvm63tDF//ZcShZ8pGN60lw3nXvfm+RzQvwyNd6vI9Ttmcy2QEWpvmO6X/T3KC0yU5JiGjYMYofO5liEJXEqk4euml0LiIEUF0Gf+JjbIscsgoACYHxaJ8QiaFSKRWUU3fmgCszBMqBqoy/HJMq80P9XjvbIzO8/5v/xrc/E1zUZl+Z09u8QaaBe4Br35tp8n081d+VX7idNErwQ80A54KGb6d/+t3eRoz9PiHJE6ILL3oww626rn/DyBDNZCOPjJbJjqXcjheAAV4yZ9RPEWc3PmzJ/RyY8I9Cu1b1DGxFx66a0uBu8mfvLz+qKKkkFKpUFiN2i16yuw1RPcysEDAoBvgeN7mp8pLbzJ3v6CazoMyShHjREzI1ObVOesSaY5XAqkMjMzy5ju3j/SzQoubwyaKm/zugGpJz5QCrPTHLWI7E6xJ1t8diGNnB2g4AScsl6eGM1/vdPfl3p9zDzJc7UkxS39T34mxYXMueMiN+f2EOMaB21D6k3DN4gxsUWEOeorpUZU26zuJyMBmffLukvRXawXSL7WFAorfCOcIK6wNAZnWovZPZh+8Jj3fBV/lUDI/2W7daircCgnbjxHh4JJ/Rdc8Vi9keoCrosikYfOARoDK3q0VomFFKDaefslIbU=
