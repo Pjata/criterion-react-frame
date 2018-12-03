@@ -15,20 +15,26 @@ import FormikContainer, {
   FormikContainerComponent
 } from "../components/Form/FormikContainer"
 import InputAdornment from "@material-ui/core/InputAdornment"
+import { createMuiTheme } from "@material-ui/core/styles"
 
+import JssProvider from "react-jss/lib/JssProvider"
 import CriterionFrame from "../components/CriterionFrame"
 import { TypeField } from "../index"
 import * as Yup from "yup"
 import i18n from "./i18n"
 import { withInfo } from "@storybook/addon-info"
 const stories = storiesOf("Menu and topbar (DontTest)", module)
-stories.addDecorator(withKnobs).addDecorator(
-  muiTheme({
-    typography: {
-      useNextVariants: true
-    }
-  })
-)
+
+const generateClassName = (rule, styleSheet) =>
+  `${styleSheet.options.classNamePrefix}-${rule.key}`
+
+const muiTheme0 = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+    suppressDeprecationWarnings: true
+  }
+})
+stories.addDecorator(withKnobs).addDecorator(muiTheme([muiTheme0]))
 
 stories.add(
   "Complete frame",
@@ -77,8 +83,10 @@ stories.add(
 )
 
 const storiesFormik = storiesOf("Form", module)
-storiesFormik.addDecorator(withKnobs).addDecorator(muiTheme())
-
+storiesFormik.addDecorator(withKnobs).addDecorator(muiTheme([muiTheme0]))
+storiesFormik.addDecorator(story => (
+  <JssProvider generateClassName={generateClassName}>{story()}</JssProvider>
+))
 storiesFormik.add(
   "TextField",
   withInfo({
@@ -339,6 +347,28 @@ storiesFormik.add("Switch", () => {
             }}
           >
             <TypeField name={"switch"} label={label} type={"switch"} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
+storiesFormik.add("Checkbox", () => {
+  const label = text("Label", "Checkbox test")
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField name={"checkbox"} label={label} type={"checkbox"} />
             <Button type="submit">Submit</Button>
           </Paper>
         )}

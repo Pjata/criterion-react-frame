@@ -1,5 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Form Checkbox 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
+      style={
+        Object {
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
+        }
+      }
+    >
+      <label
+        className="MuiFormControlLabel-root renderCheckboxComponent-root"
+      >
+        <span
+          className="MuiButtonBase-root MuiIconButton-root MuiPrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={null}
+        >
+          <span
+            className="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              color={undefined}
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+            <input
+              autoFocus={undefined}
+              checked={false}
+              className="MuiPrivateSwitchBase-input"
+              data-indeterminate={false}
+              disabled={undefined}
+              id={undefined}
+              name={undefined}
+              onChange={[Function]}
+              readOnly={undefined}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="Checkbox test"
+            />
+          </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
+        </span>
+        <span
+          className="MuiTypography-root MuiTypography-body2 MuiFormControlLabel-label renderCheckboxComponent-label"
+        >
+          Checkbox test
+        </span>
+      </label>
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
 exports[`Storyshots Form Date picker 1`] = `
 <div>
   <form
@@ -7,7 +112,7 @@ exports[`Storyshots Form Date picker 1`] = `
     style={undefined}
   >
     <div
-      className="MuiPaper-root-1159 MuiPaper-elevation2-1163 MuiPaper-rounded-1160"
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
           "margin": "15px",
@@ -18,27 +123,27 @@ exports[`Storyshots Form Date picker 1`] = `
     >
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-1189 shouldUpdate-renderTextFieldWithoutStyle--root-1188"
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
         onClick={[Function]}
         onError={undefined}
         onKeyPress={[Function]}
       >
         <label
-          className="MuiFormLabel-root-1204 MuiInputLabel-root-1193 MuiInputLabel-formControl-1198 MuiInputLabel-animated-1201"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated shouldUpdate(renderTextFieldWithoutStyle)-empty"
           data-shrink={false}
           htmlFor={undefined}
         >
           Date test
         </label>
         <div
-          className="MuiInputBase-root-1224 MuiInput-root-1211 MuiInput-underline-1215 MuiInputBase-formControl-1225 MuiInput-formControl-1212 WithUtils-DateTextField--input-1186"
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl WithUtils(DateTextField)-input"
           onClick={[Function]}
         >
           <input
             aria-invalid={false}
             autoComplete="off"
             autoFocus={undefined}
-            className="MuiInputBase-input-1234 MuiInput-input-1219"
+            className="MuiInputBase-input MuiInput-input"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -59,7 +164,7 @@ exports[`Storyshots Form Date picker 1`] = `
         </div>
       </div>
       <button
-        className="MuiButtonBase-root-1288 MuiButton-root-1262 MuiButton-text-1264 MuiButton-flat-1267"
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
         disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -75,12 +180,12 @@ exports[`Storyshots Form Date picker 1`] = `
         type="submit"
       >
         <span
-          className="MuiButton-label-1263"
+          className="MuiButton-label"
         >
           Submit
         </span>
         <span
-          className="MuiTouchRipple-root-1291"
+          className="MuiTouchRipple-root"
         />
       </button>
     </div>
@@ -95,7 +200,7 @@ exports[`Storyshots Form Select 1`] = `
     style={undefined}
   >
     <div
-      className="MuiPaper-root-760 MuiPaper-elevation2-764 MuiPaper-rounded-761"
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
           "margin": "15px",
@@ -105,7 +210,7 @@ exports[`Storyshots Form Select 1`] = `
       }
     >
       <div
-        className="MuiFormControl-root-789"
+        className="MuiFormControl-root"
         style={
           Object {
             "minWidth": 150,
@@ -113,23 +218,23 @@ exports[`Storyshots Form Select 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-804 MuiInputLabel-root-793 MuiInputLabel-formControl-798 MuiInputLabel-animated-801"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
           data-shrink={false}
         >
           Select test
         </label>
         <div
-          className="MuiInputBase-root-831 MuiInput-root-818 MuiInput-underline-822 MuiInputBase-formControl-832 MuiInput-formControl-819"
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
         >
           <div
-            className="MuiSelect-root-811"
+            className="MuiSelect-root"
           >
             <div
               aria-haspopup="true"
               aria-owns={undefined}
               aria-pressed="false"
-              className="MuiSelect-select-812 MuiSelect-selectMenu-815 MuiInputBase-input-841 MuiInput-input-826"
+              className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
               onBlur={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
@@ -160,7 +265,7 @@ exports[`Storyshots Form Select 1`] = `
             />
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-848 MuiSelect-icon-817"
+              className="MuiSvgIcon-root MuiSelect-icon"
               color={undefined}
               focusable="false"
               role="presentation"
@@ -175,7 +280,7 @@ exports[`Storyshots Form Select 1`] = `
         <div />
       </div>
       <button
-        className="MuiButtonBase-root-887 MuiButton-root-861 MuiButton-text-863 MuiButton-flat-866"
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
         disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -191,12 +296,12 @@ exports[`Storyshots Form Select 1`] = `
         type="submit"
       >
         <span
-          className="MuiButton-label-862"
+          className="MuiButton-label"
         >
           Submit
         </span>
         <span
-          className="MuiTouchRipple-root-890"
+          className="MuiTouchRipple-root"
         />
       </button>
     </div>
@@ -220,7 +325,7 @@ exports[`Storyshots Form Switch (default, converter) 1`] = `
         style={undefined}
       >
         <div
-          className="MuiPaper-root-510 MuiPaper-elevation2-514 MuiPaper-rounded-511"
+          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
           style={
             Object {
               "margin": "15px",
@@ -230,13 +335,13 @@ exports[`Storyshots Form Switch (default, converter) 1`] = `
           }
         >
           <label
-            className="MuiFormControlLabel-root-539 renderSwitchComponent-root-537"
+            className="MuiFormControlLabel-root renderSwitchComponent-root"
           >
             <span
-              className="MuiSwitch-root-545"
+              className="MuiSwitch-root"
             >
               <span
-                className="MuiButtonBase-root-564 MuiIconButton-root-558 MuiPrivateSwitchBase-root-554 MuiSwitch-switchBase-548 MuiSwitch-colorPrimary-550"
+                className="MuiButtonBase-root MuiIconButton-root MuiPrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -251,15 +356,15 @@ exports[`Storyshots Form Switch (default, converter) 1`] = `
                 tabIndex={null}
               >
                 <span
-                  className="MuiIconButton-label-563"
+                  className="MuiIconButton-label"
                 >
                   <span
-                    className="MuiSwitch-icon-546"
+                    className="MuiSwitch-icon"
                   />
                   <input
                     autoFocus={undefined}
                     checked={false}
-                    className="MuiPrivateSwitchBase-input-557"
+                    className="MuiPrivateSwitchBase-input"
                     disabled={undefined}
                     id={undefined}
                     name={undefined}
@@ -272,21 +377,21 @@ exports[`Storyshots Form Switch (default, converter) 1`] = `
                   />
                 </span>
                 <span
-                  className="MuiTouchRipple-root-628"
+                  className="MuiTouchRipple-root"
                 />
               </span>
               <span
-                className="MuiSwitch-bar-553"
+                className="MuiSwitch-bar"
               />
             </span>
             <span
-              className="MuiTypography-root-567 MuiTypography-body1-576 MuiFormControlLabel-label-544 renderSwitchComponent-label-538"
+              className="MuiTypography-root MuiTypography-body2 MuiFormControlLabel-label renderSwitchComponent-label"
             >
               Test
             </span>
           </label>
           <button
-            className="MuiButtonBase-root-564 MuiButton-root-602 MuiButton-text-604 MuiButton-flat-607"
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
             disabled={false}
             onBlur={[Function]}
             onFocus={[Function]}
@@ -302,12 +407,12 @@ exports[`Storyshots Form Switch (default, converter) 1`] = `
             type="submit"
           >
             <span
-              className="MuiButton-label-603"
+              className="MuiButton-label"
             >
               Submit
             </span>
             <span
-              className="MuiTouchRipple-root-628"
+              className="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -744,7 +849,7 @@ exports[`Storyshots Form Switch (default, converter, readOnly) 1`] = `
         style={undefined}
       >
         <div
-          className="MuiPaper-root-635 MuiPaper-elevation2-639 MuiPaper-rounded-636"
+          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
           style={
             Object {
               "margin": "15px",
@@ -754,13 +859,13 @@ exports[`Storyshots Form Switch (default, converter, readOnly) 1`] = `
           }
         >
           <label
-            className="MuiFormControlLabel-root-664 renderSwitchComponent-root-662"
+            className="MuiFormControlLabel-root renderSwitchComponent-root"
           >
             <span
-              className="MuiSwitch-root-670"
+              className="MuiSwitch-root"
             >
               <span
-                className="MuiButtonBase-root-689 MuiIconButton-root-683 MuiPrivateSwitchBase-root-679 MuiSwitch-switchBase-673 MuiSwitch-colorPrimary-675"
+                className="MuiButtonBase-root MuiIconButton-root MuiPrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -775,15 +880,15 @@ exports[`Storyshots Form Switch (default, converter, readOnly) 1`] = `
                 tabIndex={null}
               >
                 <span
-                  className="MuiIconButton-label-688"
+                  className="MuiIconButton-label"
                 >
                   <span
-                    className="MuiSwitch-icon-671"
+                    className="MuiSwitch-icon"
                   />
                   <input
                     autoFocus={undefined}
                     checked={false}
-                    className="MuiPrivateSwitchBase-input-682"
+                    className="MuiPrivateSwitchBase-input"
                     disabled={undefined}
                     id={undefined}
                     name={undefined}
@@ -796,21 +901,21 @@ exports[`Storyshots Form Switch (default, converter, readOnly) 1`] = `
                   />
                 </span>
                 <span
-                  className="MuiTouchRipple-root-753"
+                  className="MuiTouchRipple-root"
                 />
               </span>
               <span
-                className="MuiSwitch-bar-678"
+                className="MuiSwitch-bar"
               />
             </span>
             <span
-              className="MuiTypography-root-692 MuiTypography-body1-701 MuiFormControlLabel-label-669 renderSwitchComponent-label-663"
+              className="MuiTypography-root MuiTypography-body2 MuiFormControlLabel-label renderSwitchComponent-label"
             >
               Test
             </span>
           </label>
           <button
-            className="MuiButtonBase-root-689 MuiButton-root-727 MuiButton-text-729 MuiButton-flat-732"
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
             disabled={false}
             onBlur={[Function]}
             onFocus={[Function]}
@@ -826,12 +931,12 @@ exports[`Storyshots Form Switch (default, converter, readOnly) 1`] = `
             type="submit"
           >
             <span
-              className="MuiButton-label-728"
+              className="MuiButton-label"
             >
               Submit
             </span>
             <span
-              className="MuiTouchRipple-root-753"
+              className="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -1259,7 +1364,7 @@ exports[`Storyshots Form Switch 1`] = `
     style={undefined}
   >
     <div
-      className="MuiPaper-root-897 MuiPaper-elevation2-901 MuiPaper-rounded-898"
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
           "margin": "15px",
@@ -1269,13 +1374,13 @@ exports[`Storyshots Form Switch 1`] = `
       }
     >
       <label
-        className="MuiFormControlLabel-root-926 renderSwitchComponent-root-924"
+        className="MuiFormControlLabel-root renderSwitchComponent-root"
       >
         <span
-          className="MuiSwitch-root-932"
+          className="MuiSwitch-root"
         >
           <span
-            className="MuiButtonBase-root-951 MuiIconButton-root-945 MuiPrivateSwitchBase-root-941 MuiSwitch-switchBase-935 MuiSwitch-colorPrimary-937"
+            className="MuiButtonBase-root MuiIconButton-root MuiPrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -1290,15 +1395,15 @@ exports[`Storyshots Form Switch 1`] = `
             tabIndex={null}
           >
             <span
-              className="MuiIconButton-label-950"
+              className="MuiIconButton-label"
             >
               <span
-                className="MuiSwitch-icon-933"
+                className="MuiSwitch-icon"
               />
               <input
                 autoFocus={undefined}
                 checked={false}
-                className="MuiPrivateSwitchBase-input-944"
+                className="MuiPrivateSwitchBase-input"
                 disabled={undefined}
                 id={undefined}
                 name={undefined}
@@ -1311,21 +1416,21 @@ exports[`Storyshots Form Switch 1`] = `
               />
             </span>
             <span
-              className="MuiTouchRipple-root-1015"
+              className="MuiTouchRipple-root"
             />
           </span>
           <span
-            className="MuiSwitch-bar-940"
+            className="MuiSwitch-bar"
           />
         </span>
         <span
-          className="MuiTypography-root-954 MuiTypography-body1-963 MuiFormControlLabel-label-931 renderSwitchComponent-label-925"
+          className="MuiTypography-root MuiTypography-body2 MuiFormControlLabel-label renderSwitchComponent-label"
         >
           Switch test
         </span>
       </label>
       <button
-        className="MuiButtonBase-root-951 MuiButton-root-989 MuiButton-text-991 MuiButton-flat-994"
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
         disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -1341,12 +1446,12 @@ exports[`Storyshots Form Switch 1`] = `
         type="submit"
       >
         <span
-          className="MuiButton-label-990"
+          className="MuiButton-label"
         >
           Submit
         </span>
         <span
-          className="MuiTouchRipple-root-1015"
+          className="MuiTouchRipple-root"
         />
       </button>
     </div>
@@ -1370,7 +1475,7 @@ exports[`Storyshots Form TextField (default) 1`] = `
         style={undefined}
       >
         <div
-          className="MuiPaper-root-235 MuiPaper-elevation2-239 MuiPaper-rounded-236"
+          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
           style={
             Object {
               "margin": "15px",
@@ -1381,7 +1486,8 @@ exports[`Storyshots Form TextField (default) 1`] = `
         >
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-264 shouldUpdate-renderTextFieldWithoutStyle--root-263"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield",
@@ -1392,21 +1498,21 @@ exports[`Storyshots Form TextField (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-279 MuiFormLabel-filled-283 MuiInputLabel-root-268 MuiInputLabel-formControl-273 MuiInputLabel-animated-276 MuiInputLabel-shrink-275"
+              className="MuiFormLabel-root MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
               data-shrink={true}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-299 MuiInput-root-286 MuiInput-underline-290 MuiInputBase-formControl-300 MuiInput-formControl-287 MuiInputBase-adornedEnd-304"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-309 MuiInput-input-294 MuiInputBase-inputAdornedEnd-315"
+                className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -1425,10 +1531,10 @@ exports[`Storyshots Form TextField (default) 1`] = `
                 value="default value"
               />
               <div
-                className="MuiInputAdornment-root-316 MuiInputAdornment-positionEnd-319"
+                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <p
-                  className="MuiTypography-root-320 MuiTypography-body1-329 MuiTypography-colorTextSecondary-353"
+                  className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
                 >
                   nap
                 </p>
@@ -1436,7 +1542,7 @@ exports[`Storyshots Form TextField (default) 1`] = `
             </div>
           </div>
           <button
-            className="MuiButtonBase-root-381 MuiButton-root-355 MuiButton-text-357 MuiButton-flat-360"
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -1453,12 +1559,12 @@ exports[`Storyshots Form TextField (default) 1`] = `
             type="button"
           >
             <span
-              className="MuiButton-label-356"
+              className="MuiButton-label"
             >
               Submit
             </span>
             <span
-              className="MuiTouchRipple-root-384"
+              className="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -1895,7 +2001,7 @@ exports[`Storyshots Form TextField (default, read only) 1`] = `
         style={undefined}
       >
         <div
-          className="MuiPaper-root-391 MuiPaper-elevation2-395 MuiPaper-rounded-392"
+          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
           style={
             Object {
               "margin": "15px",
@@ -1906,7 +2012,8 @@ exports[`Storyshots Form TextField (default, read only) 1`] = `
         >
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-420 shouldUpdate-renderTextFieldWithoutStyle--root-419"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield",
@@ -1918,20 +2025,20 @@ exports[`Storyshots Form TextField (default, read only) 1`] = `
             readOnly={true}
           >
             <label
-              className="MuiFormLabel-root-435 MuiFormLabel-filled-439 MuiInputLabel-root-424 MuiInputLabel-formControl-429 MuiInputLabel-animated-432 MuiInputLabel-shrink-431 MuiInputLabel-outlined-434"
+              className="MuiFormLabel-root MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
               data-shrink={true}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-455 MuiOutlinedInput-root-442 MuiInputBase-formControl-456"
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
               disableUnderline={true}
               onClick={[Function]}
             >
               <fieldset
                 aria-hidden={true}
-                className="MuiPrivateNotchedOutline-root-472 MuiOutlinedInput-notchedOutline-449"
+                className="MuiPrivateNotchedOutline-root MuiOutlinedInput-notchedOutline"
                 style={
                   Object {
                     "paddingLeft": 8,
@@ -1939,7 +2046,7 @@ exports[`Storyshots Form TextField (default, read only) 1`] = `
                 }
               >
                 <legend
-                  className="MuiPrivateNotchedOutline-legend-473"
+                  className="MuiPrivateNotchedOutline-legend"
                   style={
                     Object {
                       "width": 0,
@@ -1959,7 +2066,7 @@ exports[`Storyshots Form TextField (default, read only) 1`] = `
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-465 MuiOutlinedInput-input-450"
+                className="MuiInputBase-input MuiOutlinedInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -1980,7 +2087,7 @@ exports[`Storyshots Form TextField (default, read only) 1`] = `
             </div>
           </div>
           <button
-            className="MuiButtonBase-root-500 MuiButton-root-474 MuiButton-text-476 MuiButton-flat-479"
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
             disabled={false}
             onBlur={[Function]}
             onFocus={[Function]}
@@ -1996,12 +2103,12 @@ exports[`Storyshots Form TextField (default, read only) 1`] = `
             type="submit"
           >
             <span
-              className="MuiButton-label-475"
+              className="MuiButton-label"
             >
               Submit
             </span>
             <span
-              className="MuiTouchRipple-root-503"
+              className="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -2438,7 +2545,7 @@ exports[`Storyshots Form TextField 1`] = `
         style={undefined}
       >
         <div
-          className="MuiPaper-root-1 MuiPaper-elevation2-5 MuiPaper-rounded-2"
+          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
           style={
             Object {
               "margin": "15px",
@@ -2449,7 +2556,8 @@ exports[`Storyshots Form TextField 1`] = `
         >
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-30 shouldUpdate-renderTextFieldWithoutStyle--root-29"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield",
@@ -2460,21 +2568,21 @@ exports[`Storyshots Form TextField 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-45 MuiInputLabel-root-34 MuiInputLabel-formControl-39 MuiInputLabel-animated-42"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-65 MuiInput-root-52 MuiInput-underline-56 MuiInputBase-formControl-66 MuiInput-formControl-53"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-75 MuiInput-input-60"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -2495,7 +2603,7 @@ exports[`Storyshots Form TextField 1`] = `
             </div>
           </div>
           <button
-            className="MuiButtonBase-root-108 MuiButton-root-82 MuiButton-text-84 MuiButton-flat-87"
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
             disabled={false}
             onBlur={[Function]}
             onFocus={[Function]}
@@ -2511,12 +2619,12 @@ exports[`Storyshots Form TextField 1`] = `
             type="submit"
           >
             <span
-              className="MuiButton-label-83"
+              className="MuiButton-label"
             >
               Submit
             </span>
             <span
-              className="MuiTouchRipple-root-111"
+              className="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -2953,7 +3061,7 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
         style={undefined}
       >
         <div
-          className="MuiPaper-root-118 MuiPaper-elevation2-122 MuiPaper-rounded-119"
+          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
           style={
             Object {
               "margin": "15px",
@@ -2964,7 +3072,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
         >
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield0",
@@ -2975,21 +3084,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3011,7 +3120,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield1",
@@ -3022,21 +3132,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3058,7 +3168,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield2",
@@ -3069,21 +3180,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3105,7 +3216,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield3",
@@ -3116,21 +3228,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3152,7 +3264,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield4",
@@ -3163,21 +3276,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3199,7 +3312,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield5",
@@ -3210,21 +3324,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3246,7 +3360,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield6",
@@ -3257,21 +3372,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3293,7 +3408,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield7",
@@ -3304,21 +3420,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3340,7 +3456,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield8",
@@ -3351,21 +3468,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3387,7 +3504,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield9",
@@ -3398,21 +3516,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3434,7 +3552,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield10",
@@ -3445,21 +3564,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3481,7 +3600,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield11",
@@ -3492,21 +3612,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3528,7 +3648,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield12",
@@ -3539,21 +3660,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3575,7 +3696,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield13",
@@ -3586,21 +3708,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3622,7 +3744,8 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
           </div>
           <div
             aria-describedby={undefined}
-            className="MuiFormControl-root-147 shouldUpdate-renderTextFieldWithoutStyle--root-146"
+            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+            deconverter={undefined}
             field={
               Object {
                 "name": "textfield14",
@@ -3633,21 +3756,21 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             }
           >
             <label
-              className="MuiFormLabel-root-162 MuiInputLabel-root-151 MuiInputLabel-formControl-156 MuiInputLabel-animated-159"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor={undefined}
             >
               Test
             </label>
             <div
-              className="MuiInputBase-root-182 MuiInput-root-169 MuiInput-underline-173 MuiInputBase-formControl-183 MuiInput-formControl-170"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
                 autoComplete="off"
                 autoFocus={undefined}
-                className="MuiInputBase-input-192 MuiInput-input-177"
+                className="MuiInputBase-input MuiInput-input"
                 defaultValue={undefined}
                 disabled={false}
                 id={undefined}
@@ -3668,7 +3791,7 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             </div>
           </div>
           <button
-            className="MuiButtonBase-root-225 MuiButton-root-199 MuiButton-text-201 MuiButton-flat-204"
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -3685,12 +3808,12 @@ exports[`Storyshots Form TextField heavy (default) 1`] = `
             type="button"
           >
             <span
-              className="MuiButton-label-200"
+              className="MuiButton-label"
             >
               Submit
             </span>
             <span
-              className="MuiTouchRipple-root-228"
+              className="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -4118,7 +4241,7 @@ exports[`Storyshots Form Time picker 1`] = `
     style={undefined}
   >
     <div
-      className="MuiPaper-root-1022 MuiPaper-elevation2-1026 MuiPaper-rounded-1023"
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
           "margin": "15px",
@@ -4129,7 +4252,7 @@ exports[`Storyshots Form Time picker 1`] = `
     >
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-1050"
+        className="MuiFormControl-root"
         deconverter={undefined}
         field={
           Object {
@@ -4179,21 +4302,21 @@ exports[`Storyshots Form Time picker 1`] = `
         onKeyPress={[Function]}
       >
         <label
-          className="MuiFormLabel-root-1065 MuiInputLabel-root-1054 MuiInputLabel-formControl-1059 MuiInputLabel-animated-1062"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
           data-shrink={false}
           htmlFor={undefined}
         >
           Time test
         </label>
         <div
-          className="MuiInputBase-root-1085 MuiInput-root-1072 MuiInput-underline-1076 MuiInputBase-formControl-1086 MuiInput-formControl-1073 WithUtils-DateTextField--input-1049"
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl WithUtils(DateTextField)-input"
           onClick={[Function]}
         >
           <input
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInputBase-input-1095 MuiInput-input-1080"
+            className="MuiInputBase-input MuiInput-input"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -4215,7 +4338,7 @@ exports[`Storyshots Form Time picker 1`] = `
         
       </div>
       <button
-        className="MuiButtonBase-root-1149 MuiButton-root-1123 MuiButton-text-1125 MuiButton-flat-1128"
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
         disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4231,12 +4354,12 @@ exports[`Storyshots Form Time picker 1`] = `
         type="submit"
       >
         <span
-          className="MuiButton-label-1124"
+          className="MuiButton-label"
         >
           Submit
         </span>
         <span
-          className="MuiTouchRipple-root-1152"
+          className="MuiTouchRipple-root"
         />
       </button>
     </div>
@@ -4251,7 +4374,7 @@ exports[`Storyshots Form Validation 1`] = `
     style={undefined}
   >
     <div
-      className="MuiPaper-root-1298 MuiPaper-elevation2-1302 MuiPaper-rounded-1299"
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
           "margin": "15px",
@@ -4262,7 +4385,8 @@ exports[`Storyshots Form Validation 1`] = `
     >
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-1327 shouldUpdate-renderTextFieldWithoutStyle--root-1326"
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
         field={
           Object {
             "name": "required",
@@ -4273,21 +4397,21 @@ exports[`Storyshots Form Validation 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-1342 MuiInputLabel-root-1331 MuiInputLabel-formControl-1336 MuiInputLabel-animated-1339"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
           data-shrink={false}
           htmlFor={undefined}
         >
           Required
         </label>
         <div
-          className="MuiInputBase-root-1362 MuiInput-root-1349 MuiInput-underline-1353 MuiInputBase-formControl-1363 MuiInput-formControl-1350"
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
         >
           <input
             aria-invalid={false}
             autoComplete="off"
             autoFocus={undefined}
-            className="MuiInputBase-input-1372 MuiInput-input-1357"
+            className="MuiInputBase-input MuiInput-input"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -4309,7 +4433,8 @@ exports[`Storyshots Form Validation 1`] = `
       </div>
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-1327 shouldUpdate-renderTextFieldWithoutStyle--root-1326"
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
         field={
           Object {
             "name": "regex",
@@ -4320,21 +4445,21 @@ exports[`Storyshots Form Validation 1`] = `
         }
       >
         <label
-          className="MuiFormLabel-root-1342 MuiInputLabel-root-1331 MuiInputLabel-formControl-1336 MuiInputLabel-animated-1339"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
           data-shrink={false}
           htmlFor={undefined}
         >
           Regex
         </label>
         <div
-          className="MuiInputBase-root-1362 MuiInput-root-1349 MuiInput-underline-1353 MuiInputBase-formControl-1363 MuiInput-formControl-1350"
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
         >
           <input
             aria-invalid={false}
             autoComplete="off"
             autoFocus={undefined}
-            className="MuiInputBase-input-1372 MuiInput-input-1357"
+            className="MuiInputBase-input MuiInput-input"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -4356,27 +4481,27 @@ exports[`Storyshots Form Validation 1`] = `
       </div>
       <div
         aria-describedby={undefined}
-        className="MuiFormControl-root-1327 shouldUpdate-renderTextFieldWithoutStyle--root-1326"
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
         onClick={[Function]}
         onError={undefined}
         onKeyPress={[Function]}
       >
         <label
-          className="MuiFormLabel-root-1342 MuiInputLabel-root-1331 MuiInputLabel-formControl-1336 MuiInputLabel-animated-1339"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated shouldUpdate(renderTextFieldWithoutStyle)-empty"
           data-shrink={false}
           htmlFor={undefined}
         >
           date
         </label>
         <div
-          className="MuiInputBase-root-1362 MuiInput-root-1349 MuiInput-underline-1353 MuiInputBase-formControl-1363 MuiInput-formControl-1350 WithUtils-DateTextField--input-1379"
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl WithUtils(DateTextField)-input"
           onClick={[Function]}
         >
           <input
             aria-invalid={false}
             autoComplete="off"
             autoFocus={undefined}
-            className="MuiInputBase-input-1372 MuiInput-input-1357"
+            className="MuiInputBase-input MuiInput-input"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -4397,7 +4522,7 @@ exports[`Storyshots Form Validation 1`] = `
         </div>
       </div>
       <button
-        className="MuiButtonBase-root-1427 MuiButton-root-1401 MuiButton-text-1403 MuiButton-flat-1406"
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
         disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4413,12 +4538,12 @@ exports[`Storyshots Form Validation 1`] = `
         type="submit"
       >
         <span
-          className="MuiButton-label-1402"
+          className="MuiButton-label"
         >
           Submit
         </span>
         <span
-          className="MuiTouchRipple-root-1430"
+          className="MuiTouchRipple-root"
         />
       </button>
     </div>

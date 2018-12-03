@@ -1,13 +1,7 @@
 import React, { Component, PureComponent } from "react"
 import PropTypes from "prop-types"
 import { FastField, Field } from "formik"
-import {
-  compose,
-  mapProps,
-  withProps,
-  renderComponent,
-  shouldUpdate
-} from "recompose"
+import { compose, mapProps, withProps } from "recompose"
 import moment from "moment"
 import { omit } from "lodash/fp"
 import {
@@ -15,7 +9,8 @@ import {
   renderSelectField,
   RenderTextField,
   renderSwitch,
-  renderTimePicker
+  renderTimePicker,
+  renderCheckbox
 } from "./renderers"
 
 const nothing = () => {}
@@ -23,65 +18,30 @@ const omitProps = keys => mapProps(props => omit(keys, props))
 const enhance = compose(
   withProps(props => ({
     input: {
-      value: props.field.value,
+      value: props.converter
+        ? props.converter(props.field.value)
+        : props.field.value,
       onChange: props.readOnly ? nothing : props.field.onChange,
       readOnly: props.readOnly,
       onBlur: props.field.onBlur,
+
       name: props.field.name,
       touched: props.form.touched[props.field.name],
       error: props.form.errors[props.field.name]
     },
+    deconverter: props.deconverter,
     name: props.field.name
   })),
   omitProps(["setFieldValue"])
 )
+const dateConverter = value => (value ? moment(value).format("YYYY.MM.DD") : "")
 
-const Converter = (converter, setFieldValue) => (name, value) => {
-  return setFieldValue(name, converter(value))
-}
-const withConverter = (deconverter, setFieldValue) => {
-  if (deconverter) {
-    return Converter(deconverter, setFieldValue)
-  } else {
-    return setFieldValue
-  }
-}
-const enhanceSetFieldValue = compose(
-  withProps(props => {
-    return {
-      input: {
-        value: props.converter
-          ? props.converter(props.field.value)
-          : props.field.value,
-        onChange: props.readOnly
-          ? nothing
-          : withConverter(props.deconverter, props.form.setFieldValue),
-        name: props.field.name,
-        readOnly: props.readOnly
-      },
-      deconverter: props.deconverter,
-      name: props.field.name
-    }
-  }),
-  omitProps(["setFieldValue"])
-)
-const enhanceDate = compose(
-  enhanceSetFieldValue,
-  withProps(props => ({
-    input: {
-      ...props.input,
-      readOnly: props.readOnly,
-      value: props.input.value
-        ? moment(props.input.value).format("YYYY.MM.DD")
-        : ""
-    }
-  }))
-)
 const textField = enhance(RenderTextField)
 const datePickerField = enhance(renderDatePicker)
-const selectField = enhanceSetFieldValue(renderSelectField)
-const switchField = enhanceSetFieldValue(renderSwitch)
-const timePickerField = enhanceSetFieldValue(renderTimePicker)
+const selectField = enhance(renderSelectField)
+const switchField = enhance(renderSwitch)
+const timePickerField = enhance(renderTimePicker)
+const checkboxField = enhance(renderCheckbox)
 
 class TypeFieldInner extends Component {
   shouldComponentUpdate(nextProps) {
@@ -96,11 +56,12 @@ class TypeFieldInner extends Component {
     return false
   }
   render() {
-    const { Component, ...rest } = this.props
-    return <Component {...rest} />
+    const { FieldComponent, ...rest } = this.props
+    return <FieldComponent {...rest} />
   }
 }
 const enhancedTypeFieldInner = enhance(TypeFieldInner)
+
 class TypeField extends PureComponent {
   render() {
     const { type, ...rest } = this.props
@@ -110,15 +71,16 @@ class TypeField extends PureComponent {
           <Field
             {...rest}
             component={
-              rest.readOnly ? enhanceDate(RenderTextField) : datePickerField
+              rest.readOnly ? enhance(RenderTextField) : datePickerField
             }
+            converter={dateConverter}
           />
         )
       case "text":
         return (
           <FastField
             {...rest}
-            Component={textField}
+            FieldComponent={textField}
             component={enhancedTypeFieldInner}
           />
         )
@@ -128,11 +90,13 @@ class TypeField extends PureComponent {
         return <Field {...rest} component={switchField} />
       case "time":
         return <Field {...rest} component={timePickerField} />
+      case "checkbox":
+        return <Field {...rest} component={checkboxField} />
       default:
         return (
           <FastField
             {...rest}
-            Component={textField}
+            FieldComponent={textField}
             component={enhancedTypeFieldInner}
           />
         )

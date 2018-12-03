@@ -2,8 +2,9 @@ import React, { PureComponent } from "react"
 import ReactDOM from "react-dom"
 import InputLabel from "@material-ui/core/InputLabel"
 import Select from "@material-ui/core/Select"
-import { TextField } from "@material-ui/core"
+import TextField from "@material-ui/core/TextField"
 import FormControl from "@material-ui/core/FormControl"
+import Checkbox from "@material-ui/core/Checkbox"
 import moment from "moment"
 import Switch from "@material-ui/core/Switch"
 import FormControlLabel from "@material-ui/core/FormControlLabel"
@@ -92,9 +93,6 @@ export const RenderTextField = compose(
     if (props.classes !== nextProps.classes) {
       return true
     }
-    console.log(props)
-    console.log(nextProps)
-    console.log("-----------------------")
     return false
   })
 )(renderTextFieldWithoutStyle)
@@ -110,15 +108,7 @@ const onSwitchChangeSFV = (input, deconverter, sfv, readOnly) => event => {
   }
 }
 const onSelectChangeSFV = (input, sfv) => event => {
-  console.log(sfv)
   sfv(input.name, event.target.value)
-}
-
-const onSwitchChange = input => event => {
-  const value = Boolean(event.target.checked)
-  console.log(input)
-  console.log(value)
-  input.onChange(input.name, value)
 }
 const switchStyles = {
   root: {
@@ -167,12 +157,6 @@ const renderSwitchComponent = ({
   </I18n>
 )
 export const renderSwitch = withStyles(switchStyles)(renderSwitchComponent)
-
-const onSelectChange = input => event => {
-  console.log(input)
-  console.log(event)
-  input.onChange(input.name, event.target.value, true)
-}
 const selectStyle = {
   iconStyleHidden: {
     opacity: 0
@@ -195,13 +179,11 @@ export class RenderSelectFieldComponent extends PureComponent {
 
   render() {
     const {
-      input,
+      input: { touched, ...inputProps },
       label,
       style,
       className,
       children,
-      meta,
-      form,
       name,
       classes,
       form: { submitCount, errors },
@@ -214,7 +196,7 @@ export class RenderSelectFieldComponent extends PureComponent {
           <SetFieldValueContext.Consumer>
             {({ setFieldValue }) => (
               <FormControl
-                variant={input.readOnly ? "outlined" : "standard"}
+                variant={inputProps.readOnly ? "outlined" : "standard"}
                 className={className}
                 error={Boolean(error && submitCount > 0)}
                 style={{ minWidth: 150, ...style }}
@@ -228,21 +210,21 @@ export class RenderSelectFieldComponent extends PureComponent {
                 </InputLabel>
                 <Select
                   classes={{
-                    icon: input.readOnly
+                    icon: inputProps.readOnly
                       ? classes.iconStyleHidden
-                      : input.iconStyleShow
+                      : inputProps.iconStyleShow
                   }}
-                  value={input.value || ""}
-                  onChange={onSelectChangeSFV(input, setFieldValue)}
-                  disableUnderline={input.readOnly}
+                  value={inputProps.value || ""}
+                  onChange={onSelectChangeSFV(inputProps, setFieldValue)}
+                  disableUnderline={inputProps.readOnly}
                   input={
-                    input.readOnly ? (
+                    inputProps.readOnly ? (
                       <OutlinedInput
                         labelWidth={this.state.labelWidth}
-                        {...input}
+                        {...inputProps}
                       />
                     ) : (
-                      <Input {...input} />
+                      <Input {...inputProps} />
                     )
                   }
                   //   {...rest}
@@ -396,3 +378,43 @@ export const renderDatePicker = shouldUpdate((props, nextProps) => {
     )}
   </SetFieldValueContext.Consumer>
 ))
+
+const renderCheckboxComponent = ({
+  classes,
+  input,
+  deconverter,
+  label,
+  readOnly,
+  labelPlacement
+}) => (
+  <I18n ns={["translations"]}>
+    {t => (
+      <SetFieldValueContext.Consumer>
+        {({ setFieldValue }) => (
+          <FormControlLabel
+            labelPlacement={labelPlacement}
+            control={
+              <Checkbox
+                checked={input.value}
+                onChange={onSwitchChangeSFV(
+                  input,
+                  deconverter,
+                  setFieldValue,
+                  readOnly
+                )}
+                color={"primary"}
+                value={label}
+              />
+            }
+            label={t(label)}
+            classes={{
+              root: classes.root,
+              label: classes.label
+            }}
+          />
+        )}
+      </SetFieldValueContext.Consumer>
+    )}
+  </I18n>
+)
+export const renderCheckbox = withStyles(switchStyles)(renderCheckboxComponent)
