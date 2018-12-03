@@ -8,6 +8,7 @@ install: npm install
 script:
 - npm test
 deploy:
+  skip_cleanup: true
   on:
     tags: true
   provider: npm
