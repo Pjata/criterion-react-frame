@@ -87,7 +87,6 @@ export const RenderTextField = compose(
       input.touched !== nextProps.input.touched ||
       input.error !== nextProps.input.error
     ) {
-      console.log(`updated: ${input.name}`)
       return true
     }
     if (props.classes !== nextProps.classes) {
@@ -249,7 +248,7 @@ export const renderSelectField = withStyles(selectStyle)(
 )
 export const RenderSelectField = withStyles(selectStyle)(
   ({
-    input,
+    input: { error, ...inputProps },
     label,
     style,
     className,
@@ -261,7 +260,6 @@ export const RenderSelectField = withStyles(selectStyle)(
     form: { submitCount, errors },
     ...rest
   }) => {
-    const error = errors[name]
     return (
       <SetFieldValueContext.Consumer>
         {({ setFieldValue }) => (
@@ -274,18 +272,18 @@ export const RenderSelectField = withStyles(selectStyle)(
             <InputLabel>{label}</InputLabel>
             <Select
               classes={{
-                icon: input.readOnly
+                icon: inputProps.readOnly
                   ? classes.iconStyleHidden
-                  : input.iconStyleShow
+                  : inputProps.iconStyleShow
               }}
-              value={input.value || ""}
-              onChange={onSelectChangeSFV(input, setFieldValue)}
-              disableUnderline={input.readOnly}
+              value={inputProps.value || ""}
+              onChange={onSelectChangeSFV(inputProps, setFieldValue)}
+              disableUnderline={inputProps.readOnly}
               input={
-                input.readOnly || true ? (
+                inputProps.readOnly || true ? (
                   <OutlinedInput labelWidth={10} />
                 ) : (
-                  <Input {...input} />
+                  <Input {...inputProps} />
                 )
               }
               //   {...rest}
@@ -354,7 +352,6 @@ export const renderDatePicker = shouldUpdate((props, nextProps) => {
     input.touched !== nextProps.input.touched ||
     input.error !== nextProps.input.error
   ) {
-    console.log(`updated: ${input.name}`)
     return true
   }
   return false
