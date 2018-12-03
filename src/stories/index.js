@@ -22,7 +22,6 @@ import CriterionFrame from "../components/CriterionFrame"
 import { TypeField } from "../index"
 import * as Yup from "yup"
 import i18n from "./i18n"
-import { withInfo } from "@storybook/addon-info"
 const stories = storiesOf("Menu and topbar (DontTest)", module)
 
 const generateClassName = (rule, styleSheet) =>
@@ -87,224 +86,188 @@ storiesFormik.addDecorator(withKnobs).addDecorator(muiTheme([muiTheme0]))
 storiesFormik.addDecorator(story => (
   <JssProvider generateClassName={generateClassName}>{story()}</JssProvider>
 ))
-storiesFormik.add(
-  "TextField",
-  withInfo({
-    source: false,
-    propTables: [TypeField, FormikContainerComponent]
-  })(() => {
-    const label = text("Label", "Test")
-    return (
-      <CriterionProviders i18n={i18n}>
-        <FormikContainer
-          onSubmit={action("Submitted: ")}
-          render={() => (
-            <Paper
-              style={{
-                margin: "15px",
-                padding: "5px",
-                width: "400px"
+storiesFormik.add("TextField", () => {
+  const label = text("Label", "Test")
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField name={"textfield"} label={label} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
+storiesFormik.add("TextField heavy (default)", () => {
+  const label = text("Label", "Test")
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        defaultValues={{
+          textfield: "default value"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={(values, validateForm, submitForm) => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField name={"textfield0"} label={label} />
+            <TypeField name={"textfield1"} label={label} />
+            <TypeField name={"textfield2"} label={label} />
+            <TypeField name={"textfield3"} label={label} />
+            <TypeField name={"textfield4"} label={label} />
+            <TypeField name={"textfield5"} label={label} />
+            <TypeField name={"textfield6"} label={label} />
+            <TypeField name={"textfield7"} label={label} />
+            <TypeField name={"textfield8"} label={label} />
+            <TypeField name={"textfield9"} label={label} />
+            <TypeField name={"textfield10"} label={label} />
+            <TypeField name={"textfield11"} label={label} />
+            <TypeField name={"textfield12"} label={label} />
+            <TypeField name={"textfield13"} label={label} />
+            <TypeField name={"textfield14"} label={label} />
+            <Button onClick={() => submitForm()}>Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
+storiesFormik.add("TextField (default)", () => {
+  const label = text("Label", "Test")
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        defaultValues={{
+          textfield: "default value"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={(values, validateForm, submitForm) => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position={"end"}>nap</InputAdornment>
+                )
               }}
-            >
-              <TypeField name={"textfield"} label={label} />
-              <Button type="submit">Submit</Button>
-            </Paper>
-          )}
-        />
-      </CriterionProviders>
-    )
-  })
-)
-storiesFormik.add(
-  "TextField heavy (default)",
-  withInfo({
-    source: false,
-    propTables: [TypeField, FormikContainerComponent]
-  })(() => {
-    const label = text("Label", "Test")
-    return (
-      <CriterionProviders i18n={i18n}>
-        <FormikContainer
-          defaultValues={{
-            textfield: "default value"
-          }}
-          onSubmit={action("Submitted: ")}
-          render={(values, validateForm, submitForm) => (
-            <Paper
-              style={{
-                margin: "15px",
-                padding: "5px",
-                width: "400px"
-              }}
-            >
-              <TypeField name={"textfield0"} label={label} />
-              <TypeField name={"textfield1"} label={label} />
-              <TypeField name={"textfield2"} label={label} />
-              <TypeField name={"textfield3"} label={label} />
-              <TypeField name={"textfield4"} label={label} />
-              <TypeField name={"textfield5"} label={label} />
-              <TypeField name={"textfield6"} label={label} />
-              <TypeField name={"textfield7"} label={label} />
-              <TypeField name={"textfield8"} label={label} />
-              <TypeField name={"textfield9"} label={label} />
-              <TypeField name={"textfield10"} label={label} />
-              <TypeField name={"textfield11"} label={label} />
-              <TypeField name={"textfield12"} label={label} />
-              <TypeField name={"textfield13"} label={label} />
-              <TypeField name={"textfield14"} label={label} />
-              <Button onClick={() => submitForm()}>Submit</Button>
-            </Paper>
-          )}
-        />
-      </CriterionProviders>
-    )
-  })
-)
-storiesFormik.add(
-  "TextField (default)",
-  withInfo({
-    source: false,
-    propTables: [TypeField, FormikContainerComponent]
-  })(() => {
-    const label = text("Label", "Test")
-    return (
-      <CriterionProviders i18n={i18n}>
-        <FormikContainer
-          defaultValues={{
-            textfield: "default value"
-          }}
-          onSubmit={action("Submitted: ")}
-          render={(values, validateForm, submitForm) => (
-            <Paper
-              style={{
-                margin: "15px",
-                padding: "5px",
-                width: "400px"
-              }}
-            >
-              <TypeField
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position={"end"}>nap</InputAdornment>
-                  )
-                }}
-                name={"textfield"}
-                label={label}
-              />
-              <Button onClick={() => submitForm()}>Submit</Button>
-            </Paper>
-          )}
-        />
-      </CriterionProviders>
-    )
-  })
-)
-storiesFormik.add(
-  "TextField (default, read only)",
-  withInfo({
-    source: false,
-    propTables: [TypeField, FormikContainerComponent]
-  })(() => {
-    const label = text("Label", "Test")
-    return (
-      <CriterionProviders i18n={i18n}>
-        <FormikContainer
-          defaultValues={{
-            textfield: "default value read only"
-          }}
-          onSubmit={action("Submitted: ")}
-          render={() => (
-            <Paper
-              style={{
-                margin: "15px",
-                padding: "5px",
-                width: "400px"
-              }}
-            >
-              <TypeField readOnly={true} name={"textfield"} label={label} />
-              <Button type="submit">Submit</Button>
-            </Paper>
-          )}
-        />
-      </CriterionProviders>
-    )
-  })
-)
-storiesFormik.add(
-  "Switch (default, converter)",
-  withInfo({
-    source: false,
-    propTables: [TypeField, FormikContainerComponent]
-  })(() => {
-    const label = text("Label", "Test")
-    return (
-      <CriterionProviders i18n={i18n}>
-        <FormikContainer
-          defaultValues={{
-            switch: "0"
-          }}
-          onSubmit={action("Submitted: ")}
-          render={() => (
-            <Paper
-              style={{
-                margin: "15px",
-                padding: "5px",
-                width: "400px"
-              }}
-            >
-              <TypeField
-                converter={value => value === "1"}
-                deconverter={value => (value ? "1" : "0")}
-                name={"switch"}
-                label={label}
-                type={"switch"}
-              />
-              <Button type="submit">Submit</Button>
-            </Paper>
-          )}
-        />
-      </CriterionProviders>
-    )
-  })
-)
-storiesFormik.add(
-  "Switch (default, converter, readOnly)",
-  withInfo({
-    source: false,
-    propTables: [TypeField, FormikContainerComponent]
-  })(() => {
-    const label = text("Label", "Test")
-    return (
-      <CriterionProviders i18n={i18n}>
-        <FormikContainer
-          defaultValues={{
-            switch: "0"
-          }}
-          onSubmit={action("Submitted: ")}
-          render={() => (
-            <Paper
-              style={{
-                margin: "15px",
-                padding: "5px",
-                width: "400px"
-              }}
-            >
-              <TypeField
-                converter={value => value === "1"}
-                deconverter={value => (value ? "1" : "0")}
-                readOnly={true}
-                name={"switch"}
-                label={label}
-                type={"switch"}
-              />
-              <Button type="submit">Submit</Button>
-            </Paper>
-          )}
-        />
-      </CriterionProviders>
-    )
-  })
-)
+              name={"textfield"}
+              label={label}
+            />
+            <Button onClick={() => submitForm()}>Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
+storiesFormik.add("TextField (default, read only)", () => {
+  const label = text("Label", "Test")
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        defaultValues={{
+          textfield: "default value read only"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField readOnly={true} name={"textfield"} label={label} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
+storiesFormik.add("Switch (default, converter)", () => {
+  const label = text("Label", "Test")
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        defaultValues={{
+          switch: "0"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField
+              converter={value => value === "1"}
+              deconverter={value => (value ? "1" : "0")}
+              name={"switch"}
+              label={label}
+              type={"switch"}
+            />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
+storiesFormik.add("Switch (default, converter, readOnly)", () => {
+  const label = text("Label", "Test")
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        defaultValues={{
+          switch: "0"
+        }}
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField
+              converter={value => value === "1"}
+              deconverter={value => (value ? "1" : "0")}
+              readOnly={true}
+              name={"switch"}
+              label={label}
+              type={"switch"}
+            />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
 storiesFormik.add("Select", () => {
   const label = text("Label", "Select test")
   return (

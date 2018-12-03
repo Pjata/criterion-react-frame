@@ -311,88 +311,28 @@ exports[`Storyshots Form Select 1`] = `
 
 exports[`Storyshots Form Switch (default, converter) 1`] = `
 <div>
-  <div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
     <div
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
-          "position": "relative",
-          "zIndex": 0,
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
         }
       }
     >
-      <form
-        onSubmit={[Function]}
-        style={undefined}
+      <label
+        className="MuiFormControlLabel-root renderSwitchComponent-root"
       >
-        <div
-          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
-          style={
-            Object {
-              "margin": "15px",
-              "padding": "5px",
-              "width": "400px",
-            }
-          }
+        <span
+          className="MuiSwitch-root"
         >
-          <label
-            className="MuiFormControlLabel-root renderSwitchComponent-root"
-          >
-            <span
-              className="MuiSwitch-root"
-            >
-              <span
-                className="MuiButtonBase-root MuiIconButton-root MuiPrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role={undefined}
-                tabIndex={null}
-              >
-                <span
-                  className="MuiIconButton-label"
-                >
-                  <span
-                    className="MuiSwitch-icon"
-                  />
-                  <input
-                    autoFocus={undefined}
-                    checked={false}
-                    className="MuiPrivateSwitchBase-input"
-                    disabled={undefined}
-                    id={undefined}
-                    name={undefined}
-                    onChange={[Function]}
-                    readOnly={undefined}
-                    required={undefined}
-                    tabIndex={undefined}
-                    type="checkbox"
-                    value="Test"
-                  />
-                </span>
-                <span
-                  className="MuiTouchRipple-root"
-                />
-              </span>
-              <span
-                className="MuiSwitch-bar"
-              />
-            </span>
-            <span
-              className="MuiTypography-root MuiTypography-body2 MuiFormControlLabel-label renderSwitchComponent-label"
-            >
-              Test
-            </span>
-          </label>
-          <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
-            disabled={false}
+          <span
+            className="MuiButtonBase-root MuiIconButton-root MuiPrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -403,520 +343,98 @@ exports[`Storyshots Form Switch (default, converter) 1`] = `
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
             onTouchStart={[Function]}
-            tabIndex="0"
-            type="submit"
+            role={undefined}
+            tabIndex={null}
           >
             <span
-              className="MuiButton-label"
+              className="MuiIconButton-label"
             >
-              Submit
+              <span
+                className="MuiSwitch-icon"
+              />
+              <input
+                autoFocus={undefined}
+                checked={false}
+                className="MuiPrivateSwitchBase-input"
+                disabled={undefined}
+                id={undefined}
+                name={undefined}
+                onChange={[Function]}
+                readOnly={undefined}
+                required={undefined}
+                tabIndex={undefined}
+                type="checkbox"
+                value="Test"
+              />
             </span>
             <span
               className="MuiTouchRipple-root"
             />
-          </button>
-        </div>
-      </form>
-    </div>
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      Show Info
-    </button>
-    <div
-      style={
-        Object {
-          "background": "white",
-          "bottom": 0,
-          "display": "none",
-          "left": 0,
-          "overflow": "auto",
-          "padding": "0 40px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-          "zIndex": 99999,
-        }
-      }
-    >
-      <button
-        onClick={[Function]}
-        style={
-          Object {
-            "background": "#28c",
-            "border": "none",
-            "borderRadius": "0 0 0 5px",
-            "color": "#fff",
-            "cursor": "pointer",
-            "display": "block",
-            "fontFamily": "sans-serif",
-            "fontSize": "12px",
-            "padding": "5px 15px",
-            "position": "fixed",
-            "right": 0,
-            "top": 0,
-          }
-        }
-        type="button"
-      >
-        ×
-      </button>
-      <div
-        style={undefined}
-      >
-        <div
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "backgroundColor": "#fff",
-              "border": "1px solid #eee",
-              "borderRadius": "2px",
-              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-              "fontSize": "15px",
-              "fontWeight": 300,
-              "lineHeight": 1.45,
-              "marginBottom": "20px",
-              "marginTop": "20px",
-              "padding": "20px 40px 40px",
-            }
-          }
+          </span>
+          <span
+            className="MuiSwitch-bar"
+          />
+        </span>
+        <span
+          className="MuiTypography-root MuiTypography-body2 MuiFormControlLabel-label renderSwitchComponent-label"
         >
-          <div
-            style={
-              Object {
-                "borderBottom": "1px solid #eee",
-                "marginBottom": 10,
-                "paddingTop": 10,
-              }
-            }
-          >
-            <h1
-              style={
-                Object {
-                  "fontSize": "35px",
-                  "margin": 0,
-                  "padding": 0,
-                }
-              }
-            >
-              Form
-            </h1>
-            <h2
-              style={
-                Object {
-                  "fontSize": "22px",
-                  "fontWeight": 400,
-                  "margin": "0 0 10px 0",
-                  "padding": 0,
-                }
-              }
-            >
-              Switch (default, converter)
-            </h2>
-          </div>
-          
-          <div>
-            <h1
-              style={
-                Object {
-                  "borderBottom": "1px solid #EEE",
-                  "fontSize": "25px",
-                  "margin": "20px 0 0 0",
-                  "padding": "0 0 5px 0",
-                }
-              }
-            >
-              Prop Types
-            </h1>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                CriterionProviders
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                FormikContainerComponent
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      render
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      schema
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      onError
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                TypeField
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      type
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      name
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      label
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                WithFormik(FormikContainerComponent)
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-          </div>
-        </div>
-      </div>
+          Test
+        </span>
+      </label>
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
 exports[`Storyshots Form Switch (default, converter, readOnly) 1`] = `
 <div>
-  <div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
     <div
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
-          "position": "relative",
-          "zIndex": 0,
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
         }
       }
     >
-      <form
-        onSubmit={[Function]}
-        style={undefined}
+      <label
+        className="MuiFormControlLabel-root renderSwitchComponent-root"
       >
-        <div
-          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
-          style={
-            Object {
-              "margin": "15px",
-              "padding": "5px",
-              "width": "400px",
-            }
-          }
+        <span
+          className="MuiSwitch-root"
         >
-          <label
-            className="MuiFormControlLabel-root renderSwitchComponent-root"
-          >
-            <span
-              className="MuiSwitch-root"
-            >
-              <span
-                className="MuiButtonBase-root MuiIconButton-root MuiPrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role={undefined}
-                tabIndex={null}
-              >
-                <span
-                  className="MuiIconButton-label"
-                >
-                  <span
-                    className="MuiSwitch-icon"
-                  />
-                  <input
-                    autoFocus={undefined}
-                    checked={false}
-                    className="MuiPrivateSwitchBase-input"
-                    disabled={undefined}
-                    id={undefined}
-                    name={undefined}
-                    onChange={[Function]}
-                    readOnly={undefined}
-                    required={undefined}
-                    tabIndex={undefined}
-                    type="checkbox"
-                    value="Test"
-                  />
-                </span>
-                <span
-                  className="MuiTouchRipple-root"
-                />
-              </span>
-              <span
-                className="MuiSwitch-bar"
-              />
-            </span>
-            <span
-              className="MuiTypography-root MuiTypography-body2 MuiFormControlLabel-label renderSwitchComponent-label"
-            >
-              Test
-            </span>
-          </label>
-          <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
-            disabled={false}
+          <span
+            className="MuiButtonBase-root MuiIconButton-root MuiPrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -927,433 +445,71 @@ exports[`Storyshots Form Switch (default, converter, readOnly) 1`] = `
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
             onTouchStart={[Function]}
-            tabIndex="0"
-            type="submit"
+            role={undefined}
+            tabIndex={null}
           >
             <span
-              className="MuiButton-label"
+              className="MuiIconButton-label"
             >
-              Submit
+              <span
+                className="MuiSwitch-icon"
+              />
+              <input
+                autoFocus={undefined}
+                checked={false}
+                className="MuiPrivateSwitchBase-input"
+                disabled={undefined}
+                id={undefined}
+                name={undefined}
+                onChange={[Function]}
+                readOnly={undefined}
+                required={undefined}
+                tabIndex={undefined}
+                type="checkbox"
+                value="Test"
+              />
             </span>
             <span
               className="MuiTouchRipple-root"
             />
-          </button>
-        </div>
-      </form>
-    </div>
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      Show Info
-    </button>
-    <div
-      style={
-        Object {
-          "background": "white",
-          "bottom": 0,
-          "display": "none",
-          "left": 0,
-          "overflow": "auto",
-          "padding": "0 40px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-          "zIndex": 99999,
-        }
-      }
-    >
-      <button
-        onClick={[Function]}
-        style={
-          Object {
-            "background": "#28c",
-            "border": "none",
-            "borderRadius": "0 0 0 5px",
-            "color": "#fff",
-            "cursor": "pointer",
-            "display": "block",
-            "fontFamily": "sans-serif",
-            "fontSize": "12px",
-            "padding": "5px 15px",
-            "position": "fixed",
-            "right": 0,
-            "top": 0,
-          }
-        }
-        type="button"
-      >
-        ×
-      </button>
-      <div
-        style={undefined}
-      >
-        <div
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "backgroundColor": "#fff",
-              "border": "1px solid #eee",
-              "borderRadius": "2px",
-              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-              "fontSize": "15px",
-              "fontWeight": 300,
-              "lineHeight": 1.45,
-              "marginBottom": "20px",
-              "marginTop": "20px",
-              "padding": "20px 40px 40px",
-            }
-          }
+          </span>
+          <span
+            className="MuiSwitch-bar"
+          />
+        </span>
+        <span
+          className="MuiTypography-root MuiTypography-body2 MuiFormControlLabel-label renderSwitchComponent-label"
         >
-          <div
-            style={
-              Object {
-                "borderBottom": "1px solid #eee",
-                "marginBottom": 10,
-                "paddingTop": 10,
-              }
-            }
-          >
-            <h1
-              style={
-                Object {
-                  "fontSize": "35px",
-                  "margin": 0,
-                  "padding": 0,
-                }
-              }
-            >
-              Form
-            </h1>
-            <h2
-              style={
-                Object {
-                  "fontSize": "22px",
-                  "fontWeight": 400,
-                  "margin": "0 0 10px 0",
-                  "padding": 0,
-                }
-              }
-            >
-              Switch (default, converter, readOnly)
-            </h2>
-          </div>
-          
-          <div>
-            <h1
-              style={
-                Object {
-                  "borderBottom": "1px solid #EEE",
-                  "fontSize": "25px",
-                  "margin": "20px 0 0 0",
-                  "padding": "0 0 5px 0",
-                }
-              }
-            >
-              Prop Types
-            </h1>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                CriterionProviders
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                FormikContainerComponent
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      render
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      schema
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      onError
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                TypeField
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      type
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      name
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      label
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                WithFormik(FormikContainerComponent)
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-          </div>
-        </div>
-      </div>
+          Test
+        </span>
+      </label>
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
@@ -1461,2776 +617,1088 @@ exports[`Storyshots Form Switch 1`] = `
 
 exports[`Storyshots Form TextField (default) 1`] = `
 <div>
-  <div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
     <div
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
-          "position": "relative",
-          "zIndex": 0,
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
         }
       }
     >
-      <form
-        onSubmit={[Function]}
-        style={undefined}
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
-          style={
-            Object {
-              "margin": "15px",
-              "padding": "5px",
-              "width": "400px",
-            }
-          }
-        >
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": "default value",
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
-              data-shrink={true}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value="default value"
-              />
-              <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
-              >
-                <p
-                  className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
-                >
-                  nap
-                </p>
-              </div>
-            </div>
-          </div>
-          <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex="0"
-            type="button"
-          >
-            <span
-              className="MuiButton-label"
-            >
-              Submit
-            </span>
-            <span
-              className="MuiTouchRipple-root"
-            />
-          </button>
-        </div>
-      </form>
-    </div>
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      Show Info
-    </button>
-    <div
-      style={
-        Object {
-          "background": "white",
-          "bottom": 0,
-          "display": "none",
-          "left": 0,
-          "overflow": "auto",
-          "padding": "0 40px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-          "zIndex": 99999,
-        }
-      }
-    >
-      <button
-        onClick={[Function]}
-        style={
-          Object {
-            "background": "#28c",
-            "border": "none",
-            "borderRadius": "0 0 0 5px",
-            "color": "#fff",
-            "cursor": "pointer",
-            "display": "block",
-            "fontFamily": "sans-serif",
-            "fontSize": "12px",
-            "padding": "5px 15px",
-            "position": "fixed",
-            "right": 0,
-            "top": 0,
-          }
-        }
-        type="button"
-      >
-        ×
-      </button>
       <div
-        style={undefined}
-      >
-        <div
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "backgroundColor": "#fff",
-              "border": "1px solid #eee",
-              "borderRadius": "2px",
-              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-              "fontSize": "15px",
-              "fontWeight": 300,
-              "lineHeight": 1.45,
-              "marginBottom": "20px",
-              "marginTop": "20px",
-              "padding": "20px 40px 40px",
-            }
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": "default value",
           }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+          data-shrink={true}
+          htmlFor={undefined}
         >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value="default value"
+          />
           <div
-            style={
-              Object {
-                "borderBottom": "1px solid #eee",
-                "marginBottom": 10,
-                "paddingTop": 10,
-              }
-            }
+            className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
           >
-            <h1
-              style={
-                Object {
-                  "fontSize": "35px",
-                  "margin": 0,
-                  "padding": 0,
-                }
-              }
+            <p
+              className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
             >
-              Form
-            </h1>
-            <h2
-              style={
-                Object {
-                  "fontSize": "22px",
-                  "fontWeight": 400,
-                  "margin": "0 0 10px 0",
-                  "padding": 0,
-                }
-              }
-            >
-              TextField (default)
-            </h2>
-          </div>
-          
-          <div>
-            <h1
-              style={
-                Object {
-                  "borderBottom": "1px solid #EEE",
-                  "fontSize": "25px",
-                  "margin": "20px 0 0 0",
-                  "padding": "0 0 5px 0",
-                }
-              }
-            >
-              Prop Types
-            </h1>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                CriterionProviders
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                FormikContainerComponent
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      render
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      schema
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      onError
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                TypeField
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      type
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      name
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      label
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                WithFormik(FormikContainerComponent)
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
+              nap
+            </p>
           </div>
         </div>
       </div>
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
 exports[`Storyshots Form TextField (default, read only) 1`] = `
 <div>
-  <div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
     <div
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
-          "position": "relative",
-          "zIndex": 0,
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
         }
       }
     >
-      <form
-        onSubmit={[Function]}
-        style={undefined}
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
-          style={
-            Object {
-              "margin": "15px",
-              "padding": "5px",
-              "width": "400px",
-            }
-          }
-        >
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": "default value read only",
-              }
-            }
-            readOnly={true}
-          >
-            <label
-              className="MuiFormLabel-root MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
-              data-shrink={true}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
-              disableUnderline={true}
-              onClick={[Function]}
-            >
-              <fieldset
-                aria-hidden={true}
-                className="MuiPrivateNotchedOutline-root MuiOutlinedInput-notchedOutline"
-                style={
-                  Object {
-                    "paddingLeft": 8,
-                  }
-                }
-              >
-                <legend
-                  className="MuiPrivateNotchedOutline-legend"
-                  style={
-                    Object {
-                      "width": 0,
-                    }
-                  }
-                >
-                  <span
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "&#8203;",
-                      }
-                    }
-                  />
-                </legend>
-              </fieldset>
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value="default value read only"
-              />
-            </div>
-          </div>
-          <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
-            disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex="0"
-            type="submit"
-          >
-            <span
-              className="MuiButton-label"
-            >
-              Submit
-            </span>
-            <span
-              className="MuiTouchRipple-root"
-            />
-          </button>
-        </div>
-      </form>
-    </div>
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      Show Info
-    </button>
-    <div
-      style={
-        Object {
-          "background": "white",
-          "bottom": 0,
-          "display": "none",
-          "left": 0,
-          "overflow": "auto",
-          "padding": "0 40px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-          "zIndex": 99999,
-        }
-      }
-    >
-      <button
-        onClick={[Function]}
-        style={
-          Object {
-            "background": "#28c",
-            "border": "none",
-            "borderRadius": "0 0 0 5px",
-            "color": "#fff",
-            "cursor": "pointer",
-            "display": "block",
-            "fontFamily": "sans-serif",
-            "fontSize": "12px",
-            "padding": "5px 15px",
-            "position": "fixed",
-            "right": 0,
-            "top": 0,
-          }
-        }
-        type="button"
-      >
-        ×
-      </button>
       <div
-        style={undefined}
-      >
-        <div
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "backgroundColor": "#fff",
-              "border": "1px solid #eee",
-              "borderRadius": "2px",
-              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-              "fontSize": "15px",
-              "fontWeight": 300,
-              "lineHeight": 1.45,
-              "marginBottom": "20px",
-              "marginTop": "20px",
-              "padding": "20px 40px 40px",
-            }
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": "default value read only",
           }
+        }
+        readOnly={true}
+      >
+        <label
+          className="MuiFormLabel-root MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
+          data-shrink={true}
+          htmlFor={undefined}
         >
-          <div
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          disableUnderline={true}
+          onClick={[Function]}
+        >
+          <fieldset
+            aria-hidden={true}
+            className="MuiPrivateNotchedOutline-root MuiOutlinedInput-notchedOutline"
             style={
               Object {
-                "borderBottom": "1px solid #eee",
-                "marginBottom": 10,
-                "paddingTop": 10,
+                "paddingLeft": 8,
               }
             }
           >
-            <h1
+            <legend
+              className="MuiPrivateNotchedOutline-legend"
               style={
                 Object {
-                  "fontSize": "35px",
-                  "margin": 0,
-                  "padding": 0,
+                  "width": 0,
                 }
               }
             >
-              Form
-            </h1>
-            <h2
-              style={
-                Object {
-                  "fontSize": "22px",
-                  "fontWeight": 400,
-                  "margin": "0 0 10px 0",
-                  "padding": 0,
-                }
-              }
-            >
-              TextField (default, read only)
-            </h2>
-          </div>
-          
-          <div>
-            <h1
-              style={
-                Object {
-                  "borderBottom": "1px solid #EEE",
-                  "fontSize": "25px",
-                  "margin": "20px 0 0 0",
-                  "padding": "0 0 5px 0",
-                }
-              }
-            >
-              Prop Types
-            </h1>
-            <div>
-              <h2
-                style={
+              <span
+                dangerouslySetInnerHTML={
                   Object {
-                    "margin": "20px 0 0 0",
+                    "__html": "&#8203;",
                   }
                 }
-              >
-                "
-                CriterionProviders
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                FormikContainerComponent
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      render
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      schema
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      onError
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                TypeField
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      type
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      name
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      label
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                WithFormik(FormikContainerComponent)
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-          </div>
+              />
+            </legend>
+          </fieldset>
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiOutlinedInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value="default value read only"
+          />
         </div>
       </div>
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
 exports[`Storyshots Form TextField 1`] = `
 <div>
-  <div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
     <div
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
-          "position": "relative",
-          "zIndex": 0,
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
         }
       }
     >
-      <form
-        onSubmit={[Function]}
-        style={undefined}
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
-          style={
-            Object {
-              "margin": "15px",
-              "padding": "5px",
-              "width": "400px",
-            }
-          }
-        >
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
-            disabled={false}
-            onBlur={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex="0"
-            type="submit"
-          >
-            <span
-              className="MuiButton-label"
-            >
-              Submit
-            </span>
-            <span
-              className="MuiTouchRipple-root"
-            />
-          </button>
-        </div>
-      </form>
-    </div>
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      Show Info
-    </button>
-    <div
-      style={
-        Object {
-          "background": "white",
-          "bottom": 0,
-          "display": "none",
-          "left": 0,
-          "overflow": "auto",
-          "padding": "0 40px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-          "zIndex": 99999,
-        }
-      }
-    >
-      <button
-        onClick={[Function]}
-        style={
-          Object {
-            "background": "#28c",
-            "border": "none",
-            "borderRadius": "0 0 0 5px",
-            "color": "#fff",
-            "cursor": "pointer",
-            "display": "block",
-            "fontFamily": "sans-serif",
-            "fontSize": "12px",
-            "padding": "5px 15px",
-            "position": "fixed",
-            "right": 0,
-            "top": 0,
-          }
-        }
-        type="button"
-      >
-        ×
-      </button>
       <div
-        style={undefined}
-      >
-        <div
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "backgroundColor": "#fff",
-              "border": "1px solid #eee",
-              "borderRadius": "2px",
-              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-              "fontSize": "15px",
-              "fontWeight": 300,
-              "lineHeight": 1.45,
-              "marginBottom": "20px",
-              "marginTop": "20px",
-              "padding": "20px 40px 40px",
-            }
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
           }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
         >
-          <div
-            style={
-              Object {
-                "borderBottom": "1px solid #eee",
-                "marginBottom": 10,
-                "paddingTop": 10,
-              }
-            }
-          >
-            <h1
-              style={
-                Object {
-                  "fontSize": "35px",
-                  "margin": 0,
-                  "padding": 0,
-                }
-              }
-            >
-              Form
-            </h1>
-            <h2
-              style={
-                Object {
-                  "fontSize": "22px",
-                  "fontWeight": 400,
-                  "margin": "0 0 10px 0",
-                  "padding": 0,
-                }
-              }
-            >
-              TextField
-            </h2>
-          </div>
-          
-          <div>
-            <h1
-              style={
-                Object {
-                  "borderBottom": "1px solid #EEE",
-                  "fontSize": "25px",
-                  "margin": "20px 0 0 0",
-                  "padding": "0 0 5px 0",
-                }
-              }
-            >
-              Prop Types
-            </h1>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                CriterionProviders
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                FormikContainerComponent
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      render
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      schema
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      onError
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                TypeField
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      type
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      name
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      label
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                WithFormik(FormikContainerComponent)
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-          </div>
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
         </div>
       </div>
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="submit"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
 exports[`Storyshots Form TextField heavy (default) 1`] = `
 <div>
-  <div>
+  <form
+    onSubmit={[Function]}
+    style={undefined}
+  >
     <div
+      className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
       style={
         Object {
-          "position": "relative",
-          "zIndex": 0,
+          "margin": "15px",
+          "padding": "5px",
+          "width": "400px",
         }
       }
     >
-      <form
-        onSubmit={[Function]}
-        style={undefined}
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
-          style={
-            Object {
-              "margin": "15px",
-              "padding": "5px",
-              "width": "400px",
-            }
-          }
-        >
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield0",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield0"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield1",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield1"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield2",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield2"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield3",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield3"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield4",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield4"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield5",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield5"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield6",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield6"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield7",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield7"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield8",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield8"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield9",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield9"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield10",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield10"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield11",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield11"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield12",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield12"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield13",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield13"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            aria-describedby={undefined}
-            className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
-            deconverter={undefined}
-            field={
-              Object {
-                "name": "textfield14",
-                "onBlur": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              }
-            }
-          >
-            <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink={false}
-              htmlFor={undefined}
-            >
-              Test
-            </label>
-            <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-              onClick={[Function]}
-            >
-              <input
-                aria-invalid={false}
-                autoComplete="off"
-                autoFocus={undefined}
-                className="MuiInputBase-input MuiInput-input"
-                defaultValue={undefined}
-                disabled={false}
-                id={undefined}
-                mask={undefined}
-                name="textfield14"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={undefined}
-                onKeyUp={undefined}
-                placeholder={undefined}
-                readOnly={undefined}
-                required={false}
-                rows={undefined}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex="0"
-            type="button"
-          >
-            <span
-              className="MuiButton-label"
-            >
-              Submit
-            </span>
-            <span
-              className="MuiTouchRipple-root"
-            />
-          </button>
-        </div>
-      </form>
-    </div>
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      Show Info
-    </button>
-    <div
-      style={
-        Object {
-          "background": "white",
-          "bottom": 0,
-          "display": "none",
-          "left": 0,
-          "overflow": "auto",
-          "padding": "0 40px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-          "zIndex": 99999,
-        }
-      }
-    >
-      <button
-        onClick={[Function]}
-        style={
-          Object {
-            "background": "#28c",
-            "border": "none",
-            "borderRadius": "0 0 0 5px",
-            "color": "#fff",
-            "cursor": "pointer",
-            "display": "block",
-            "fontFamily": "sans-serif",
-            "fontSize": "12px",
-            "padding": "5px 15px",
-            "position": "fixed",
-            "right": 0,
-            "top": 0,
-          }
-        }
-        type="button"
-      >
-        ×
-      </button>
       <div
-        style={undefined}
-      >
-        <div
-          style={
-            Object {
-              "WebkitFontSmoothing": "antialiased",
-              "backgroundColor": "#fff",
-              "border": "1px solid #eee",
-              "borderRadius": "2px",
-              "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-              "fontSize": "15px",
-              "fontWeight": 300,
-              "lineHeight": 1.45,
-              "marginBottom": "20px",
-              "marginTop": "20px",
-              "padding": "20px 40px 40px",
-            }
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield0",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
           }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
         >
-          <div
-            style={
-              Object {
-                "borderBottom": "1px solid #eee",
-                "marginBottom": 10,
-                "paddingTop": 10,
-              }
-            }
-          >
-            <h1
-              style={
-                Object {
-                  "fontSize": "35px",
-                  "margin": 0,
-                  "padding": 0,
-                }
-              }
-            >
-              Form
-            </h1>
-            <h2
-              style={
-                Object {
-                  "fontSize": "22px",
-                  "fontWeight": 400,
-                  "margin": "0 0 10px 0",
-                  "padding": 0,
-                }
-              }
-            >
-              TextField heavy (default)
-            </h2>
-          </div>
-          
-          <div>
-            <h1
-              style={
-                Object {
-                  "borderBottom": "1px solid #EEE",
-                  "fontSize": "25px",
-                  "margin": "20px 0 0 0",
-                  "padding": "0 0 5px 0",
-                }
-              }
-            >
-              Prop Types
-            </h1>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                CriterionProviders
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                FormikContainerComponent
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      render
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      schema
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      onError
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                TypeField
-                " Component
-              </h2>
-              <table
-                className="css-1ytzlk7"
-              >
-                <thead>
-                  <tr>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      property
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      propType
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      required
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      default
-                    </th>
-                    <th
-                      className="css-d52hbj"
-                    >
-                      description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      type
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      name
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      yes
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                  <tr>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      label
-                    </td>
-                    <td
-                      className="css-1ygfcef"
-                    >
-                      <span />
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    >
-                      -
-                    </td>
-                    <td
-                      className="css-d52hbj"
-                    />
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <h2
-                style={
-                  Object {
-                    "margin": "20px 0 0 0",
-                  }
-                }
-              >
-                "
-                WithFormik(FormikContainerComponent)
-                " Component
-              </h2>
-              <small>
-                No propTypes defined!
-              </small>
-            </div>
-          </div>
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield0"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
         </div>
       </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield1",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield1"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield2",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield2"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield3",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield3"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield4",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield4"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield5",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield5"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield6",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield6"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield7",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield7"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield8",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield8"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield9",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield9"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield10",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield10"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield11",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield11"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield12",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield12"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield13",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield13"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root shouldUpdate(renderTextFieldWithoutStyle)-root"
+        deconverter={undefined}
+        field={
+          Object {
+            "name": "textfield14",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "value": undefined,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor={undefined}
+        >
+          Test
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            autoFocus={undefined}
+            className="MuiInputBase-input MuiInput-input"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            mask={undefined}
+            name="textfield14"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={false}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Submit
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
