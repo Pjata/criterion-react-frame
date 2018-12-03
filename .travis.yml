@@ -7,6 +7,8 @@ cache:
 script:
 - npm test
 deploy:
+  on:
+    tags: true
   provider: npm
   email: "pjatacsuk@gmail.com"
   api_key:
