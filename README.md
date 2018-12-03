@@ -4,6 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/criterion-frame.svg)](https://www.npmjs.com/package/criterion-frame) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](https://pjata.github.io/criterion-react-frame)
+[![Build Status](https://travis-ci.org/Pjata/criterion-react-frame.svg?branch=master)](https://travis-ci.org/Pjata/criterion-react-frame)
 
 ## Install
 
