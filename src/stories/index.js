@@ -393,6 +393,7 @@ storiesFormik.add("Validation", () => {
         schema={values =>
           Yup.object().shape({
             required: Yup.string().required("Kötelező mező!"),
+            select: Yup.number().required("Kötelező mező!"),
             regex:
               values.required === "123"
                 ? Yup.string().matches(new RegExp(regex))
@@ -411,6 +412,12 @@ storiesFormik.add("Validation", () => {
             <TypeField label={"Required"} name={"required"} />
             <TypeField label={"Regex"} name={"regex"} />
             <TypeField name={"date"} label={"date"} type={"date"} />
+            <TypeField name={"select"} label={"select"} type={"select"}>
+              <MenuItem value={1}>1</MenuItem>
+              <MenuItem value={2}>2</MenuItem>
+              <MenuItem value={3}>3</MenuItem>
+              <MenuItem value={4}>4</MenuItem>
+            </TypeField>
             <Button type={"submit"}>Submit</Button>
           </Paper>
         )}

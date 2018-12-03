@@ -170,7 +170,6 @@ export class RenderSelectFieldComponent extends PureComponent {
   }
   componentDidMount() {
     const off = ReactDOM.findDOMNode(this.InputLabelRef).offsetWidth
-    console.log(off)
     this.setState({
       labelWidth: ReactDOM.findDOMNode(this.InputLabelRef).offsetWidth
     })
@@ -178,7 +177,7 @@ export class RenderSelectFieldComponent extends PureComponent {
 
   render() {
     const {
-      input: { touched, ...inputProps },
+      input: { error, touched, ...inputProps },
       label,
       style,
       className,
@@ -188,7 +187,6 @@ export class RenderSelectFieldComponent extends PureComponent {
       form: { submitCount, errors },
       ...rest
     } = this.props
-    const error = errors[name]
     return (
       <I18n ns={["translations"]}>
         {t => (
@@ -197,7 +195,7 @@ export class RenderSelectFieldComponent extends PureComponent {
               <FormControl
                 variant={inputProps.readOnly ? "outlined" : "standard"}
                 className={className}
-                error={Boolean(error && submitCount > 0)}
+                error={Boolean(error && (submitCount > 0 || touched))}
                 style={{ minWidth: 150, ...style }}
               >
                 <InputLabel
@@ -245,61 +243,6 @@ export class RenderSelectFieldComponent extends PureComponent {
 }
 export const renderSelectField = withStyles(selectStyle)(
   RenderSelectFieldComponent
-)
-export const RenderSelectField = withStyles(selectStyle)(
-  ({
-    input: { error, ...inputProps },
-    label,
-    style,
-    className,
-    children,
-    meta,
-    form,
-    name,
-    classes,
-    form: { submitCount, errors },
-    ...rest
-  }) => {
-    return (
-      <SetFieldValueContext.Consumer>
-        {({ setFieldValue }) => (
-          <FormControl
-            variant={"outlined"}
-            className={className}
-            error={Boolean(error && submitCount > 0)}
-            style={{ minWidth: 150, ...style }}
-          >
-            <InputLabel>{label}</InputLabel>
-            <Select
-              classes={{
-                icon: inputProps.readOnly
-                  ? classes.iconStyleHidden
-                  : inputProps.iconStyleShow
-              }}
-              value={inputProps.value || ""}
-              onChange={onSelectChangeSFV(inputProps, setFieldValue)}
-              disableUnderline={inputProps.readOnly}
-              input={
-                inputProps.readOnly || true ? (
-                  <OutlinedInput labelWidth={10} />
-                ) : (
-                  <Input {...inputProps} />
-                )
-              }
-              //   {...rest}
-            >
-              {children}
-            </Select>
-            {error && submitCount > 0 ? (
-              <FormHelperText>{error}</FormHelperText>
-            ) : (
-              <div />
-            )}
-          </FormControl>
-        )}
-      </SetFieldValueContext.Consumer>
-    )
-  }
 )
 
 const onChangeTimePicker = (name, setFieldValue) => date => {
