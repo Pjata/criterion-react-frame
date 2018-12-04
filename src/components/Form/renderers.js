@@ -1,25 +1,25 @@
-import React, { PureComponent } from "react"
-import ReactDOM from "react-dom"
-import InputLabel from "@material-ui/core/InputLabel"
-import Select from "@material-ui/core/Select"
-import TextField from "@material-ui/core/TextField"
-import FormControl from "@material-ui/core/FormControl"
-import Checkbox from "@material-ui/core/Checkbox"
-import moment from "moment"
-import Switch from "@material-ui/core/Switch"
-import FormControlLabel from "@material-ui/core/FormControlLabel"
-import FormHelperText from "@material-ui/core/FormHelperText"
-import { withStyles } from "@material-ui/core/styles"
-import { shouldUpdate, compose } from "recompose"
-import classNames from "classnames"
-import { TimePicker, DatePicker } from "material-ui-pickers"
-import SetFieldValueContext from "./SetFieldValueContext"
-import TextMaskCustom from "./TextMaskCustom"
-import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft"
-import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight"
-import OutlinedInput from "@material-ui/core/OutlinedInput"
-import Input from "@material-ui/core/Input"
-import { I18n } from "react-i18next"
+import React, { PureComponent } from "react";
+import ReactDOM from "react-dom";
+import InputLabel from "@material-ui/core/InputLabel";
+import Select from "@material-ui/core/Select";
+import TextField from "@material-ui/core/TextField";
+import FormControl from "@material-ui/core/FormControl";
+import Checkbox from "@material-ui/core/Checkbox";
+import moment from "moment";
+import Switch from "@material-ui/core/Switch";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormHelperText from "@material-ui/core/FormHelperText";
+import { withStyles } from "@material-ui/core/styles";
+import { shouldUpdate, compose } from "recompose";
+import classNames from "classnames";
+import { TimePicker, DatePicker } from "material-ui-pickers";
+import SetFieldValueContext from "./SetFieldValueContext";
+import TextMaskCustom from "./TextMaskCustom";
+import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
+import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
+import OutlinedInput from "@material-ui/core/OutlinedInput";
+import Input from "@material-ui/core/Input";
+import { I18n } from "react-i18next";
 
 const textFieldStyle = theme => ({
   empty: {
@@ -28,7 +28,7 @@ const textFieldStyle = theme => ({
   root: {
     width: "100%"
   }
-})
+});
 
 /*  */
 const renderTextFieldWithoutStyle = ({
@@ -76,39 +76,39 @@ const renderTextFieldWithoutStyle = ({
       />
     )}
   </I18n>
-)
+);
 
 export const RenderTextField = compose(
   withStyles(textFieldStyle),
   shouldUpdate((props, nextProps) => {
-    const { input } = props
+    const { input } = props;
     if (
       input.value !== nextProps.input.value ||
       input.touched !== nextProps.input.touched ||
       input.error !== nextProps.input.error
     ) {
-      return true
+      return true;
     }
     if (props.classes !== nextProps.classes) {
-      return true
+      return true;
     }
-    return false
+    return false;
   })
-)(renderTextFieldWithoutStyle)
+)(renderTextFieldWithoutStyle);
 const onSwitchChangeSFV = (input, deconverter, sfv, readOnly) => event => {
   if (readOnly) {
-    return
+    return;
   }
-  const value = Boolean(event.target.checked)
+  const value = Boolean(event.target.checked);
   if (deconverter) {
-    sfv(input.name, deconverter(value))
+    sfv(input.name, deconverter(value));
   } else {
-    sfv(input.name, value)
+    sfv(input.name, value);
   }
-}
+};
 const onSelectChangeSFV = (input, sfv) => event => {
-  sfv(input.name, event.target.value)
-}
+  sfv(input.name, event.target.value);
+};
 const switchStyles = {
   root: {
     margin: "0px 0px 0px 0px"
@@ -116,7 +116,7 @@ const switchStyles = {
   label: {
     margin: "0px 0px 0px 10px"
   }
-}
+};
 const renderSwitchComponent = ({
   classes,
   input,
@@ -154,8 +154,8 @@ const renderSwitchComponent = ({
       </SetFieldValueContext.Consumer>
     )}
   </I18n>
-)
-export const renderSwitch = withStyles(switchStyles)(renderSwitchComponent)
+);
+export const renderSwitch = withStyles(switchStyles)(renderSwitchComponent);
 const selectStyle = {
   iconStyleHidden: {
     opacity: 0
@@ -163,16 +163,16 @@ const selectStyle = {
   iconStyleShow: {
     opacity: 1
   }
-}
+};
 export class RenderSelectFieldComponent extends PureComponent {
   state = {
     labelWidth: 0
-  }
+  };
   componentDidMount() {
-    const off = ReactDOM.findDOMNode(this.InputLabelRef).offsetWidth
+    const off = ReactDOM.findDOMNode(this.InputLabelRef).offsetWidth;
     this.setState({
       labelWidth: ReactDOM.findDOMNode(this.InputLabelRef).offsetWidth
-    })
+    });
   }
 
   render() {
@@ -186,7 +186,7 @@ export class RenderSelectFieldComponent extends PureComponent {
       classes,
       form: { submitCount, errors },
       ...rest
-    } = this.props
+    } = this.props;
     return (
       <I18n ns={["translations"]}>
         {t => (
@@ -200,7 +200,7 @@ export class RenderSelectFieldComponent extends PureComponent {
               >
                 <InputLabel
                   ref={ref => {
-                    this.InputLabelRef = ref
+                    this.InputLabelRef = ref;
                   }}
                 >
                   {t(label)}
@@ -228,7 +228,7 @@ export class RenderSelectFieldComponent extends PureComponent {
                 >
                   {children}
                 </Select>
-                {error && submitCount > 0 ? (
+                {error && (submitCount > 0 || touched) ? (
                   <FormHelperText>{error}</FormHelperText>
                 ) : (
                   <div />
@@ -238,24 +238,24 @@ export class RenderSelectFieldComponent extends PureComponent {
           </SetFieldValueContext.Consumer>
         )}
       </I18n>
-    )
+    );
   }
 }
 export const renderSelectField = withStyles(selectStyle)(
   RenderSelectFieldComponent
-)
+);
 
 const onChangeTimePicker = (name, setFieldValue) => date => {
-  setFieldValue(name, date.format("HH:mm"))
-}
+  setFieldValue(name, date.format("HH:mm"));
+};
 const getTimeValue = value => {
-  const time = moment(value, "HH:mm")
+  const time = moment(value, "HH:mm");
   if (time.isValid()) {
-    return time
+    return time;
   } else {
-    return ""
+    return "";
   }
-}
+};
 export const renderTimePicker = ({
   className,
   input,
@@ -281,23 +281,23 @@ export const renderTimePicker = ({
       />
     )}
   </SetFieldValueContext.Consumer>
-)
+);
 const onChangeDateSFV = (input, sfv) => date => {
-  sfv(input.name, date)
-}
+  sfv(input.name, date);
+};
 const DateButton = ({ form, name, input }) => ({ helperText, ...props }) => {
-  return <RenderTextField form={form} name={name} input={input} {...props} />
-}
+  return <RenderTextField form={form} name={name} input={input} {...props} />;
+};
 export const renderDatePicker = shouldUpdate((props, nextProps) => {
-  const { input } = props
+  const { input } = props;
   if (
     input.value !== nextProps.input.value ||
     input.touched !== nextProps.input.touched ||
     input.error !== nextProps.input.error
   ) {
-    return true
+    return true;
   }
-  return false
+  return false;
 })(({ className, input, name, form, label, ...rest }) => (
   <SetFieldValueContext.Consumer>
     {({ setFieldValue }) => (
@@ -317,7 +317,7 @@ export const renderDatePicker = shouldUpdate((props, nextProps) => {
       />
     )}
   </SetFieldValueContext.Consumer>
-))
+));
 
 const renderCheckboxComponent = ({
   classes,
@@ -356,5 +356,5 @@ const renderCheckboxComponent = ({
       </SetFieldValueContext.Consumer>
     )}
   </I18n>
-)
-export const renderCheckbox = withStyles(switchStyles)(renderCheckboxComponent)
+);
+export const renderCheckbox = withStyles(switchStyles)(renderCheckboxComponent);
