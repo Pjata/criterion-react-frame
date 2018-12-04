@@ -196,7 +196,7 @@ export class RenderSelectFieldComponent extends PureComponent {
                 variant={inputProps.readOnly ? "outlined" : "standard"}
                 className={className}
                 error={Boolean(error && (submitCount > 0 || touched))}
-                style={{ minWidth: 150, ...style }}
+                style={{ ...style }}
               >
                 <InputLabel
                   ref={ref => {

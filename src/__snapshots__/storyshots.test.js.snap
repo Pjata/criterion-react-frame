@@ -211,11 +211,7 @@ exports[`Storyshots Form Select 1`] = `
     >
       <div
         className="MuiFormControl-root"
-        style={
-          Object {
-            "minWidth": 150,
-          }
-        }
+        style={Object {}}
       >
         <label
           className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -1991,11 +1987,7 @@ exports[`Storyshots Form Validation 1`] = `
       </div>
       <div
         className="MuiFormControl-root"
-        style={
-          Object {
-            "minWidth": 150,
-          }
-        }
+        style={Object {}}
       >
         <label
           className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
