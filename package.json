@@ -27,7 +27,8 @@
     "deploy": "gh-pages -d example/build",
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "deploy-storybook-ci": "storybook-to-ghpages --ci --host-token-env-variable=GITHUB_TOKEN"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
