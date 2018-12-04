@@ -8,7 +8,7 @@ install: npm install
 script:
 - npm test
 after_success:
-  - npm run deploy-storybook
+  - npm run deploy-storybook-ci
 deploy:
   skip_cleanup: true
   on:
