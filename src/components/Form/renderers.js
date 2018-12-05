@@ -158,6 +158,9 @@ const renderSwitchComponent = ({
 )
 export const renderSwitch = withStyles(switchStyles)(renderSwitchComponent)
 const selectStyle = {
+  root: {
+    width: "100%"
+  },
   iconStyleHidden: {
     opacity: 0
   },
@@ -197,6 +200,7 @@ export class RenderSelectFieldComponent extends PureComponent {
                 variant={inputProps.readOnly ? "outlined" : "standard"}
                 className={className}
                 error={Boolean(error && (submitCount > 0 || touched))}
+                classes={classes}
                 style={{ ...style }}
               >
                 <InputLabel
