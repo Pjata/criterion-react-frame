@@ -210,7 +210,7 @@ exports[`Storyshots Form Select 1`] = `
       }
     >
       <div
-        className="MuiFormControl-root"
+        className="MuiFormControl-root RenderSelectFieldComponent-root"
         style={Object {}}
       >
         <label
@@ -1986,7 +1986,7 @@ exports[`Storyshots Form Validation 1`] = `
         </div>
       </div>
       <div
-        className="MuiFormControl-root"
+        className="MuiFormControl-root RenderSelectFieldComponent-root"
         style={Object {}}
       >
         <label
