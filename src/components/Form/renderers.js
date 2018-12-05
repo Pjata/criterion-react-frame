@@ -191,6 +191,9 @@ export class RenderSelectFieldComponent extends PureComponent {
       form: { submitCount, errors },
       ...rest
     } = this.props
+    const formControlClasses = {
+      root: classes.root
+    }
     return (
       <I18n ns={["translations"]}>
         {t => (
@@ -200,7 +203,7 @@ export class RenderSelectFieldComponent extends PureComponent {
                 variant={inputProps.readOnly ? "outlined" : "standard"}
                 className={className}
                 error={Boolean(error && (submitCount > 0 || touched))}
-                classes={classes}
+                classes={formControlClasses}
                 style={{ ...style }}
               >
                 <InputLabel
