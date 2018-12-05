@@ -216,7 +216,11 @@ export class RenderSelectFieldComponent extends PureComponent {
                       ? classes.iconStyleHidden
                       : inputProps.iconStyleShow
                   }}
-                  value={inputProps.value || ""}
+                  value={
+                    inputProps.value || inputProps.value === !true
+                      ? inputProps.value
+                      : ""
+                  }
                   onChange={onSelectChangeSFV(inputProps, setFieldValue)}
                   disableUnderline={inputProps.readOnly}
                   input={
