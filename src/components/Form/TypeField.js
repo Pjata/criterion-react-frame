@@ -76,9 +76,11 @@ class TypeField extends PureComponent {
             converter={dateConverter}
           />
         )
+      case "number":
       case "text":
         return (
           <FastField
+            type={type}
             {...rest}
             FieldComponent={textField}
             component={enhancedTypeFieldInner}

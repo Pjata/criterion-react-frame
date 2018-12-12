@@ -19,6 +19,7 @@ import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft"
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight"
 import OutlinedInput from "@material-ui/core/OutlinedInput"
 import Input from "@material-ui/core/Input"
+import NumberFormatCustom from "./NumberFormatCustom"
 import { I18n } from "react-i18next"
 
 const textFieldStyle = theme => ({
@@ -30,7 +31,14 @@ const textFieldStyle = theme => ({
   }
 })
 
-/*  */
+const getInputComponentTextField = (mask, type) => {
+  if (type === "number") {
+    return NumberFormatCustom
+  } else if (mask) {
+    return TextMaskCustom
+  }
+  return undefined
+}
 const renderTextFieldWithoutStyle = ({
   input,
   label,
@@ -40,6 +48,8 @@ const renderTextFieldWithoutStyle = ({
   form: { submitCount },
   mask,
   InputProps,
+  converter,
+  type,
   ...custom
 }) => (
   <I18n ns={["translations"]}>
@@ -53,7 +63,7 @@ const renderTextFieldWithoutStyle = ({
         variant={input.readOnly ? "outlined" : "standard"}
         InputProps={{
           name: input.name,
-          inputComponent: mask ? TextMaskCustom : undefined,
+          inputComponent: getInputComponentTextField(mask, type),
           disableUnderline: input.readOnly,
           ...InputProps
         }}

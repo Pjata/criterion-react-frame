@@ -120,6 +120,7 @@
     "react-datepicker": "^1.6.0",
     "react-i18next": "^7.11.1",
     "react-notification-system-redux": "^1.2.0",
+    "react-number-format": "^4.0.5",
     "react-pose": "^4.0.1",
     "react-text-mask": "^5.4.3",
     "recompose": "^0.30.0",

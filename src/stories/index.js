@@ -180,6 +180,28 @@ storiesFormik.add("TextField (default)", () => {
     </CriterionProviders>
   )
 })
+storiesFormik.add("TextField (number)", () => {
+  const label = text("Label", "Test")
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField type={"number"} name={"textfield"} label={label} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
 storiesFormik.add("TextField (default, read only)", () => {
   const label = text("Label", "Test")
   return (
