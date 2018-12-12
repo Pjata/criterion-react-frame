@@ -10,7 +10,6 @@ function NumberFormatCustom(props) {
       decimalSeparator={","}
       thousandSeparator={" "}
       onValueChange={values => {
-        console.log(values)
         onChange({
           target: {
             value: values.floatValue,
