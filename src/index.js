@@ -3,6 +3,9 @@ export { default as FormikContainer } from "./components/Form/FormikContainer"
 export { default as MenuDrawer } from "./components/MenuDrawer"
 export { default as TopBar } from "./components/TopBar"
 export {
+  default as NumberFormatCustom
+} from "./components/Form/NumberFormatCustom"
+export {
   default as CriterionProviders
 } from "./components/Form/CriterionProviders"
 export { default as TypeField } from "./components/Form/TypeField"
