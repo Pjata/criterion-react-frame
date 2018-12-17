@@ -10,7 +10,8 @@ import {
   RenderTextField,
   renderSwitch,
   renderTimePicker,
-  renderCheckbox
+  renderCheckbox,
+  renderDateTimePicker
 } from "./renderers"
 
 const nothing = () => {}
@@ -41,6 +42,7 @@ const datePickerField = enhance(renderDatePicker)
 const selectField = enhance(renderSelectField)
 const switchField = enhance(renderSwitch)
 const timePickerField = enhance(renderTimePicker)
+const dateTimePickerField = enhance(renderDateTimePicker)
 const checkboxField = enhance(renderCheckbox)
 
 class TypeFieldInner extends Component {
@@ -92,6 +94,8 @@ class TypeField extends PureComponent {
         return <Field {...rest} component={switchField} />
       case "time":
         return <Field {...rest} component={timePickerField} />
+      case "dateTime":
+        return <Field {...rest} component={dateTimePickerField} />
       case "checkbox":
         return <Field {...rest} component={checkboxField} />
       default:

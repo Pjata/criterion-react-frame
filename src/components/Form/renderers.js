@@ -12,7 +12,11 @@ import FormHelperText from "@material-ui/core/FormHelperText"
 import { withStyles } from "@material-ui/core/styles"
 import { shouldUpdate, compose } from "recompose"
 import classNames from "classnames"
-import { TimePicker, DatePicker } from "material-ui-pickers"
+import {
+  TimePicker,
+  DatePicker,
+  InlineDateTimePicker
+} from "material-ui-pickers"
 import SetFieldValueContext from "./SetFieldValueContext"
 import TextMaskCustom from "./TextMaskCustom"
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft"
@@ -21,7 +25,8 @@ import OutlinedInput from "@material-ui/core/OutlinedInput"
 import Input from "@material-ui/core/Input"
 import NumberFormatCustom from "./NumberFormatCustom"
 import { I18n } from "react-i18next"
-
+import DateRange from "@material-ui/icons/DateRange"
+import AccessTime from "@material-ui/icons/AccessTime"
 const textFieldStyle = theme => ({
   empty: {
     color: theme.palette.primary.light
@@ -267,6 +272,49 @@ export const renderSelectField = withStyles(selectStyle)(
   RenderSelectFieldComponent
 )
 
+const onChangeDateTimePicker = (name, setFieldValue) => date => {
+  setFieldValue(name, date.format("YYYY.MM.DD HH:mm"))
+}
+const getDateTimeValue = value => {
+  const time = moment(value, "YYYY.MM.DD HH:mm")
+  if (time.isValid()) {
+    return time
+  } else {
+    return ""
+  }
+}
+export const renderDateTimePicker = ({
+  className,
+  input,
+  name,
+  label,
+  form,
+  ...rest
+}) => (
+  <SetFieldValueContext.Consumer>
+    {({ setFieldValue }) => (
+      <InlineDateTimePicker
+        {...rest}
+        clearable
+        dateRangeIcon={<DateRange />}
+        timeIcon={<AccessTime />}
+        rightArrowIcon={<KeyboardArrowRight />}
+        leftArrowIcon={<KeyboardArrowLeft />}
+        ampm={false}
+        format={"YYYY.MM.DD HH:mm"}
+        className={className}
+        label={label}
+        invalidLabel={""}
+        value={getDateTimeValue(input.value)}
+        variant={input.readOnly ? "outlined" : "standard"}
+        InputProps={{
+          disableUnderline: input.readOnly
+        }}
+        onChange={onChangeDateTimePicker(input.name, setFieldValue)}
+      />
+    )}
+  </SetFieldValueContext.Consumer>
+)
 const onChangeTimePicker = (name, setFieldValue) => date => {
   setFieldValue(name, date.format("HH:mm"))
 }

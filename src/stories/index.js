@@ -361,6 +361,28 @@ storiesFormik.add("Checkbox", () => {
     </CriterionProviders>
   )
 })
+storiesFormik.add("DateTime picker", () => {
+  const label = text("Label", "Time test")
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField name={"time"} label={label} type={"dateTime"} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
 storiesFormik.add("Time picker", () => {
   const label = text("Label", "Time test")
   return (

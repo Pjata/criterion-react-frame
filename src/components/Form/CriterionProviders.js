@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react"
-import MomentUtils from "material-ui-pickers/utils/moment-utils"
-import MuiPickersUtilsProvider from "material-ui-pickers/utils/MuiPickersUtilsProvider"
+import { MuiPickersUtilsProvider } from "material-ui-pickers"
 import { I18nextProvider } from "react-i18next"
+import MomentUtils from "@date-io/moment"
+
 class CriterionProviders extends PureComponent {
   render() {
     const { i18n, children, language = "kplogKPLOG" } = this.props
