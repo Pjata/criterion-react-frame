@@ -10,8 +10,9 @@ import Typography from "@material-ui/core/Typography"
 import MenuIcon from "@material-ui/icons/Menu"
 import logo from "./google_logo_132px_height_vertical_white.png"
 const style = theme => ({
+  rootBgTest: { backgroundColor: "#ffeb38" },
+  rootBgNormal: { background: theme.palette.background.paper },
   root: {
-    background: theme.palette.background.paper,
     color: theme.palette.text.primary,
     position: "absolute",
     marginTop: "0px",
@@ -47,12 +48,16 @@ const style = theme => ({
 })
 class TopBarContainer extends PureComponent {
   render() {
-    const { classes, title } = this.props
+    const { classes, title, test } = this.props
     return (
       <Grid
         container
         spacing={8}
         className={classNames(
+          {
+            [classes.rootBgTest]: test,
+            [classes.rootBgNormal]: !test
+          },
           this.props.classes.root,
           this.props.menuOpen && this.props.classes.menuOpen
         )}

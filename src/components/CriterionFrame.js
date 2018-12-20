@@ -41,6 +41,7 @@ export default class CriterionFrame extends Component {
   }
   topBarRender = props => (
     <TopBar
+      test={this.props.test}
       menuOpen={this.state.drawerOpen}
       height={topBarHeight}
       handleMenuOpen={this.handleDrawerOpen}
@@ -57,6 +58,7 @@ export default class CriterionFrame extends Component {
       children,
       style,
       selectedIndex,
+      test,
       menuWidth = drawerWidth
     } = this.props
     return (
@@ -68,6 +70,7 @@ export default class CriterionFrame extends Component {
           menuWidth={menuWidth}
           topBarHeight={topBarHeight}
           handleOpen={this.handleDrawerOpen}
+          test={test}
           onItemSelected={this.select}
           selectedIndex={
             selectedIndex ? selectedIndex : this.state.selectedIndex

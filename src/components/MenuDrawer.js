@@ -69,6 +69,7 @@ const styles = theme => ({
       duration: theme.transitions.duration.enteringScreen
     })
   },
+  testPaper: { backgroundColor: "#ffeb38" },
   drawerPaper: {
     height: "100%",
     position: "relative",
@@ -145,6 +146,7 @@ class MenuDrawer extends PureComponent {
       menuWidth,
       items,
       topBarRender,
+      test,
       rootStyle
     } = this.props
     const contentStyle = {
@@ -184,7 +186,8 @@ class MenuDrawer extends PureComponent {
                 classes={{
                   paper: classNames(
                     classes.drawerPaper,
-                    !open && classes.drawerPaperClose
+                    !open && classes.drawerPaperClose,
+                    { [classes.testPaper]: test }
                   )
                 }}
                 PaperProps={{

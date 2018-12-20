@@ -6,7 +6,7 @@ import { action } from "@storybook/addon-actions"
 import HomeIcon from "@material-ui/icons/Home"
 import FileIcon from "@material-ui/icons/FileCopy"
 import TagMultipleIcon from "@material-ui/icons/RemoveRedEye"
-import { withKnobs, text, object } from "@storybook/addon-knobs"
+import { withKnobs, text, object, boolean } from "@storybook/addon-knobs"
 import CriterionFrameReadme from "../tools/CriterionFrame.md"
 import { Button, Paper, MenuItem } from "@material-ui/core"
 import { withReadme } from "storybook-readme"
@@ -39,6 +39,7 @@ stories.add(
   "Complete frame",
   withReadme(CriterionFrameReadme, () => {
     const title = text("title", "Example app")
+    const test = boolean("test", false)
     const content = text("content", "Hello world!")
     const userInfo = object("userInfo", {
       userName: "Gipsz Jakab",
@@ -64,6 +65,7 @@ stories.add(
             path: "/app/szolgaltatasok"
           }
         ]}
+        test={test}
         title={title}
         onLogout={action("Logout clicked!")}
         userInfo={userInfo}

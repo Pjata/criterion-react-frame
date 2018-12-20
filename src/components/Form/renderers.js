@@ -132,7 +132,6 @@ const switchStyles = {
     margin: "0px 0px 0px 10px"
   }
 }
-
 const renderSwitchComponent = ({
   classes,
   input,
