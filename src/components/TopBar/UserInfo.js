@@ -21,9 +21,9 @@ const style = theme => ({
 })
 class UserInfo extends PureComponent {
   render() {
-    const { classes, onLogout, userInfo, userInfoRender } = this.props
+    const { classes, onLogout, userInfo, userInfoRender, test } = this.props
     const render = userInfoRender ? (
-      userInfoRender(userInfo)
+      userInfoRender(userInfo, test)
     ) : (
       <React.Fragment>{userInfo.userName}</React.Fragment>
     )

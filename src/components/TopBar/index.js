@@ -10,10 +10,15 @@ import Typography from "@material-ui/core/Typography"
 import MenuIcon from "@material-ui/icons/Menu"
 import logo from "./google_logo_132px_height_vertical_white.png"
 const style = theme => ({
-  rootBgTest: { backgroundColor: "#ffeb38" },
-  rootBgNormal: { background: theme.palette.background.paper },
-  root: {
+  rootBgTest: {
+    color: "black",
+    backgroundColor: "#ffeb38"
+  },
+  rootBgNormal: {
     color: theme.palette.text.primary,
+    background: theme.palette.background.paper
+  },
+  root: {
     position: "absolute",
     marginTop: "0px",
     marginBottom: "0px"
@@ -41,6 +46,10 @@ const style = theme => ({
   logo: {
     height: "80%",
     filter: theme.palette.type !== "dark" ? "invert(1)" : "invert(0)"
+  },
+  logoTest: {
+    height: "80%",
+    filter: theme.palette.type !== "dark" ? "invert(1)" : "invert(1)"
   },
   hide: {
     display: "none"
@@ -89,14 +98,23 @@ class TopBarContainer extends PureComponent {
               </IconButton>
             </div>
             <div className={classes.center}>
-              <img className={classes.logo} src={logo} />
-              <Typography variant={"h6"}>{title}</Typography>
+              <img
+                className={classNames({
+                  [classes.logoTest]: test,
+                  [classes.logo]: !test
+                })}
+                src={logo}
+              />
+              <Typography variant={"h6"} style={test ? { color: "black" } : {}}>
+                {title}
+              </Typography>
             </div>
           </div>
         </Grid>
         <Grid item xs={3}>
           <div className={classes.center}>
             <UserInfo
+              test={test}
               userInfoRender={this.props.userInfoRender}
               userInfo={this.props.userInfo}
               onLogout={this.props.onLogout}

@@ -72,7 +72,10 @@ const renderTextFieldWithoutStyle = ({
           disableUnderline: input.readOnly,
           ...InputProps
         }}
-        onBlur={input.onBlur}
+        onBlur={ev => {
+          console.log(ev)
+          input.onBlur(ev)
+        }}
         classes={{
           root: classes.root
         }}
@@ -355,7 +358,7 @@ const onChangeDateSFV = (input, sfv) => date => {
   sfv(input.name, date)
 }
 const DateButton = ({ form, name, input }) => ({ helperText, ...props }) => {
-  return <RenderTextField form={form} name={name} input={input} {...props} />
+  return <RenderTextField form={form} name={name} {...props} input={input} />
 }
 export const renderDatePicker = shouldUpdate((props, nextProps) => {
   const { input } = props

@@ -105,6 +105,10 @@ const styles = theme => ({
   },
   selectedMenu: {
     background: grey[600]
+  },
+  normalIcon: {},
+  testIcon: {
+    color: "black"
   }
 })
 class MenuDrawer extends PureComponent {
@@ -119,22 +123,29 @@ class MenuDrawer extends PureComponent {
   goToPage = ({ item, index }) => event => {
     this.props.onItemSelected(item, index)
   }
-  generateMenuItems = items =>
-    items.map((item, index) => (
+  generateMenuItems = items => {
+    const { test, classes, selectedIndex } = this.props
+    return items.map((item, index) => (
       <div key={index}>
         <ListItem
           button
           onClick={this.goToPage({ index, item })}
           className={classNames({
-            [this.props.classes.selectedMenu]:
-              this.props.selectedIndex === index
+            [classes.selectedMenu]: selectedIndex === index
           })}
         >
-          <ListItemIcon>{item.icon}</ListItemIcon>
+          <ListItemIcon
+            classes={{
+              root: test ? classes.testIcon : classes.normalIcon
+            }}
+          >
+            {item.icon}
+          </ListItemIcon>
           <ListItemText primary={item.label} />
         </ListItem>
       </div>
     ))
+  }
 
   render() {
     const {

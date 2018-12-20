@@ -24,7 +24,10 @@ const enhance = compose(
         : props.field.value,
       onChange: props.readOnly ? nothing : props.field.onChange,
       readOnly: props.readOnly,
-      onBlur: props.field.onBlur,
+      onBlur: event => {
+        console.log("onblur")
+        props.field.onBlur(event)
+      },
 
       name: props.field.name,
       touched: props.form.touched[props.field.name],

@@ -69,7 +69,7 @@ stories.add(
         title={title}
         onLogout={action("Logout clicked!")}
         userInfo={userInfo}
-        userInfoRender={userInfo => (
+        userInfoRender={(userInfo, test) => (
           <div>
             <div>{userInfo.userName}</div>
             <div>{userInfo.phoneNumber}</div>
