@@ -188,18 +188,21 @@ storiesFormik.add("TextField (number)", () => {
     <CriterionProviders i18n={i18n}>
       <FormikContainer
         onSubmit={action("Submitted: ")}
-        render={() => (
-          <Paper
-            style={{
-              margin: "15px",
-              padding: "5px",
-              width: "400px"
-            }}
-          >
-            <TypeField type={"number"} name={"textfield"} label={label} />
-            <Button type="submit">Submit</Button>
-          </Paper>
-        )}
+        render={values => {
+          console.log(values)
+          return (
+            <Paper
+              style={{
+                margin: "15px",
+                padding: "5px",
+                width: "400px"
+              }}
+            >
+              <TypeField type={"number"} name={"textfield"} label={label} />
+              <Button type="submit">Submit</Button>
+            </Paper>
+          )
+        }}
       />
     </CriterionProviders>
   )

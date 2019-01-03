@@ -82,6 +82,14 @@ class TypeField extends PureComponent {
           />
         )
       case "number":
+        return (
+          <FastField
+            type={type}
+            {...rest}
+            FieldComponent={textField}
+            component={enhancedTypeFieldInner}
+          />
+        )
       case "text":
         return (
           <FastField

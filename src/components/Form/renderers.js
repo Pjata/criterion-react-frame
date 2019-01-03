@@ -61,7 +61,7 @@ const renderTextFieldWithoutStyle = ({
     {t => (
       <TextField
         label={t(label)}
-        value={input.value || ""}
+        value={input.value === 0 ? input.value : input.value || ""}
         onChange={input.onChange}
         autoComplete={"off"}
         helperText={input.touched || submitCount > 0 ? input.error : null}
