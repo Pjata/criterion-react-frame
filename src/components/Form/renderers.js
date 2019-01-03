@@ -211,6 +211,12 @@ export class RenderSelectFieldComponent extends PureComponent {
     const formControlClasses = {
       root: classes.root
     }
+    const options = [
+      <option value={""} />,
+      ...children.map(item => (
+        <option value={item.props.value}>{item.props.children}</option>
+      ))
+    ]
     return (
       <I18n ns={["translations"]}>
         {t => (
@@ -231,6 +237,7 @@ export class RenderSelectFieldComponent extends PureComponent {
                   {t(label)}
                 </InputLabel>
                 <Select
+                  native
                   classes={{
                     icon: inputProps.readOnly
                       ? classes.iconStyleHidden
@@ -255,7 +262,7 @@ export class RenderSelectFieldComponent extends PureComponent {
                   }
                   //   {...rest}
                 >
-                  {children}
+                  {options}
                 </Select>
                 {error && (submitCount > 0 || touched) ? (
                   <FormHelperText>{error}</FormHelperText>

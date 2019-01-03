@@ -297,6 +297,9 @@ storiesFormik.add("Switch (default, converter, readOnly)", () => {
 })
 storiesFormik.add("Select", () => {
   const label = text("Label", "Select test")
+  const items = Array.from(Array(1000).keys()).map(item => (
+    <MenuItem value={item}>{item}</MenuItem>
+  ))
   return (
     <CriterionProviders i18n={i18n}>
       <FormikContainer
@@ -310,10 +313,7 @@ storiesFormik.add("Select", () => {
             }}
           >
             <TypeField name={"select"} label={label} type={"select"}>
-              <MenuItem value={1}>1</MenuItem>
-              <MenuItem value={2}>2</MenuItem>
-              <MenuItem value={3}>3</MenuItem>
-              <MenuItem value={4}>4</MenuItem>
+              {items}
             </TypeField>
             <Button type="submit">Submit</Button>
           </Paper>
