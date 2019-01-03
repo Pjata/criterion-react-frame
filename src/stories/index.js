@@ -298,7 +298,9 @@ storiesFormik.add("Switch (default, converter, readOnly)", () => {
 storiesFormik.add("Select", () => {
   const label = text("Label", "Select test")
   const items = Array.from(Array(1000).keys()).map(item => (
-    <MenuItem value={item}>{item}</MenuItem>
+    <MenuItem key={item} value={item}>
+      {item}
+    </MenuItem>
   ))
   return (
     <CriterionProviders i18n={i18n}>
