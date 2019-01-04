@@ -125,6 +125,8 @@ const onSwitchChangeSFV = (input, deconverter, sfv, readOnly) => event => {
   }
 }
 const onSelectChangeSFV = (input, sfv) => event => {
+  const index = event.target.selectedIndex
+  debugger
   sfv(input.name, event.target.value)
 }
 const switchStyles = {
@@ -226,6 +228,11 @@ export class RenderSelectFieldComponent extends PureComponent {
         </option>
       ))
     ]
+    const onSelectChangeSFV = (input, sfv) => event => {
+      const index = event.target.selectedIndex
+      const value = options[index].props.value
+      sfv(input.name, value)
+    }
     return (
       <I18n ns={["translations"]}>
         {t => (
