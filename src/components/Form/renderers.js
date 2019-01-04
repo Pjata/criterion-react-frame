@@ -184,8 +184,8 @@ const selectStyle = {
   iconStyleShow: {
     opacity: 1
   },
-  select: {
-    color: "black"
+  selectMenu: {
+    color: "red"
   }
 }
 export class RenderSelectFieldComponent extends PureComponent {
@@ -217,7 +217,11 @@ export class RenderSelectFieldComponent extends PureComponent {
     const options = [
       <option key={""} value={""} />,
       ...children.map(item => (
-        <option key={item.props.value} value={item.props.value}>
+        <option
+          style={{ color: "black" }}
+          key={item.props.value}
+          value={item.props.value}
+        >
           {item.props.children}
         </option>
       ))
@@ -246,8 +250,7 @@ export class RenderSelectFieldComponent extends PureComponent {
                   classes={{
                     icon: inputProps.readOnly
                       ? classes.iconStyleHidden
-                      : inputProps.iconStyleShow,
-                    select: classes.select
+                      : inputProps.iconStyleShow
                   }}
                   value={
                     inputProps.value || inputProps.value === !true
