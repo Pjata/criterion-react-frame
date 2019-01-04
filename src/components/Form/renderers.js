@@ -183,6 +183,9 @@ const selectStyle = {
   },
   iconStyleShow: {
     opacity: 1
+  },
+  select: {
+    color: "black"
   }
 }
 export class RenderSelectFieldComponent extends PureComponent {
@@ -243,7 +246,8 @@ export class RenderSelectFieldComponent extends PureComponent {
                   classes={{
                     icon: inputProps.readOnly
                       ? classes.iconStyleHidden
-                      : inputProps.iconStyleShow
+                      : inputProps.iconStyleShow,
+                    select: classes.select
                   }}
                   value={
                     inputProps.value || inputProps.value === !true
