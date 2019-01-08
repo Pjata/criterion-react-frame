@@ -9,7 +9,7 @@ export {
   default as CriterionProviders
 } from "./components/Form/CriterionProviders"
 export { default as TypeField } from "./components/Form/TypeField"
-export { RenderTextField } from "./components/Form/renderers"
+export { TextField } from "./components/Form/renderers"
 export {
   default as SetFieldValueContext
 } from "./components/Form/SetFieldValueContext"
