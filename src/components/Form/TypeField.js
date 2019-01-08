@@ -4,16 +4,16 @@ import { FastField, Field } from "formik"
 import { compose, mapProps, withProps } from "recompose"
 import moment from "moment"
 import { omit } from "lodash/fp"
-import {
-  renderDatePicker,
-  renderSelectField,
-  RenderTextField,
-  renderSwitch,
-  renderTimePicker,
-  renderCheckbox,
-  renderDateTimePicker
-} from "./renderers"
 
+import {
+  TextField,
+  SwitchField,
+  SelectField,
+  DateTimePickerField,
+  TimePickerField,
+  DatePickerField,
+  CheckboxField
+} from "./renderers"
 const nothing = () => {}
 const omitProps = keys => mapProps(props => omit(keys, props))
 const enhance = compose(
@@ -25,7 +25,6 @@ const enhance = compose(
       onChange: props.readOnly ? nothing : props.field.onChange,
       readOnly: props.readOnly,
       onBlur: event => {
-        console.log("onblur")
         props.field.onBlur(event)
       },
 
@@ -40,13 +39,13 @@ const enhance = compose(
 )
 const dateConverter = value => (value ? moment(value).format("YYYY.MM.DD") : "")
 
-const textField = enhance(RenderTextField)
-const datePickerField = enhance(renderDatePicker)
-const selectField = enhance(renderSelectField)
-const switchField = enhance(renderSwitch)
-const timePickerField = enhance(renderTimePicker)
-const dateTimePickerField = enhance(renderDateTimePicker)
-const checkboxField = enhance(renderCheckbox)
+const textField = enhance(TextField)
+const switchField = enhance(SwitchField)
+const selectField = enhance(SelectField)
+const datePickerField = enhance(DatePickerField)
+const dateTimePickerField = enhance(DateTimePickerField)
+const timePickerField = enhance(TimePickerField)
+const checkboxField = enhance(CheckboxField)
 
 class TypeFieldInner extends Component {
   shouldComponentUpdate(nextProps) {
@@ -75,9 +74,7 @@ class TypeField extends PureComponent {
         return (
           <Field
             {...rest}
-            component={
-              rest.readOnly ? enhance(RenderTextField) : datePickerField
-            }
+            component={rest.readOnly ? textField : datePickerField}
             converter={dateConverter}
           />
         )

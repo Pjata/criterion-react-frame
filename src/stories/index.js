@@ -445,10 +445,7 @@ storiesFormik.add("Validation", () => {
           Yup.object().shape({
             required: Yup.string().required("Kötelező mező!"),
             select: Yup.number().required("Kötelező mező!"),
-            regex:
-              values.required === "123"
-                ? Yup.string().matches(new RegExp(regex))
-                : Yup.string(),
+            regex: Yup.string().matches(new RegExp(regex)),
             date: Yup.string().required("Kötelező mező!")
           })
         }
