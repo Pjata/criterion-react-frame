@@ -97,7 +97,6 @@ export class RenderSelectFieldComponent extends PureComponent {
                       : ""
                   }
                   onChange={onSelectChangeSFV(inputProps, setFieldValue)}
-                  disableUnderline={inputProps.readOnly}
                   input={
                     inputProps.readOnly ? (
                       <OutlinedInput
