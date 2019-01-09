@@ -48,7 +48,6 @@ const renderTextFieldWithoutStyle = ({
         InputProps={{
           name: input.name,
           inputComponent: getInputComponentTextField(mask, type),
-          disableUnderline: input.readOnly,
           ...InputProps
         }}
         onBlur={ev => {
