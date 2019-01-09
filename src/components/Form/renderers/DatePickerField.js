@@ -35,9 +35,6 @@ export const DatePickerField = shouldUpdate((props, nextProps) => {
         format={"YYYY.MM.DD"}
         onChange={onChangeDateSFV(input, setFieldValue)}
         variant={input.readOnly ? "outlined" : "standard"}
-        InputProps={{
-          disableUnderline: input.readOnly
-        }}
         value={input.value ? moment(input.value) : null}
       />
     )}

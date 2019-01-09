@@ -25,9 +25,6 @@ export const TimePickerField = ({ className, input, name, label, ...rest }) => (
         invalidLabel={""}
         value={getTimeValue(input.value)}
         variant={input.readOnly ? "outlined" : "standard"}
-        InputProps={{
-          disableUnderline: input.readOnly
-        }}
         onChange={onChangeTimePicker(input.name, setFieldValue)}
       />
     )}

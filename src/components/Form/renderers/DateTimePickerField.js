@@ -41,9 +41,6 @@ export const DateTimePickerField = ({
         invalidLabel={""}
         value={getDateTimeValue(input.value)}
         variant={input.readOnly ? "outlined" : "standard"}
-        InputProps={{
-          disableUnderline: input.readOnly
-        }}
         onChange={onChangeDateTimePicker(input.name, setFieldValue)}
       />
     )}
