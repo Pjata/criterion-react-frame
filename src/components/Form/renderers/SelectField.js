@@ -96,6 +96,9 @@ export class RenderSelectFieldComponent extends PureComponent {
                       ? inputProps.value
                       : ""
                   }
+                  inputProps={{
+                    disabled: Boolean(inputProps.readOnly)
+                  }}
                   onChange={onSelectChangeSFV(inputProps, setFieldValue)}
                   input={
                     inputProps.readOnly ? (
