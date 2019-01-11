@@ -348,7 +348,7 @@ exports[`Storyshots Form Select 1`] = `
               value=""
             >
               <option
-                value=""
+                value={null}
               />
               <option
                 style={
@@ -12209,7 +12209,7 @@ exports[`Storyshots Form Validation 1`] = `
               value=""
             >
               <option
-                value=""
+                value={null}
               />
               <option
                 style={

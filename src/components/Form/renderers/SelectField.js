@@ -49,7 +49,7 @@ export class RenderSelectFieldComponent extends PureComponent {
       root: classes.root
     }
     const options = [
-      <option key={""} value={""} />,
+      <option key={""} value={null} />,
       ...children.map(item => (
         <option
           style={{ color: "black" }}
