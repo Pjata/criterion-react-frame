@@ -77,8 +77,9 @@ const renderTextFieldWithoutStyle = ({
 export const RenderTextField = compose(
   withStyles(textFieldStyle),
   shouldUpdate((props, nextProps) => {
-    const { input } = props
+    const { input, form } = props
     if (
+      form.submitCount !== nextProps.form.submitCount ||
       input.value !== nextProps.input.value ||
       input.touched !== nextProps.input.touched ||
       input.error !== nextProps.input.error

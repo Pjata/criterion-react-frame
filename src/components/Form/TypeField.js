@@ -49,8 +49,9 @@ const checkboxField = enhance(CheckboxField)
 
 class TypeFieldInner extends Component {
   shouldComponentUpdate(nextProps) {
-    const { input } = this.props
+    const { input, form } = this.props
     if (
+      form.submitCount !== nextProps.form.submitCount ||
       input.value !== nextProps.input.value ||
       input.touched !== nextProps.input.touched ||
       input.error !== nextProps.input.error

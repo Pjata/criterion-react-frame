@@ -14,8 +14,9 @@ const DateButton = ({ form, name, input }) => ({ helperText, ...props }) => {
   return <TextField form={form} name={name} {...props} input={input} />
 }
 export const DatePickerField = shouldUpdate((props, nextProps) => {
-  const { input } = props
+  const { input, form } = props
   if (
+    form.submitCount !== nextProps.form.submitCount ||
     input.value !== nextProps.input.value ||
     input.touched !== nextProps.input.touched ||
     input.error !== nextProps.input.error
