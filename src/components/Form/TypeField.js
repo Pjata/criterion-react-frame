@@ -61,6 +61,7 @@ class TypeFieldInner extends Component {
     return false
   }
   render() {
+    console.log()
     const { FieldComponent, ...rest } = this.props
     return <FieldComponent {...rest} />
   }
@@ -81,7 +82,7 @@ class TypeField extends PureComponent {
         )
       case "number":
         return (
-          <FastField
+          <Field
             type={type}
             {...rest}
             FieldComponent={textField}
@@ -90,7 +91,7 @@ class TypeField extends PureComponent {
         )
       case "text":
         return (
-          <FastField
+          <Field
             type={type}
             {...rest}
             FieldComponent={textField}
@@ -109,7 +110,7 @@ class TypeField extends PureComponent {
         return <Field {...rest} component={checkboxField} />
       default:
         return (
-          <FastField
+          <Field
             {...rest}
             FieldComponent={textField}
             component={enhancedTypeFieldInner}
