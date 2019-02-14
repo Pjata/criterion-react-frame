@@ -10,7 +10,11 @@ import TextField from "./TextField"
 const onChangeDateSFV = (input, sfv) => date => {
   sfv(input.name, date)
 }
-const DateButton = ({ form, name, input }) => ({ helperText, ...props }) => {
+const DateButton = ({ form, name, input }) => ({
+  helperText,
+  value,
+  ...props
+}) => {
   return <TextField form={form} name={name} {...props} input={input} />
 }
 export const DatePickerField = shouldUpdate((props, nextProps) => {

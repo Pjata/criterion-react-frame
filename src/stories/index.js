@@ -417,6 +417,9 @@ storiesFormik.add("Date picker", () => {
   return (
     <CriterionProviders i18n={i18n}>
       <FormikContainer
+        defaultValues={{
+          date: new Date()
+        }}
         onSubmit={action("Submitted: ")}
         render={() => (
           <Paper
