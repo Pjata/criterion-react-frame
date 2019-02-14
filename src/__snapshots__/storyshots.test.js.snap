@@ -129,8 +129,8 @@ exports[`Storyshots Form Date picker 1`] = `
         onKeyPress={[Function]}
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated shouldUpdate(renderTextFieldWithoutStyle)-empty"
-          data-shrink={false}
+          className="MuiFormLabel-root MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+          data-shrink={true}
           htmlFor={undefined}
         >
           Date test
@@ -160,7 +160,7 @@ exports[`Storyshots Form Date picker 1`] = `
             required={false}
             rows={undefined}
             type="text"
-            value=""
+            value="2019.02.14"
           />
         </div>
       </div>
