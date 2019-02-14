@@ -51,11 +51,7 @@ export class RenderSelectFieldComponent extends PureComponent {
     const options = [
       <option key={""} value={null} />,
       ...children.map(item => (
-        <option
-          style={{ color: "black" }}
-          key={item.props.value}
-          value={item.props.value}
-        >
+        <option key={item.props.value} value={item.props.value}>
           {item.props.children}
         </option>
       ))
