@@ -3,7 +3,7 @@ import moment from "moment"
 import { TimePicker } from "material-ui-pickers"
 import SetFieldValueContext from "../SetFieldValueContext"
 const onChangeTimePicker = (name, setFieldValue) => date => {
-  setFieldValue(name, date.format("HH:mm"))
+  setFieldValue(name, date ? date.format("HH:mm") : null)
 }
 const getTimeValue = value => {
   const time = moment(value, "HH:mm")

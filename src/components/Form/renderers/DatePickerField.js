@@ -32,6 +32,7 @@ export const DatePickerField = shouldUpdate((props, nextProps) => {
   <SetFieldValueContext.Consumer>
     {({ setFieldValue }) => (
       <DatePicker
+        clearable
         label={label}
         className={className}
         TextFieldComponent={DateButton({ form, name, input })}
