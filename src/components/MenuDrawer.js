@@ -1,17 +1,17 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import { compose } from "redux";
-import Drawer from "@material-ui/core/Drawer";
-import { Divider, List } from "@material-ui/core";
-import classNames from "classnames";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import IconButton from "@material-ui/core/IconButton";
-import { withStyles, withTheme } from "@material-ui/core/styles";
-import grey from "@material-ui/core/colors/grey";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import posed, { PoseGroup } from "react-pose";
+import React, { PureComponent } from "react"
+import PropTypes from "prop-types"
+import { compose } from "redux"
+import Drawer from "@material-ui/core/Drawer"
+import { Divider, List } from "@material-ui/core"
+import classNames from "classnames"
+import ListItem from "@material-ui/core/ListItem"
+import ListItemIcon from "@material-ui/core/ListItemIcon"
+import ListItemText from "@material-ui/core/ListItemText"
+import IconButton from "@material-ui/core/IconButton"
+import { withStyles, withTheme } from "@material-ui/core/styles"
+import grey from "@material-ui/core/colors/grey"
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
+import posed, { PoseGroup } from "react-pose"
 const TopBar = posed.div({
   enter: {
     y: 0,
@@ -26,7 +26,7 @@ const TopBar = posed.div({
     opacity: 0,
     transition: { duration: 150 }
   }
-});
+})
 const Menu = posed.div({
   enter: {
     x: 0,
@@ -41,7 +41,7 @@ const Menu = posed.div({
     opacity: 0,
     transition: { duration: 150 }
   }
-});
+})
 const styles = theme => ({
   root: {
     flexGrow: 1
@@ -111,21 +111,21 @@ const styles = theme => ({
     color: "black"
   },
   contents: { width: "calc(100% - " + theme.spacing.unit * 7 + "px)" }
-});
+})
 class MenuDrawer extends PureComponent {
   state = {
     isVisible: false
-  };
+  }
   componentDidMount() {
     this.setState({
       isVisible: true
-    });
+    })
   }
   goToPage = ({ item, index }) => event => {
-    this.props.onItemSelected(item, index);
-  };
+    this.props.onItemSelected(item, index)
+  }
   generateMenuItems = items => {
-    const { test, classes, selectedIndex } = this.props;
+    const { test, classes, selectedIndex } = this.props
     return items.map((item, index) => (
       <div key={index}>
         <ListItem
@@ -145,8 +145,8 @@ class MenuDrawer extends PureComponent {
           <ListItemText primary={item.label} />
         </ListItem>
       </div>
-    ));
-  };
+    ))
+  }
 
   render() {
     const {
@@ -160,7 +160,7 @@ class MenuDrawer extends PureComponent {
       topBarRender,
       test,
       rootStyle
-    } = this.props;
+    } = this.props
     const contentStyle = {
       padding: theme.spacing.unit * 3,
       marginTop: topBarHeight,
@@ -169,12 +169,12 @@ class MenuDrawer extends PureComponent {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
       })
-    };
+    }
     const appbarStyle = open
       ? { marginLeft: menuWidth, width: `calc(100% - ${menuWidth}px)` }
-      : {};
-    const drawerPaperStyle = open ? { width: menuWidth } : {};
-    const { isVisible } = this.state;
+      : {}
+    const drawerPaperStyle = open ? { width: menuWidth } : {}
+    const { isVisible } = this.state
     return (
       <div className={classes.appFrame} style={{ ...rootStyle }}>
         <PoseGroup>
@@ -231,14 +231,11 @@ class MenuDrawer extends PureComponent {
           ]}
         </PoseGroup>
       </div>
-    );
+    )
   }
 }
 
-const enhance = compose(
-  withStyles(styles),
-  withTheme()
-);
+const enhance = compose(withStyles(styles), withTheme())
 
 MenuDrawer.propTypes = {
   open: PropTypes.bool.isRequired,
@@ -253,6 +250,6 @@ MenuDrawer.propTypes = {
   theme: PropTypes.any,
   classes: PropTypes.any,
   rootStyle: PropTypes.any
-};
+}
 
-export default enhance(MenuDrawer);
+export default enhance(MenuDrawer)
