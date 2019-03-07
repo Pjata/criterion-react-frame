@@ -64,7 +64,10 @@ const renderTextFieldWithoutStyle = ({
         }}
         InputLabelProps={{
           className: classNames({
-            [classes.empty]: input.value === null || input.value === ""
+            [classes.empty]:
+              input.value === null ||
+              input.value === undefined ||
+              input.value === ""
           })
         }}
         className={classNames(className)}

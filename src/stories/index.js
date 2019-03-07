@@ -17,6 +17,7 @@ import FormikContainer, {
 import InputAdornment from "@material-ui/core/InputAdornment"
 import { createMuiTheme } from "@material-ui/core/styles"
 
+import { MuiThemeProvider } from "@material-ui/core/styles"
 import JssProvider from "react-jss/lib/JssProvider"
 import CriterionFrame from "../components/CriterionFrame"
 import { TypeField } from "../index"
@@ -28,65 +29,65 @@ const generateClassName = (rule, styleSheet) =>
   `${styleSheet.options.classNamePrefix}-${rule.key}`
 
 const muiTheme0 = createMuiTheme({
+  palette: {
+    type: "dark"
+  },
   typography: {
     useNextVariants: true,
     suppressDeprecationWarnings: true
   }
 })
-stories.addDecorator(withKnobs).addDecorator(muiTheme([muiTheme0]))
+stories.addDecorator(withKnobs)
 
-stories.add(
-  "Complete frame",
-  withReadme(CriterionFrameReadme, () => {
-    const title = text("title", "Example app")
-    const test = boolean("test", false)
-    const content = text("content", "Hello world!")
-    const userInfo = object("userInfo", {
-      userName: "Gipsz Jakab",
-      phoneNumber: 1081
-    })
-
-    return (
-      <CriterionFrame
-        menuConfig={[
-          {
-            label: "Főoldal",
-            icon: <HomeIcon />,
-            path: "/app/index"
-          },
-          {
-            label: "Szerződések",
-            icon: <FileIcon />,
-            path: "/app/szerzodesek"
-          },
-          {
-            label: "Szolgáltatások",
-            icon: <TagMultipleIcon />,
-            path: "/app/szolgaltatasok"
-          }
-        ]}
-        test={test}
-        title={title}
-        onLogout={action("Logout clicked!")}
-        userInfo={userInfo}
-        userInfoRender={(userInfo, test) => (
-          <div>
-            <div>{userInfo.userName}</div>
-            <div>{userInfo.phoneNumber}</div>
-          </div>
-        )}
-        onItemSelected={action("item selected")}
-      >
-        {content}
-      </CriterionFrame>
-    )
+stories.add("Complete frame", () => {
+  const title = text("title", "Example app")
+  const test = boolean("test", false)
+  const content = text("content", "Hello world!")
+  const userInfo = object("userInfo", {
+    userName: "Gipsz Jakab",
+    phoneNumber: 1081
   })
-)
+
+  return (
+    <CriterionFrame
+      menuConfig={[
+        {
+          label: "Főoldal",
+          icon: <HomeIcon />,
+          path: "/app/index"
+        },
+        {
+          label: "Szerződések",
+          icon: <FileIcon />,
+          path: "/app/szerzodesek"
+        },
+        {
+          label: "Szolgáltatások",
+          icon: <TagMultipleIcon />,
+          path: "/app/szolgaltatasok"
+        }
+      ]}
+      test={test}
+      title={title}
+      onLogout={action("Logout clicked!")}
+      userInfo={userInfo}
+      userInfoRender={(userInfo, test) => (
+        <div>
+          <div>{userInfo.userName}</div>
+          <div>{userInfo.phoneNumber}</div>
+        </div>
+      )}
+      onItemSelected={action("item selected")}
+    >
+      {content}
+    </CriterionFrame>
+  )
+})
 
 const storiesFormik = storiesOf("Form", module)
-storiesFormik.addDecorator(withKnobs).addDecorator(muiTheme([muiTheme0]))
+storiesFormik.addDecorator(withKnobs)
 storiesFormik.addDecorator(story => (
-  <JssProvider generateClassName={generateClassName}>{story()}</JssProvider>
+  <MuiThemeProvider theme={muiTheme0}>{story()}</MuiThemeProvider>
 ))
 storiesFormik.add("TextField", () => {
   const label = text("Label", "Test")

@@ -5,11 +5,15 @@ import Select from "@material-ui/core/Select"
 import FormControl from "@material-ui/core/FormControl"
 import FormHelperText from "@material-ui/core/FormHelperText"
 import { withStyles } from "@material-ui/core/styles"
+import classNames from "classnames"
 import SetFieldValueContext from "../SetFieldValueContext"
 import OutlinedInput from "@material-ui/core/OutlinedInput"
 import Input from "@material-ui/core/Input"
 import { I18n } from "react-i18next"
-const selectStyle = {
+const selectStyle = theme => ({
+  empty: {
+    color: theme.palette.primary.light
+  },
   root: {
     width: "100%"
   },
@@ -22,7 +26,7 @@ const selectStyle = {
   selectMenu: {
     color: "red"
   }
-}
+})
 export class RenderSelectFieldComponent extends PureComponent {
   state = {
     labelWidth: 0
@@ -76,6 +80,14 @@ export class RenderSelectFieldComponent extends PureComponent {
                 <InputLabel
                   ref={ref => {
                     this.InputLabelRef = ref
+                  }}
+                  classes={{
+                    root:
+                      inputProps.value === null ||
+                      inputProps.value === undefined ||
+                      inputProps.value === ""
+                        ? classes.empty
+                        : null
                   }}
                 >
                   {t(label)}

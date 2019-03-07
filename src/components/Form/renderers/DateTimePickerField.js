@@ -6,6 +6,15 @@ import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft"
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight"
 import DateRange from "@material-ui/icons/DateRange"
 import AccessTime from "@material-ui/icons/AccessTime"
+import TextField from "./TextField"
+
+const DateButton = ({ form, name, input }) => ({
+  helperText,
+  value,
+  ...props
+}) => {
+  return <TextField form={form} name={name} {...props} input={input} />
+}
 const onChangeDateTimePicker = (name, setFieldValue) => date => {
   setFieldValue(name, date.format("YYYY.MM.DD HH:mm"))
 }
@@ -39,6 +48,7 @@ export const DateTimePickerField = ({
         className={className}
         label={label}
         invalidLabel={""}
+        TextFieldComponent={DateButton({ form, name, input, className })}
         value={getDateTimeValue(input.value)}
         variant={input.readOnly ? "outlined" : "standard"}
         onChange={onChangeDateTimePicker(input.name, setFieldValue)}

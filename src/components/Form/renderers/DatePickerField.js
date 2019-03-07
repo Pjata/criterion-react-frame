@@ -35,7 +35,7 @@ export const DatePickerField = shouldUpdate((props, nextProps) => {
         clearable
         label={label}
         className={className}
-        TextFieldComponent={DateButton({ form, name, input })}
+        TextFieldComponent={DateButton({ form, name, input, className })}
         rightArrowIcon={<KeyboardArrowRight />}
         leftArrowIcon={<KeyboardArrowLeft />}
         format={"YYYY.MM.DD"}
