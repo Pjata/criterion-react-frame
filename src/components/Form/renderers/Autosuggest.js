@@ -72,11 +72,23 @@ function renderSuggestion(suggestion, { query, isHighlighted }) {
         {parts.map(
           (part, index) =>
             part.highlight ? (
-              <span key={String(index)} style={{ fontWeight: 900 }}>
+              <span
+                key={String(index)}
+                style={{
+                  fontWeight: 900,
+                  fontStyle: suggestion.key ? "normal" : "italic"
+                }}
+              >
                 {part.text}
               </span>
             ) : (
-              <strong key={String(index)} style={{ fontWeight: 200 }}>
+              <strong
+                key={String(index)}
+                style={{
+                  fontStyle: suggestion.key ? "normal" : "italic",
+                  fontWeight: 200
+                }}
+              >
                 {part.text}
               </strong>
             )
@@ -105,10 +117,7 @@ function getSuggestions(suggestions, value) {
 
           return keep
         })
-  if (inputLength !== 0 && suggestionsFiltered.length === 0) {
-    return [...suggestionsFiltered, { label: value }]
-  }
-  return suggestionsFiltered
+  return [...suggestionsFiltered, { label: value }]
 }
 
 function getSuggestionValue(suggestion) {

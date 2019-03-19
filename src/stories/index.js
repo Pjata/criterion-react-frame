@@ -475,11 +475,12 @@ storiesFormik.add("Date picker", () => {
   )
 })
 storiesFormik.add("Auto suggest", () => {
+  const defaultValues = [{ key: "0", label: "123" }, { key: "1", label: "456" }]
   return (
     <CriterionProviders i18n={i18n}>
       <FormikContainer
         defaultValues={{
-          chipper: [{ key: "123", label: "123" }, { key: "456", label: "456" }]
+          chipper: defaultValues
         }}
         onSubmit={action("Submitted: ")}
         render={() => (
@@ -492,7 +493,7 @@ storiesFormik.add("Auto suggest", () => {
           >
             <TypeField
               label={"Chipper"}
-              suggestions={suggestions}
+              suggestions={defaultValues}
               name={"chipper"}
               type={"chipper"}
             />
