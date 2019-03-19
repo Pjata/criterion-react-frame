@@ -20,7 +20,7 @@ class Chipper extends PureComponent {
     )
     const foundOrNew = found
       ? found
-      : { key: `NEW_${data.label}`, label: data.label }
+      : { key: `${data.label}`, label: data.label }
     const isAlreadyAdded = value.find(item => item.key === foundOrNew.key)
     if (!isAlreadyAdded) {
       setFieldValue(name, [...value, foundOrNew])
