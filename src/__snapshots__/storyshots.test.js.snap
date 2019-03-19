@@ -78,7 +78,7 @@ exports[`Storyshots Form Auto suggest 1`] = `
           <span
             className="MuiChip-label-1764"
           >
-            0
+            123
           </span>
           <svg
             aria-hidden="true"
@@ -105,7 +105,7 @@ exports[`Storyshots Form Auto suggest 1`] = `
           <span
             className="MuiChip-label-1764"
           >
-            1
+            456
           </span>
           <svg
             aria-hidden="true"

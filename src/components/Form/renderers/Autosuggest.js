@@ -105,7 +105,10 @@ function getSuggestions(suggestions, value) {
 
           return keep
         })
-  return [...suggestionsFiltered, { label: value }]
+  if (inputLength !== 0 && suggestionsFiltered.length === 0) {
+    return [...suggestionsFiltered, { label: value }]
+  }
+  return suggestionsFiltered
 }
 
 function getSuggestionValue(suggestion) {

@@ -479,7 +479,7 @@ storiesFormik.add("Auto suggest", () => {
     <CriterionProviders i18n={i18n}>
       <FormikContainer
         defaultValues={{
-          chipper: [{ key: 0, label: "0" }, { key: 1, label: "1" }]
+          chipper: [{ key: "123", label: "123" }, { key: "456", label: "456" }]
         }}
         onSubmit={action("Submitted: ")}
         render={() => (
