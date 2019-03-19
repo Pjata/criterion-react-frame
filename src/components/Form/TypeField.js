@@ -12,7 +12,8 @@ import {
   DateTimePickerField,
   TimePickerField,
   DatePickerField,
-  CheckboxField
+  CheckboxField,
+  ChipperField
 } from "./renderers"
 const nothing = () => {}
 const omitProps = keys => mapProps(props => omit(keys, props))
@@ -46,6 +47,7 @@ const datePickerField = enhance(DatePickerField)
 const dateTimePickerField = enhance(DateTimePickerField)
 const timePickerField = enhance(TimePickerField)
 const checkboxField = enhance(CheckboxField)
+const chipperField = enhance(ChipperField)
 
 class TypeFieldInner extends Component {
   shouldComponentUpdate(nextProps) {
@@ -108,6 +110,8 @@ class TypeField extends PureComponent {
         return <Field {...rest} component={dateTimePickerField} />
       case "checkbox":
         return <Field {...rest} component={checkboxField} />
+      case "chipper":
+        return <Field {...rest} component={chipperField} />
       default:
         return (
           <Field

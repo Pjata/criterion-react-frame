@@ -1,4 +1,5 @@
 import React from "react"
+import Autosuggest from "../components/Form/renderers/Autosuggest"
 
 import CriterionProviders from "../components/Form/CriterionProviders"
 import { storiesOf } from "@storybook/react"
@@ -19,12 +20,49 @@ import { createMuiTheme } from "@material-ui/core/styles"
 
 import { MuiThemeProvider } from "@material-ui/core/styles"
 import JssProvider from "react-jss/lib/JssProvider"
+import Chipper from "../components/Form/renderers/Chipper"
 import CriterionFrame from "../components/CriterionFrame"
 import { TypeField } from "../index"
 import * as Yup from "yup"
 import i18n from "./i18n"
 const stories = storiesOf("Menu and topbar (DontTest)", module)
 
+const suggestions = [
+  { label: "Afghanistan" },
+  { label: "Aland Islands" },
+  { label: "Albania" },
+  { label: "Algeria" },
+  { label: "American Samoa" },
+  { label: "Andorra" },
+  { label: "Angola" },
+  { label: "Anguilla" },
+  { label: "Antarctica" },
+  { label: "Antigua and Barbuda" },
+  { label: "Argentina" },
+  { label: "Armenia" },
+  { label: "Aruba" },
+  { label: "Australia" },
+  { label: "Austria" },
+  { label: "Azerbaijan" },
+  { label: "Bahamas" },
+  { label: "Bahrain" },
+  { label: "Bangladesh" },
+  { label: "Barbados" },
+  { label: "Belarus" },
+  { label: "Belgium" },
+  { label: "Belize" },
+  { label: "Benin" },
+  { label: "Bermuda" },
+  { label: "Bhutan" },
+  { label: "Bolivia, Plurinational State of" },
+  { label: "Bonaire, Sint Eustatius and Saba" },
+  { label: "Bosnia and Herzegovina" },
+  { label: "Botswana" },
+  { label: "Bouvet Island" },
+  { label: "Brazil" },
+  { label: "British Indian Ocean Territory" },
+  { label: "Brunei Darussalam" }
+]
 const generateClassName = (rule, styleSheet) =>
   `${styleSheet.options.classNamePrefix}-${rule.key}`
 
@@ -429,6 +467,35 @@ storiesFormik.add("Date picker", () => {
             }}
           >
             <TypeField name={"date"} label={label} type={"date"} />
+            <Button type="submit">Submit</Button>
+          </Paper>
+        )}
+      />
+    </CriterionProviders>
+  )
+})
+storiesFormik.add("Auto suggest", () => {
+  return (
+    <CriterionProviders i18n={i18n}>
+      <FormikContainer
+        defaultValues={{
+          chipper: [{ key: 0, label: "0" }, { key: 1, label: "1" }]
+        }}
+        onSubmit={action("Submitted: ")}
+        render={() => (
+          <Paper
+            style={{
+              margin: "15px",
+              padding: "5px",
+              width: "400px"
+            }}
+          >
+            <TypeField
+              label={"Chipper"}
+              suggestions={suggestions}
+              name={"chipper"}
+              type={"chipper"}
+            />
             <Button type="submit">Submit</Button>
           </Paper>
         )}

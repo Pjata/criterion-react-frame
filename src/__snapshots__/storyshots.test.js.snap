@@ -1,5 +1,158 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Form Auto suggest 1`] = `
+<form
+  onSubmit={[Function]}
+  style={undefined}
+>
+  <div
+    className="MuiPaper-root-1676 MuiPaper-elevation2-1680 MuiPaper-rounded-1677"
+    style={
+      Object {
+        "margin": "15px",
+        "padding": "5px",
+        "width": "400px",
+      }
+    }
+  >
+    <div>
+      <div
+        aria-expanded={false}
+        aria-haspopup="listbox"
+        aria-owns="react-autowhatever-1"
+        className="IntegrationAutosuggest-container-1704"
+        role="combobox"
+      >
+        <div
+          aria-activedescendant={null}
+          aria-autocomplete="list"
+          aria-controls="react-autowhatever-1"
+          className="MuiFormControl-root-1709 MuiFormControl-fullWidth-1712"
+          onKeyDown={[Function]}
+          style={Object {}}
+        >
+          <div
+            className="MuiInputBase-root-1726 MuiInput-root-1713 MuiInput-underline-1717 MuiInputBase-fullWidth-1735 MuiInput-fullWidth-1720 MuiInputBase-formControl-1727 MuiInput-formControl-1714"
+            onClick={[Function]}
+          >
+            <input
+              aria-describedby={undefined}
+              aria-invalid={false}
+              autoComplete="off"
+              autoFocus={undefined}
+              className="MuiInputBase-input-1736 MuiInput-input-1721"
+              defaultValue={undefined}
+              disabled={false}
+              id={undefined}
+              name={undefined}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder="Chipper"
+              readOnly={undefined}
+              required={false}
+              rows={undefined}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="MuiPaper-root-1676 MuiPaper-elevation2-1680"
+          id="react-autowhatever-1"
+          role="listbox"
+          style={Object {}}
+        />
+      </div>
+      <div>
+        <div
+          className="MuiChip-root-1745 MuiChip-deletable-1751 ChipsArray-chip-1744"
+          onClick={undefined}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <span
+            className="MuiChip-label-1764"
+          >
+            0
+          </span>
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-1770 MuiChip-deleteIcon-1765"
+            color={undefined}
+            focusable="false"
+            onClick={[Function]}
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+            />
+          </svg>
+        </div>
+        <div
+          className="MuiChip-root-1745 MuiChip-deletable-1751 ChipsArray-chip-1744"
+          onClick={undefined}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <span
+            className="MuiChip-label-1764"
+          >
+            1
+          </span>
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-1770 MuiChip-deleteIcon-1765"
+            color={undefined}
+            focusable="false"
+            onClick={[Function]}
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <button
+      className="MuiButtonBase-root-1805 MuiButton-root-1779 MuiButton-text-1781 MuiButton-flat-1784"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="submit"
+    >
+      <span
+        className="MuiButton-label-1780"
+      >
+        Submit
+      </span>
+      <span
+        className="MuiTouchRipple-root-1808"
+      />
+    </button>
+  </div>
+</form>
+`;
+
 exports[`Storyshots Form Checkbox 1`] = `
 <form
   onSubmit={[Function]}
@@ -6981,7 +7134,7 @@ exports[`Storyshots Form Validation 1`] = `
   style={undefined}
 >
   <div
-    className="MuiPaper-root-1676 MuiPaper-elevation2-1680 MuiPaper-rounded-1677"
+    className="MuiPaper-root-1815 MuiPaper-elevation2-1819 MuiPaper-rounded-1816"
     style={
       Object {
         "margin": "15px",
@@ -6991,7 +7144,7 @@ exports[`Storyshots Form Validation 1`] = `
     }
   >
     <div
-      className="MuiFormControl-root-1705 shouldUpdate-renderTextFieldWithoutStyle--root-1704"
+      className="MuiFormControl-root-1844 shouldUpdate-renderTextFieldWithoutStyle--root-1843"
       deconverter={undefined}
       field={
         Object {
@@ -7003,14 +7156,14 @@ exports[`Storyshots Form Validation 1`] = `
       }
     >
       <label
-        className="MuiFormLabel-root-1720 MuiInputLabel-root-1709 MuiInputLabel-formControl-1714 MuiInputLabel-animated-1717 shouldUpdate-renderTextFieldWithoutStyle--empty-1703"
+        className="MuiFormLabel-root-1859 MuiInputLabel-root-1848 MuiInputLabel-formControl-1853 MuiInputLabel-animated-1856 shouldUpdate-renderTextFieldWithoutStyle--empty-1842"
         data-shrink={false}
         htmlFor={undefined}
       >
         Required
       </label>
       <div
-        className="MuiInputBase-root-1740 MuiInput-root-1727 MuiInput-underline-1731 MuiInputBase-formControl-1741 MuiInput-formControl-1728"
+        className="MuiInputBase-root-1879 MuiInput-root-1866 MuiInput-underline-1870 MuiInputBase-formControl-1880 MuiInput-formControl-1867"
         onClick={[Function]}
       >
         <input
@@ -7018,7 +7171,7 @@ exports[`Storyshots Form Validation 1`] = `
           aria-invalid={false}
           autoComplete="off"
           autoFocus={undefined}
-          className="MuiInputBase-input-1750 MuiInput-input-1735"
+          className="MuiInputBase-input-1889 MuiInput-input-1874"
           defaultValue={undefined}
           disabled={false}
           id={undefined}
@@ -7039,7 +7192,7 @@ exports[`Storyshots Form Validation 1`] = `
       </div>
     </div>
     <div
-      className="MuiFormControl-root-1705 shouldUpdate-renderTextFieldWithoutStyle--root-1704"
+      className="MuiFormControl-root-1844 shouldUpdate-renderTextFieldWithoutStyle--root-1843"
       deconverter={undefined}
       field={
         Object {
@@ -7051,14 +7204,14 @@ exports[`Storyshots Form Validation 1`] = `
       }
     >
       <label
-        className="MuiFormLabel-root-1720 MuiInputLabel-root-1709 MuiInputLabel-formControl-1714 MuiInputLabel-animated-1717 shouldUpdate-renderTextFieldWithoutStyle--empty-1703"
+        className="MuiFormLabel-root-1859 MuiInputLabel-root-1848 MuiInputLabel-formControl-1853 MuiInputLabel-animated-1856 shouldUpdate-renderTextFieldWithoutStyle--empty-1842"
         data-shrink={false}
         htmlFor={undefined}
       >
         Regex
       </label>
       <div
-        className="MuiInputBase-root-1740 MuiInput-root-1727 MuiInput-underline-1731 MuiInputBase-formControl-1741 MuiInput-formControl-1728"
+        className="MuiInputBase-root-1879 MuiInput-root-1866 MuiInput-underline-1870 MuiInputBase-formControl-1880 MuiInput-formControl-1867"
         onClick={[Function]}
       >
         <input
@@ -7066,7 +7219,7 @@ exports[`Storyshots Form Validation 1`] = `
           aria-invalid={false}
           autoComplete="off"
           autoFocus={undefined}
-          className="MuiInputBase-input-1750 MuiInput-input-1735"
+          className="MuiInputBase-input-1889 MuiInput-input-1874"
           defaultValue={undefined}
           disabled={false}
           id={undefined}
@@ -7087,20 +7240,20 @@ exports[`Storyshots Form Validation 1`] = `
       </div>
     </div>
     <div
-      className="MuiFormControl-root-1705 shouldUpdate-renderTextFieldWithoutStyle--root-1704"
+      className="MuiFormControl-root-1844 shouldUpdate-renderTextFieldWithoutStyle--root-1843"
       onClick={[Function]}
       onError={undefined}
       onKeyPress={[Function]}
     >
       <label
-        className="MuiFormLabel-root-1720 MuiInputLabel-root-1709 MuiInputLabel-formControl-1714 MuiInputLabel-animated-1717 shouldUpdate-renderTextFieldWithoutStyle--empty-1703"
+        className="MuiFormLabel-root-1859 MuiInputLabel-root-1848 MuiInputLabel-formControl-1853 MuiInputLabel-animated-1856 shouldUpdate-renderTextFieldWithoutStyle--empty-1842"
         data-shrink={false}
         htmlFor={undefined}
       >
         date
       </label>
       <div
-        className="MuiInputBase-root-1740 MuiInput-root-1727 MuiInput-underline-1731 MuiInputBase-formControl-1741 MuiInput-formControl-1728"
+        className="MuiInputBase-root-1879 MuiInput-root-1866 MuiInput-underline-1870 MuiInputBase-formControl-1880 MuiInput-formControl-1867"
         onClick={[Function]}
       >
         <input
@@ -7108,7 +7261,7 @@ exports[`Storyshots Form Validation 1`] = `
           aria-invalid={false}
           autoComplete="off"
           autoFocus={undefined}
-          className="MuiInputBase-input-1750 MuiInput-input-1735"
+          className="MuiInputBase-input-1889 MuiInput-input-1874"
           defaultValue={undefined}
           disabled={false}
           id={undefined}
@@ -7130,28 +7283,28 @@ exports[`Storyshots Form Validation 1`] = `
       </div>
     </div>
     <div
-      className="MuiFormControl-root-1705 RenderSelectFieldComponent-root-1781"
+      className="MuiFormControl-root-1844 RenderSelectFieldComponent-root-1920"
       style={Object {}}
     >
       <label
-        className="MuiFormLabel-root-1720 MuiInputLabel-root-1709 RenderSelectFieldComponent-empty-1780 MuiInputLabel-formControl-1714 MuiInputLabel-animated-1717"
+        className="MuiFormLabel-root-1859 MuiInputLabel-root-1848 RenderSelectFieldComponent-empty-1919 MuiInputLabel-formControl-1853 MuiInputLabel-animated-1856"
         data-shrink={false}
       >
         select
       </label>
       <div
-        className="MuiInputBase-root-1740 MuiInput-root-1727 MuiInput-underline-1731 MuiInputBase-formControl-1741 MuiInput-formControl-1728"
+        className="MuiInputBase-root-1879 MuiInput-root-1866 MuiInput-underline-1870 MuiInputBase-formControl-1880 MuiInput-formControl-1867"
         onClick={[Function]}
       >
         <div
-          className="MuiSelect-root-1785"
+          className="MuiSelect-root-1924"
         >
           <select
             aria-describedby={undefined}
             aria-invalid={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiSelect-select-1786 MuiInputBase-input-1750 MuiInput-input-1735"
+            className="MuiSelect-select-1925 MuiInputBase-input-1889 MuiInput-input-1874"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -7195,7 +7348,7 @@ exports[`Storyshots Form Validation 1`] = `
           </select>
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-1792 MuiSelect-icon-1791"
+            className="MuiSvgIcon-root-1931 MuiSelect-icon-1930"
             color={undefined}
             focusable="false"
             role="presentation"
@@ -7210,7 +7363,7 @@ exports[`Storyshots Form Validation 1`] = `
       <div />
     </div>
     <button
-      className="MuiButtonBase-root-1827 MuiButton-root-1801 MuiButton-text-1803 MuiButton-flat-1806"
+      className="MuiButtonBase-root-1966 MuiButton-root-1940 MuiButton-text-1942 MuiButton-flat-1945"
       disabled={false}
       onBlur={[Function]}
       onContextMenu={[Function]}
@@ -7227,12 +7380,12 @@ exports[`Storyshots Form Validation 1`] = `
       type="submit"
     >
       <span
-        className="MuiButton-label-1802"
+        className="MuiButton-label-1941"
       >
         Submit
       </span>
       <span
-        className="MuiTouchRipple-root-1830"
+        className="MuiTouchRipple-root-1969"
       />
     </button>
   </div>
