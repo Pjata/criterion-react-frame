@@ -23,8 +23,7 @@ class ChipsArray extends React.Component {
   }
 
   render() {
-    const { classes } = this.props
-    const { chips } = this.props
+    const { chips, readOnly, classes } = this.props
 
     return (
       <div>
@@ -36,7 +35,7 @@ class ChipsArray extends React.Component {
               key={data.key}
               icon={icon}
               label={data.label}
-              onDelete={this.handleDelete(data)}
+              onDelete={!readOnly && this.handleDelete(data)}
               className={classes.chip}
             />
           )

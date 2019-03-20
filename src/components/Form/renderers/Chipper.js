@@ -2,6 +2,7 @@ import React, { PureComponent } from "react"
 import ChipArray from "./ChipArray"
 import SetFieldValueContext from "../SetFieldValueContext"
 import Autosuggest from "./Autosuggest"
+import Typography from "@material-ui/core/Typography"
 class Chipper extends PureComponent {
   onDelete = setFieldValue => data => {
     const {
@@ -26,22 +27,32 @@ class Chipper extends PureComponent {
       setFieldValue(name, [...value, foundOrNew])
     }
   }
+  getTopComponent = setFieldValue => {
+    const { readOnly, label, suggestions } = this.props
+    if (readOnly) {
+      return <Typography>{label}:</Typography>
+    }
+    return (
+      <Autosuggest
+        label={label}
+        clearOnBlur
+        suggestions={suggestions}
+        onSuggestionSelected={this.onSuggestionSelected(setFieldValue)}
+      />
+    )
+  }
   render() {
-    const { input, readOnly, label, suggestions } = this.props
+    const { input, readOnly } = this.props
     return (
       <SetFieldValueContext.Consumer>
         {({ setFieldValue }) => (
           <div>
-            <Autosuggest
-              label={label}
-              clearOnBlur
-              suggestions={suggestions}
-              onSuggestionSelected={this.onSuggestionSelected(setFieldValue)}
-            />
+            {this.getTopComponent(setFieldValue)}
             {input.value &&
               input.value.length !== 0 && (
                 <ChipArray
                   chips={input.value}
+                  readOnly={readOnly}
                   onDelete={this.onDelete(setFieldValue)}
                 />
               )}

@@ -98,25 +98,45 @@ function renderSuggestion(suggestion, { query, isHighlighted }) {
   )
 }
 
-function getSuggestions(suggestions, value) {
+function getPrefixes(suggestions, value) {
   const inputValue = deburr(value.trim()).toLowerCase()
-  const inputLength = inputValue.length
-  let count = 0
+  return suggestions.filter(suggestion => {
+    return suggestion.label.toLowerCase().startsWith(inputValue)
+  })
+}
 
-  const suggestionsFiltered =
-    inputLength === 0
-      ? []
-      : suggestions.filter(suggestion => {
-          const keep =
-            count < 5 &&
-            suggestion.label.toLowerCase().includes(inputValue.toLowerCase())
+function getIncludes(suggestions, value) {
+  const inputValue = deburr(value.trim()).toLowerCase()
+  return suggestions.filter(suggestion => {
+    return suggestion.label.toLowerCase().includes(inputValue)
+  })
+}
+function getUnique(arr, comp) {
+  const unique = arr
+    .map(e => e[comp])
 
-          if (keep) {
-            count += 1
-          }
+    // store the keys of the unique objects
+    .map((e, i, final) => final.indexOf(e) === i && i)
 
-          return keep
-        })
+    // eliminate the dead keys & store unique objects
+    .filter(e => arr[e])
+    .map(e => arr[e])
+
+  return unique
+}
+
+function mergeNWithFirstPriority(a, b, n) {
+  const aN = a.slice(0, n)
+  const bN = b.slice(b, n)
+  const aNbN = getUnique([...aN, ...bN], "key")
+  return aNbN.slice(0, n)
+}
+function getSuggestions(suggestions, value) {
+  const includes = getIncludes(suggestions, value)
+  const startsWith = getPrefixes(suggestions, value)
+
+  const suggestionsFiltered = mergeNWithFirstPriority(startsWith, includes, 5)
+
   return [...suggestionsFiltered, { label: value }]
 }
 

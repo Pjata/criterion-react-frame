@@ -475,7 +475,16 @@ storiesFormik.add("Date picker", () => {
   )
 })
 storiesFormik.add("Auto suggest", () => {
-  const defaultValues = [{ key: "0", label: "123" }, { key: "1", label: "456" }]
+  const defaultValues = [
+    { key: "0", label: "123" },
+    { key: "1", label: "456" },
+    { key: "2", label: "6834" },
+    { key: "3", label: "3teszt" },
+    { key: "4", label: "4teszt" },
+    { key: "5", label: "5teszt" },
+    { key: "6", label: "6teszt" },
+    { key: "7", label: "7teszt" }
+  ]
   return (
     <CriterionProviders i18n={i18n}>
       <FormikContainer
