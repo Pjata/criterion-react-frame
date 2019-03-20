@@ -2,6 +2,7 @@ import CriterionFrame from "./components/CriterionFrame"
 export { default as FormikContainer } from "./components/Form/FormikContainer"
 export { default as MenuDrawer } from "./components/MenuDrawer"
 export { default as TopBar } from "./components/TopBar"
+export { default as ChipperController } from "./components/ChipperController"
 export {
   default as NumberFormatCustom
 } from "./components/Form/NumberFormatCustom"

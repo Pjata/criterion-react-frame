@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Autosuggest from "../components/Form/renderers/Autosuggest"
 
 import CriterionProviders from "../components/Form/CriterionProviders"
@@ -21,11 +21,12 @@ import { createMuiTheme } from "@material-ui/core/styles"
 import { MuiThemeProvider } from "@material-ui/core/styles"
 import JssProvider from "react-jss/lib/JssProvider"
 import Chipper from "../components/Form/renderers/Chipper"
+import ChipperController from "../components/ChipperController"
 import CriterionFrame from "../components/CriterionFrame"
 import { TypeField } from "../index"
 import * as Yup from "yup"
 import i18n from "./i18n"
-const stories = storiesOf("Menu and topbar (DontTest)", module)
+const stories = storiesOf("Utilities (DontTest)", module)
 
 const suggestions = [
   { label: "Afghanistan" },
@@ -474,7 +475,39 @@ storiesFormik.add("Date picker", () => {
     </CriterionProviders>
   )
 })
-storiesFormik.add("Auto suggest", () => {
+const ChipperControllerComponent = () => {
+  const defaultValues = [
+    { key: "0", label: "123" },
+    { key: "1", label: "456" },
+    { key: "2", label: "6834" },
+    { key: "3", label: "3teszt" },
+    { key: "4", label: "4teszt" },
+    { key: "5", label: "5teszt" },
+    { key: "6", label: "6teszt" },
+    { key: "7", label: "7teszt" }
+  ]
+  const [values, setValues] = useState(defaultValues)
+  return (
+    <Paper
+      style={{
+        margin: "15px",
+        padding: "5px",
+        width: "400px"
+      }}
+    >
+      <ChipperController
+        label={"Chipper"}
+        suggestions={defaultValues}
+        value={values}
+        onChange={setValues}
+        name={"chipper"}
+        type={"chipper"}
+      />
+    </Paper>
+  )
+}
+stories.add("ChipperController", () => <ChipperControllerComponent />)
+storiesFormik.add("Chipper", () => {
   const defaultValues = [
     { key: "0", label: "123" },
     { key: "1", label: "456" },
