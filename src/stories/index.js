@@ -410,6 +410,7 @@ storiesFormik.add("Checkbox", () => {
 })
 storiesFormik.add("DateTime picker", () => {
   const label = text("Label", "Time test")
+  const readOnly = boolean("readOnly", false)
   return (
     <CriterionProviders i18n={i18n}>
       <FormikContainer
@@ -422,7 +423,7 @@ storiesFormik.add("DateTime picker", () => {
               width: "400px"
             }}
           >
-            <TypeField name={"time"} label={label} type={"dateTime"} />
+            <TypeField readOnly={readOnly} name={"time"} label={label} type={"dateTime"} />
             <Button type="submit">Submit</Button>
           </Paper>
         )}
@@ -432,6 +433,7 @@ storiesFormik.add("DateTime picker", () => {
 })
 storiesFormik.add("Time picker", () => {
   const label = text("Label", "Time test")
+  const readOnly = boolean("readOnly", false)
   return (
     <CriterionProviders i18n={i18n}>
       <FormikContainer
@@ -444,7 +446,7 @@ storiesFormik.add("Time picker", () => {
               width: "400px"
             }}
           >
-            <TypeField name={"time"} label={label} type={"time"} />
+            <TypeField readOnly={readOnly} name={"time"} label={label} type={"time"} />
             <Button type="submit">Submit</Button>
           </Paper>
         )}

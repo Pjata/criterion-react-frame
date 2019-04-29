@@ -105,9 +105,9 @@ class TypeField extends PureComponent {
       case "switch":
         return <Field {...rest} component={switchField} />
       case "time":
-        return <Field {...rest} component={timePickerField} />
+        return <Field {...rest} component={rest.readOnly ? textField : timePickerField} />
       case "dateTime":
-        return <Field {...rest} component={dateTimePickerField} />
+        return <Field {...rest} component={rest.readOnly ? textField : dateTimePickerField} />
       case "checkbox":
         return <Field {...rest} component={checkboxField} />
       case "chipper":
