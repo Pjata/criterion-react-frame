@@ -538,6 +538,7 @@ exports[`Storyshots Form DateTime picker 1`] = `
       onClick={[Function]}
       onError={undefined}
       onKeyPress={[Function]}
+      readOnly={false}
     >
       <label
         className="MuiFormLabel-root-1320 MuiInputLabel-root-1309 MuiInputLabel-formControl-1314 MuiInputLabel-animated-1317 shouldUpdate-renderTextFieldWithoutStyle--empty-1303"
@@ -7222,6 +7223,7 @@ exports[`Storyshots Form Time picker 1`] = `
       onClick={[Function]}
       onError={undefined}
       onKeyPress={[Function]}
+      readOnly={false}
     >
       <label
         className="MuiFormLabel-root-1440 MuiInputLabel-root-1429 MuiInputLabel-formControl-1434 MuiInputLabel-animated-1437 shouldUpdate-renderTextFieldWithoutStyle--empty-1423"
